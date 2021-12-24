@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
+		5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CAB827763A250095EE43 /* MyPlaceView.swift */; };
+		5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CABD27763B2B0095EE43 /* MyPlaceRow.swift */; };
+		5389CAC127763F250095EE43 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5389CAC027763F250095EE43 /* SDWebImageSwiftUI */; };
 		53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A34EFE2773993700F48566 /* PreviousLocationRow.swift */; };
 		53AB86E52770F617006493D7 /* ThatsItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB86E42770F617006493D7 /* ThatsItApp.swift */; };
 		53AB86E72770F617006493D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB86E62770F617006493D7 /* ContentView.swift */; };
@@ -24,6 +27,8 @@
 /* Begin PBXFileReference section */
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
+		5389CAB827763A250095EE43 /* MyPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceView.swift; sourceTree = "<group>"; };
+		5389CABD27763B2B0095EE43 /* MyPlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceRow.swift; sourceTree = "<group>"; };
 		53A34EFE2773993700F48566 /* PreviousLocationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLocationRow.swift; sourceTree = "<group>"; };
 		53AB86E12770F617006493D7 /* ThatsIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThatsIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53AB86E42770F617006493D7 /* ThatsItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThatsItApp.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5389CAC127763F250095EE43 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +71,15 @@
 				537C3FC22771A03A00A2626D /* SimpleDialog.swift */,
 			);
 			path = Dialog;
+			sourceTree = "<group>";
+		};
+		5389CAB527763A000095EE43 /* MyPlace */ = {
+			isa = PBXGroup;
+			children = (
+				5389CAB827763A250095EE43 /* MyPlaceView.swift */,
+				5389CABD27763B2B0095EE43 /* MyPlaceRow.swift */,
+			);
+			path = MyPlace;
 			sourceTree = "<group>";
 		};
 		53AB86D82770F617006493D7 = {
@@ -108,6 +123,7 @@
 			children = (
 				53AB86E62770F617006493D7 /* ContentView.swift */,
 				53AB86F42770FC28006493D7 /* Component */,
+				5389CAB527763A000095EE43 /* MyPlace */,
 				536D826227737C4600C3AAB7 /* Home */,
 				53AB86F32770FC1F006493D7 /* Login */,
 			);
@@ -163,6 +179,9 @@
 			dependencies = (
 			);
 			name = ThatsIt;
+			packageProductDependencies = (
+				5389CAC027763F250095EE43 /* SDWebImageSwiftUI */,
+			);
 			productName = ThatsIt;
 			productReference = 53AB86E12770F617006493D7 /* ThatsIt.app */;
 			productType = "com.apple.product-type.application";
@@ -191,6 +210,9 @@
 				Base,
 			);
 			mainGroup = 53AB86D82770F617006493D7;
+			packageReferences = (
+				5389CABF27763F250095EE43 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 53AB86E22770F617006493D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -219,6 +241,8 @@
 			files = (
 				53AB86E72770F617006493D7 /* ContentView.swift in Sources */,
 				53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */,
+				5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */,
+				5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */,
 				53AB86E52770F617006493D7 /* ThatsItApp.swift in Sources */,
 				53AB86F82770FDFB006493D7 /* LoginView.swift in Sources */,
 				53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */,
@@ -429,6 +453,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5389CABF27763F250095EE43 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5389CAC027763F250095EE43 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5389CABF27763F250095EE43 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 53AB86D92770F617006493D7 /* Project object */;
 }

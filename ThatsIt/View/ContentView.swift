@@ -19,7 +19,7 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("홈")
                 }
-            Text("2")
+            MyPlaceView()
                 .tabItem {
                     Image(systemName: "mappin")
                     Text("나의 장소")
