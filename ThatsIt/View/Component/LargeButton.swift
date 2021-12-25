@@ -26,7 +26,7 @@ struct LargeButtonStyle: ButtonStyle {
                     .stroke(currentForegroundColor, lineWidth: 1)
         )
             .padding([.top, .bottom], 10)
-            .font(Font.system(size: 19, weight: .semibold))
+            .font(NotoSans.medium(size: 17))
     }
 }
 

@@ -38,15 +38,16 @@ struct HomeView: View {
                 
                 VStack(alignment: .leading, spacing: 17) {
                     Text("오늘 어디가지?")
-                        .font(.title)
-                        .bold()
+                        .font(NotoSans.bold(size: 30))
                     Text("(닉네임)님 안녕하세요. \n 어려운 장소 선택 친구들과 한번에 해결하세요!")
+                        .font(NotoSans.medium(size: 15))
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.bottom, 20)
                 
                 Text("이미지 or 관련 일러스트")
+                    .font(NotoSans.light(size: 17))
                     .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
                     .overlay(
                         RoundedRectangle(cornerRadius: 3)
@@ -65,8 +66,7 @@ struct HomeView: View {
                 )
                 
                 Text("지난 장소 투표")
-                    .font(.title2)
-                    .bold()
+                    .font(NotoSans.bold(size: 20))
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 ScrollView(.horizontal, showsIndicators: false) {

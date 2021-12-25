@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530D55182776F36D00AF1FD1 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */; };
+		530D55192776F36D00AF1FD1 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */; };
+		530D551A2776F36D00AF1FD1 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */; };
+		530D551B2776F36D00AF1FD1 /* NotoSansKR-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55142776F36D00AF1FD1 /* NotoSansKR-DemiLight.otf */; };
+		530D551C2776F36D00AF1FD1 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55152776F36D00AF1FD1 /* NotoSansKR-Black.otf */; };
+		530D551D2776F36D00AF1FD1 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55162776F36D00AF1FD1 /* NotoSansKR-Medium.otf */; };
+		530D551E2776F36D00AF1FD1 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55172776F36D00AF1FD1 /* NotoSansKR-Thin.otf */; };
+		530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */; };
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
 		5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CAB827763A250095EE43 /* MyPlaceView.swift */; };
@@ -25,6 +33,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		530D55142776F36D00AF1FD1 /* NotoSansKR-DemiLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-DemiLight.otf"; sourceTree = "<group>"; };
+		530D55152776F36D00AF1FD1 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
+		530D55162776F36D00AF1FD1 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		530D55172776F36D00AF1FD1 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
+		530D551F2776F47900AF1FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+NotoSans.swift"; sourceTree = "<group>"; };
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
 		5389CAB827763A250095EE43 /* MyPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceView.swift; sourceTree = "<group>"; };
@@ -54,6 +71,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		530D55102776F35400AF1FD1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				530D55152776F36D00AF1FD1 /* NotoSansKR-Black.otf */,
+				530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */,
+				530D55142776F36D00AF1FD1 /* NotoSansKR-DemiLight.otf */,
+				530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */,
+				530D55162776F36D00AF1FD1 /* NotoSansKR-Medium.otf */,
+				530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */,
+				530D55172776F36D00AF1FD1 /* NotoSansKR-Thin.otf */,
+				530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		536D826227737C4600C3AAB7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +133,12 @@
 		53AB86E32770F617006493D7 /* ThatsIt */ = {
 			isa = PBXGroup;
 			children = (
+				530D551F2776F47900AF1FD1 /* Info.plist */,
 				53AB86E42770F617006493D7 /* ThatsItApp.swift */,
 				53C00A882774D38A00C51065 /* Model */,
 				53AB86F22770FC17006493D7 /* View */,
 				53AB86E82770F618006493D7 /* Assets.xcassets */,
+				530D55102776F35400AF1FD1 /* Fonts */,
 				53AB86EA2770F618006493D7 /* Preview Content */,
 			);
 			path = ThatsIt;
@@ -227,8 +261,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530D55192776F36D00AF1FD1 /* NotoSansKR-Regular.otf in Resources */,
 				53AB86EC2770F618006493D7 /* Preview Assets.xcassets in Resources */,
+				530D551E2776F36D00AF1FD1 /* NotoSansKR-Thin.otf in Resources */,
+				530D55182776F36D00AF1FD1 /* NotoSansKR-Light.otf in Resources */,
+				530D551B2776F36D00AF1FD1 /* NotoSansKR-DemiLight.otf in Resources */,
+				530D551A2776F36D00AF1FD1 /* NotoSansKR-Bold.otf in Resources */,
 				53AB86E92770F618006493D7 /* Assets.xcassets in Resources */,
+				530D551D2776F36D00AF1FD1 /* NotoSansKR-Medium.otf in Resources */,
+				530D551C2776F36D00AF1FD1 /* NotoSansKR-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +290,7 @@
 				536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */,
 				53C00A8527749B7100C51065 /* SelectFriendView.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
+				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
 			);
@@ -384,6 +426,7 @@
 				DEVELOPMENT_TEAM = 273WM862CP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThatsIt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -413,6 +456,7 @@
 				DEVELOPMENT_TEAM = 273WM862CP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ThatsIt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

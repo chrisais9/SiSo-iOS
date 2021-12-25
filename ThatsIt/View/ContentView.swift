@@ -9,9 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var email: String = ""
-    @State var password: String = ""
-    
     var body: some View {
         TabView {
             HomeView()
@@ -30,6 +27,7 @@ struct ContentView: View {
                     Text("마이페이지")
                 }
         }
+        .accentColor(.black)
     }
 }
 
