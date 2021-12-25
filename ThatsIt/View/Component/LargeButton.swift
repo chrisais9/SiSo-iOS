@@ -16,7 +16,8 @@ struct LargeButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         let currentForegroundColor = isDisabled || configuration.isPressed ? foregroundColor.opacity(0.3) : foregroundColor
         return configuration.label
-            .padding()
+            .padding(.horizontal)
+            .padding(.vertical, 13)
             .foregroundColor(currentForegroundColor)
             .background(isDisabled || configuration.isPressed ? backgroundColor.opacity(0.3) : backgroundColor)
             // This is the key part, we are using both an overlay as well as cornerRadius
@@ -25,7 +26,6 @@ struct LargeButtonStyle: ButtonStyle {
                 RoundedRectangle(cornerRadius: 6)
                     .stroke(currentForegroundColor, lineWidth: 1)
         )
-            .padding([.top, .bottom], 10)
             .font(NotoSans.medium(size: 17))
     }
 }

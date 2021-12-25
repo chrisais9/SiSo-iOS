@@ -30,6 +30,8 @@
 		53C00A8527749B7100C51065 /* SelectFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8427749B7100C51065 /* SelectFriendView.swift */; };
 		53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A862774ACEE00C51065 /* SelectFilterView.swift */; };
 		53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */; };
+		53E467AB2777717500554722 /* SearchFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* SearchFriendView.swift */; };
+		53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AC27777CDE00554722 /* TextField+ClearButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		53C00A8427749B7100C51065 /* SelectFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendView.swift; sourceTree = "<group>"; };
 		53C00A862774ACEE00C51065 /* SelectFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterView.swift; sourceTree = "<group>"; };
 		53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectedFilters+Enum.swift"; sourceTree = "<group>"; };
+		53E467AA2777717500554722 /* SearchFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendView.swift; sourceTree = "<group>"; };
+		53E467AC27777CDE00554722 /* TextField+ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+ClearButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 				53A34EFE2773993700F48566 /* PreviousLocationRow.swift */,
 				53C00A8427749B7100C51065 /* SelectFriendView.swift */,
 				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
+				53E467AA2777717500554722 /* SearchFriendView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			children = (
 				537C3FC427736B0C00A2626D /* Dialog */,
 				53AB86F52770FC41006493D7 /* LargeButton.swift */,
+				53E467AC27777CDE00554722 /* TextField+ClearButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			files = (
 				53AB86E72770F617006493D7 /* ContentView.swift in Sources */,
 				53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */,
+				53E467AB2777717500554722 /* SearchFriendView.swift in Sources */,
 				5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */,
 				5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */,
 				53AB86E52770F617006493D7 /* ThatsItApp.swift in Sources */,
@@ -290,6 +297,7 @@
 				536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */,
 				53C00A8527749B7100C51065 /* SelectFriendView.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
+				53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */,
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
