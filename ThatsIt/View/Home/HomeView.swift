@@ -96,20 +96,20 @@ struct HomeView: View {
             .simpleDialog(isShowing: $isInstructionDialogActive, dialogContent: {
                 VStack {
                     Text("그래, 그거 설명서")
-                        .font(.headline)
-                        .fontWeight(.bold)
+                        .font(NotoSans.bold(size: 18))
                         .padding(.vertical, 17)
                     
                     Text("1. 장소 선택하러 가기 클릭\n2. 투표를 함께할 친구 초대\n3. 필터 선택\n4. 내 동네 맛집 리스트 확인\n5. 친구들과 투표시작\n6. 1위 결과 발표!")
+                        .font(NotoSans.regular(size: 13))
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 13)
-                        .font(.caption)
                     
                     Divider()
                     Button {
                         isInstructionDialogActive.toggle()
                     } label: {
                         Text("확인")
+                            .font(NotoSans.medium(size: 16))
                             .foregroundColor(.black)
                             .frame(minWidth: 0, maxWidth: .infinity)
                             .padding(.bottom)

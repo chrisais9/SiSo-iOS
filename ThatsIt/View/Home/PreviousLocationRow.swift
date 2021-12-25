@@ -9,18 +9,20 @@ import SwiftUI
 
 struct PreviousLocationRow: View {
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 5) {
             Text("9월 30일")
-                .font(.caption)
+                .font(NotoSans.regular(size: 13))
             Text("장소 명")
-                .font(.title3)
+                .font(NotoSans.bold(size: 17))
                 .bold()
-            Text("성동구 성수 2가")
-                .font(.caption)
+            Text("성동구 성수 2")
+                .font(NotoSans.regular(size: 13))
             Spacer()
-                .frame(height: 20)
+                .frame(height: 17)
         }
-        .padding()
+        .padding(.vertical, 10)
+        .padding(.leading, 10)
+        .padding(.trailing, 33)
         .background(
             RoundedRectangle(cornerRadius: 5)
                 .fill(Color.white)
