@@ -10,8 +10,8 @@ import SwiftUI
 struct MyPlaceView: View {
     
     init(){
-            UITableView.appearance().backgroundColor = .clear
-        }
+        UITableView.appearance().backgroundColor = .clear
+    }
     
     var body: some View {
         NavigationView {
@@ -28,11 +28,12 @@ struct MyPlaceView: View {
                         .padding(.trailing)
                 }
                 List {
-                    ForEach(0..<10) { i in
-                        MyPlaceRow()
-                            .listRowInsets(EdgeInsets())
-                            .listRowSeparator(.hidden)
-                            .padding(.vertical)
+                    LazyVStack{
+                        ForEach(0..<10) { i in
+                            MyPlaceRow()
+                                .listRowInsets(EdgeInsets())
+                                .padding(.vertical)
+                        }
                     }
                 }
             }
