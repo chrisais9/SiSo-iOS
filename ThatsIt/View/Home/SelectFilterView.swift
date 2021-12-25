@@ -103,7 +103,7 @@ struct SelectFilterView: View {
                 Spacer()
                     .frame(height: 40)
                 
-                Text("가격 / 1인당")
+                Text("주차 여부")
                     .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -126,7 +126,7 @@ struct SelectFilterView: View {
             }
             Spacer()
         }
-        .padding()
+        .padding(.horizontal)
     }
 }
 
