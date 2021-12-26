@@ -25,7 +25,7 @@ struct SearchFriendView: View {
 
                 HStack {
                     TextField("", text: $query)
-                        .padding(.vertical, 6)
+                        .padding(.vertical, 10)
                         .padding(.horizontal, 10)
                         .modifier(TextFieldClearButton(text: $query))
                     Image(systemName: "magnifyingglass")
