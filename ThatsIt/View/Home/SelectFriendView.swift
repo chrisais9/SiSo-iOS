@@ -17,6 +17,7 @@ struct SelectFriendView: View {
     @ObservedObject var selectedFriend: SelectedFriend = SelectedFriend()
     
     @State var isInstructionDialogActive: Bool = false
+    @State var isConfirmationVoteViewActive: Bool = false
     
     var body: some View {
         VStack {
@@ -147,9 +148,16 @@ struct SelectFriendView: View {
                 if selectedFriend.isEmpty || selectedFilters.isEmpty {
                     isInstructionDialogActive.toggle()
                 } else {
-                    // do next
+                    isConfirmationVoteViewActive.toggle()
                 }
             }
+            .background(
+                NavigationLink(isActive: $isConfirmationVoteViewActive, destination: {
+                    ConfirmVoteView(selectedFilters: selectedFilters, selectedFriend: selectedFriend)
+                }, label: {
+                    EmptyView()
+                })
+            )
         }
         .padding()
         .toolbar {

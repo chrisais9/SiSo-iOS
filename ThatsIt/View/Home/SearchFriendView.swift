@@ -37,6 +37,7 @@ struct SearchFriendView: View {
                     self.presentationMode.wrappedValue.dismiss()
                 } label: {
                     Image(systemName: "chevron.left")
+                        .scaleEffect(1.3)
                         .foregroundColor(.black)
                 }
 
