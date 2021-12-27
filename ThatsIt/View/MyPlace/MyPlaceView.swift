@@ -31,7 +31,6 @@ struct MyPlaceView: View {
                     LazyVStack{
                         ForEach(0..<10) { i in
                             MyPlaceRow()
-                                .listRowInsets(EdgeInsets())
                                 .padding(.vertical)
                         }
                     }

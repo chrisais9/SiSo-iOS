@@ -14,6 +14,7 @@ struct SelectFriendView: View {
     @State var query: String = ""
     
     @ObservedObject var selectedFilters: SelectedFilters = SelectedFilters()
+    @ObservedObject var selectedFriend: SelectedFriend = SelectedFriend()
     
     var body: some View {
         VStack {
@@ -40,7 +41,7 @@ struct SelectFriendView: View {
             }
             .background(
                 NavigationLink(isActive: $isSearchViewActive, destination: {
-                    SearchFriendView()
+                    SearchFriendView(selectedFriend: selectedFriend)
                 }, label: {
                     EmptyView()
                 })
