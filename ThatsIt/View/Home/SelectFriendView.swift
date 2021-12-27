@@ -47,6 +47,27 @@ struct SelectFriendView: View {
                 })
             )
             
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(selectedFriend.frieds, id: \.email) { friend in
+                        HStack {
+                            Text(friend.name)
+                            Spacer()
+                                .frame(width: 23)
+                            Image(systemName: "multiply.circle.fill")
+                                .onTapGesture {
+                                    selectedFriend.removeFriendBy(email: friend.email)
+                                }
+                        }
+                        .padding(5)
+                        .background(
+                            RoundedRectangle(cornerRadius: 4)
+                                .foregroundColor(.gray.opacity(0.5))
+                        )
+                    }
+                }
+            }
+            
             LargeButton(title: "필터 선택하기", foregroundColor: .black) {
                 isFilterViewActive.toggle()
             }

@@ -10,6 +10,8 @@ import SDWebImageSwiftUI
 
 struct MyFriendRow: View {
     
+    let selectedFriend: SelectedFriend
+    
     let profileImage: String
     let name: String
     let email: String
@@ -31,7 +33,7 @@ struct MyFriendRow: View {
             }
             Spacer()
             Button {
-                
+                selectedFriend.frieds.append(MyFriend(name: name, email: email))
             } label: {
                 Text("선택")
                     .font(NotoSans.medium(size: 15))
@@ -52,6 +54,6 @@ struct MyFriendRow: View {
 
 struct MyFriendRow_Previews: PreviewProvider {
     static var previews: some View {
-        MyFriendRow(profileImage: "https://www.ibossedu.co.kr/template/DESIGN_shared/program/theme/01/THUMBNAIL_60_60_icon_rep_box.gif", name: "홍길동", email: "chrisais9@naver.com")
+        MyFriendRow(selectedFriend: SelectedFriend(), profileImage: "https://www.ibossedu.co.kr/template/DESIGN_shared/program/theme/01/THUMBNAIL_60_60_icon_rep_box.gif", name: "홍길동", email: "chrisais9@naver.com")
     }
 }

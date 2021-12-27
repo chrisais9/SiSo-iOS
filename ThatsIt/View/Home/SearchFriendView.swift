@@ -72,6 +72,7 @@ struct SearchFriendView: View {
                 List {
                     ForEach(queriedFriends, id: \.email) { friend in
                         MyFriendRow(
+                            selectedFriend: selectedFriend,
                             profileImage: friend.profileImage,
                             name: friend.name,
                             email: friend.email
