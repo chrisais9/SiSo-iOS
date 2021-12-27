@@ -24,16 +24,16 @@ struct MyPlaceRow: View {
                     Rectangle().foregroundColor(.gray)
                 }
                 .cornerRadius(10)
-                .frame(width: 100, height: 100)
+                .frame(width: 150, height: 150)
                 
                 
             VStack(alignment: .leading) {
                 Spacer()
                 Text("장소 명")
-                    .bold()
+                    .font(NotoSans.bold(size: 17))
                 Spacer()
                 Text("성동구 | 양식")
-                    .font(.caption)
+                    .font(NotoSans.regular(size: 13))
                 Spacer()
             }
             
@@ -41,11 +41,11 @@ struct MyPlaceRow: View {
             VStack {
                 Image(systemName: "bookmark.fill")
                 Text("57")
-                    .bold()
+                    .font(NotoSans.bold(size: 17))
                 Spacer()
             }
         }
-        .frame(width: .infinity, height: 100)
+        .frame(height: 150)
     }
 }
 

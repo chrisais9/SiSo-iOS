@@ -17,23 +17,23 @@ struct MyPlaceView: View {
         NavigationView {
             VStack {
                 Text("나의 장소")
-                    .font(.title)
-                    .bold()
+                    .font(NotoSans.bold(size: 23))
                     .padding(.leading)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 HStack {
                     Spacer()
                     Text("총 10개")
+                        .font(NotoSans.regular(size: 13))
                         .foregroundColor(.gray)
                         .padding(.trailing)
                 }
-                List {
-                    LazyVStack{
+                ScrollView {
+                    LazyVStack {
                         ForEach(0..<10) { i in
                             MyPlaceRow()
-                                .padding(.vertical)
                         }
-                    }
+                        
+                    }.padding(.horizontal)
                 }
             }
             .navigationBarHidden(true)

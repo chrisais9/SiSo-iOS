@@ -14,7 +14,6 @@ struct PreviousLocationRow: View {
                 .font(NotoSans.regular(size: 13))
             Text("장소 명")
                 .font(NotoSans.bold(size: 17))
-                .bold()
             Text("성동구 성수 2")
                 .font(NotoSans.regular(size: 13))
             Spacer()

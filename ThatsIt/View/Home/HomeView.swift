@@ -87,7 +87,7 @@ struct HomeView: View {
                 
                 Spacer()
             }
-            .fullScreenCover(isPresented: $isLoginPageActive, onDismiss: {
+            .sheet(isPresented: $isLoginPageActive, onDismiss: {
                 
             }, content: {
                 LoginView()

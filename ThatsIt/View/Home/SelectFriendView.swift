@@ -19,8 +19,7 @@ struct SelectFriendView: View {
     var body: some View {
         VStack {
             Text("투표를 함께 할\n친구를 선택해주세요.")
-                .bold()
-                .font(.title)
+                .font(NotoSans.bold(size: 25))
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
             Spacer()
@@ -28,6 +27,7 @@ struct SelectFriendView: View {
             
             HStack {
                 Text("이메일, 닉네임으로 검색해보세요.")
+                    .font(NotoSans.regular(size: 15))
                 Spacer()
                 Image(systemName: "magnifyingglass")
             }
@@ -106,11 +106,13 @@ struct SelectFriendView: View {
             Spacer()
             HStack {
                 Text("가입되지 않은 친구라면?")
+                    .font(NotoSans.regular(size: 15))
                 Spacer()
                 Button {
                     
                 } label: {
                     Text("초대하기")
+                        .font(NotoSans.regular(size: 15))
                         .padding(.vertical, 5)
                         .padding(.horizontal, 25)
                         .overlay(

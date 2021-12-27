@@ -34,6 +34,7 @@ struct MyFriendRow: View {
                 
             } label: {
                 Text("선택")
+                    .font(NotoSans.medium(size: 15))
                     .padding()
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
