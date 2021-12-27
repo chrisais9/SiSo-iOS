@@ -10,6 +10,9 @@ import Foundation
 class SelectedFriend: ObservableObject {
     @Published var frieds: [MyFriend] = []
     
+    var isEmpty: Bool {
+        frieds.isEmpty
+    }
     func removeFriendBy(email: String) {
         frieds.removeAll(where: {$0.email == email})
     }

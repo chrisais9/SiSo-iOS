@@ -12,6 +12,10 @@ class SelectedFilters: ObservableObject {
     @Published var category: Category?
     @Published var price: Price?
     @Published var parking: Parking?
+    
+    var isEmpty: Bool {
+        range == nil && category == nil && price == nil && parking == nil
+    }
 }
 
 enum Range: String, CaseIterable {

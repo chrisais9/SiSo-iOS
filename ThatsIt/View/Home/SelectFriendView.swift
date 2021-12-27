@@ -16,6 +16,8 @@ struct SelectFriendView: View {
     @ObservedObject var selectedFilters: SelectedFilters = SelectedFilters()
     @ObservedObject var selectedFriend: SelectedFriend = SelectedFriend()
     
+    @State var isInstructionDialogActive: Bool = false
+    
     var body: some View {
         VStack {
             Text("투표를 함께 할\n친구를 선택해주세요.")
@@ -144,7 +146,11 @@ struct SelectFriendView: View {
                 }
             }
             LargeButton(title: "다음으로", backgroundColor: .gray, foregroundColor: .white) {
-                
+                if selectedFriend.isEmpty || selectedFilters.isEmpty {
+                    isInstructionDialogActive.toggle()
+                } else {
+                    // do next
+                }
             }
         }
         .padding()
@@ -154,6 +160,29 @@ struct SelectFriendView: View {
             }
         }
         .ignoresSafeArea(.keyboard)
+        .simpleDialog(isShowing: $isInstructionDialogActive, dialogContent: {
+            VStack {
+                Text(selectedFriend.isEmpty ? "친구 미선택" : "필터 미선택")
+                    .font(NotoSans.bold(size: 15))
+                    .padding(.vertical, 17)
+                
+                Text("\(selectedFriend.isEmpty ? "친구" : "필터")가 선택되지 않았어요!")
+                    .font(NotoSans.regular(size: 15))
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 13)
+                
+                Divider()
+                Button {
+                    isInstructionDialogActive.toggle()
+                } label: {
+                    Text("확인")
+                        .font(NotoSans.medium(size: 16))
+                        .foregroundColor(.black)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding(.bottom)
+                }
+            }
+        })
     }
 }
 
