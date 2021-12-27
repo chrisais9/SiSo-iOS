@@ -19,24 +19,14 @@ struct SearchFriendView: View {
     @State var query: String = ""
     @State var isShowingFriends: Bool = false
     
-    var selectedFriend: SelectedFriend
-    
-    @State var myFriends: [MyFriend] = [
-        MyFriend(name: "김갑돌", email: "chfasdf@naver.com"),
-        MyFriend(name: "오형제", email: "chgregs9@naver.com"),
-        MyFriend(name: "김철수", email: "chrisdfadf@naver.com"),
-        MyFriend(name: "정우성", email: "chcggs4@naver.com"),
-        MyFriend(name: "하정우", email: "cdasfs@naver.com"),
-        MyFriend(name: "윤성호", email: "chriddd@naver.com"),
-        MyFriend(name: "구형모", email: "chrisais9@naver.com")
-    ]
+    @ObservedObject var selectedFriend: SelectedFriend
     
     var queriedFriends: [MyFriend] {
         if query.isEmpty {
-            return myFriends
+            return selectedFriend.exampleFriends
         }
         else {
-            return myFriends.filter({ $0.name.starts(with: query) || $0.email.starts(with: query) })
+            return selectedFriend.exampleFriends.filter({ $0.name.starts(with: query) || $0.email.starts(with: query) })
         }
     }
     

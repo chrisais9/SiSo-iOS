@@ -6,15 +6,28 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SelectedFriend: ObservableObject {
+    @Published var exampleFriends: [MyFriend] = [
+        MyFriend(name: "김갑돌", email: "chfasdf@naver.com"),
+        MyFriend(name: "오형제", email: "chgregs9@naver.com"),
+        MyFriend(name: "김철수", email: "chrisdfadf@naver.com"),
+        MyFriend(name: "정우성", email: "chcggs4@naver.com"),
+        MyFriend(name: "하정우", email: "cdasfs@naver.com"),
+        MyFriend(name: "윤성호", email: "chriddd@naver.com"),
+        MyFriend(name: "구형모", email: "chrisais9@naver.com")
+    ]
+    
     @Published var frieds: [MyFriend] = []
     
     var isEmpty: Bool {
         frieds.isEmpty
     }
     func removeFriendBy(email: String) {
-        frieds.removeAll(where: {$0.email == email})
+        withAnimation {
+            frieds.removeAll(where: {$0.email == email})
+        }
     }
 }
 

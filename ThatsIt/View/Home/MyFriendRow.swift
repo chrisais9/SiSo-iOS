@@ -33,16 +33,19 @@ struct MyFriendRow: View {
             }
             Spacer()
             Button {
-                selectedFriend.frieds.append(MyFriend(name: name, email: email))
+                withAnimation {
+                    selectedFriend.frieds.append(MyFriend(name: name, email: email))
+                    selectedFriend.exampleFriends.removeAll(where: {$0.email == email})
+                }
             } label: {
                 Text("선택")
                     .font(NotoSans.medium(size: 15))
                     .padding()
+                    .frame(width: 80, height: 30)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
                             .stroke()
                             .foregroundColor(.black)
-                            .frame(width: 80, height: 30)
                     )
                     .foregroundColor(.black)
             }

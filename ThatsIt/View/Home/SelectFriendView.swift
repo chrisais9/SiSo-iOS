@@ -24,8 +24,6 @@ struct SelectFriendView: View {
                 .font(NotoSans.bold(size: 25))
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Spacer()
-                .frame(height: 60)
             
             HStack {
                 Text("이메일, 닉네임으로 검색해보세요.")
