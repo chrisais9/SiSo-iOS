@@ -21,7 +21,7 @@ struct ContentView: View {
                     Image(systemName: "mappin")
                     Text("나의 장소")
                 }
-            Text("3")
+            NaverMapView()
                 .tabItem {
                     Image(systemName: "person.circle")
                     Text("마이페이지")

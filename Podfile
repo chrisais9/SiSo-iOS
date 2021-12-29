@@ -7,7 +7,10 @@ target 'ThatsIt' do
 
   # Pods for ThatsIt
   
-  #SDWebImageSwiftUI(https://github.com/SDWebImage/SDWebImageSwiftUI)
+  # SDWebImageSwiftUI(https://github.com/SDWebImage/SDWebImageSwiftUI)
   pod 'SDWebImageSwiftUI'
+  
+  # NaverMap SDK
+  pod 'NMapsMap','3.13.0'
 
 end

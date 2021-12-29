@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import NMapsMap
 
 @main
 struct ThatsItApp: App {
+    
+    init() {
+        NMFAuthManager.shared().clientId = "gyrtzz3dq2"
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
