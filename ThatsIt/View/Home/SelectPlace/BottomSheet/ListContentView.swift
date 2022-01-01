@@ -12,15 +12,15 @@ struct ListContentView: View {
     @Binding var bottomSheetPosition: CustomBottomSheetPosition
     var body: some View {
         VStack {
-            ScrollView {
-                ForEach(0..<10) { i in
-                    MyPlaceRow()
-                        .padding(.top)
-                        .padding(.horizontal)
-                }
-            }
-            .padding(.top)
             if bottomSheetPosition == .top {
+                ScrollView {
+                    ForEach(0..<10) { i in
+                        MyPlaceRow()
+                            .padding(.top)
+                            .padding(.horizontal)
+                    }
+                }
+                .padding(.top)
                 LargeButton(title: "투표 하러가기", backgroundColor: .gray, foregroundColor: .white) {
                     
                 }
