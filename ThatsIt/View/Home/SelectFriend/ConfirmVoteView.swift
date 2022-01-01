@@ -12,6 +12,8 @@ struct ConfirmVoteView: View {
     @ObservedObject var selectedFilters: SelectedFilters
     @ObservedObject var selectedFriend: SelectedFriend
     
+    @State var isPlaceMapViewActive: Bool = false
+    
     var body: some View {
         VStack {
             Text("모두 모였으면,\n지금 바로 투표를 시작해보세요!")
@@ -77,8 +79,15 @@ struct ConfirmVoteView: View {
             }
             Spacer()
             LargeButton(title: "지금 바로 투표 시작!", backgroundColor: .gray, foregroundColor: .white) {
-                
+                isPlaceMapViewActive.toggle()
             }
+            .background(
+                NavigationLink(isActive: $isPlaceMapViewActive, destination: {
+                    PlaceMapView()
+                }, label: {
+                    EmptyView()
+                })
+            )
         }
         .padding()
     }

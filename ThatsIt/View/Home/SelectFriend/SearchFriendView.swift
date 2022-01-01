@@ -22,12 +22,7 @@ struct SearchFriendView: View {
     @ObservedObject var selectedFriend: SelectedFriend
     
     var queriedFriends: [MyFriend] {
-        if query.isEmpty {
-            return selectedFriend.exampleFriends
-        }
-        else {
-            return selectedFriend.exampleFriends.filter({ $0.name.starts(with: query) || $0.email.starts(with: query) })
-        }
+        selectedFriend.exampleFriends.filter({ $0.name.contains(query) || $0.email.contains(query) || query.isEmpty })
     }
     
     var body: some View {

@@ -1,4 +1,5 @@
 PODS:
+  - BottomSheetSwiftUI (2.4.0)
   - NMapsMap (3.13.0)
   - SDWebImage (5.12.1):
     - SDWebImage/Core (= 5.12.1)
@@ -7,20 +8,23 @@ PODS:
     - SDWebImage (~> 5.10)
 
 DEPENDENCIES:
+  - BottomSheetSwiftUI
   - NMapsMap (= 3.13.0)
   - SDWebImageSwiftUI
 
 SPEC REPOS:
   trunk:
+    - BottomSheetSwiftUI
     - NMapsMap
     - SDWebImage
     - SDWebImageSwiftUI
 
 SPEC CHECKSUMS:
+  BottomSheetSwiftUI: c176c3022969d6383deaa388dd011199cc50f5bd
   NMapsMap: 88b5bdac7087bfa99ab058ff5cdd95fb766e0e95
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
 
-PODFILE CHECKSUM: 8457b23be930b13324c85328195c4518b5993462
+PODFILE CHECKSUM: 5f054a9589a341413e5ca3980ea3c9eee028fabc
 
 COCOAPODS: 1.11.2

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C47C56399398E5F67516CD6 /* Pods_ThatsIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF5968A3625C06934C062849 /* Pods_ThatsIt.framework */; };
 		530D55182776F36D00AF1FD1 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */; };
 		530D55192776F36D00AF1FD1 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */; };
 		530D551A2776F36D00AF1FD1 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */; };
@@ -35,12 +34,14 @@
 		53C00A8527749B7100C51065 /* SelectFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8427749B7100C51065 /* SelectFriendView.swift */; };
 		53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A862774ACEE00C51065 /* SelectFilterView.swift */; };
 		53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */; };
+		53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C42964277CC925004C6B1C /* PlaceMapView.swift */; };
 		53E467AB2777717500554722 /* SearchFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* SearchFriendView.swift */; };
 		53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AC27777CDE00554722 /* TextField+ClearButton.swift */; };
+		F5B41E6B0BBE177A2CC468E4 /* Pods_ThatsIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825349723DC9BBE2527186F7 /* Pods_ThatsIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		221D0F98F59F38CCF34199C1 /* Pods-ThatsIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThatsIt.release.xcconfig"; path = "Target Support Files/Pods-ThatsIt/Pods-ThatsIt.release.xcconfig"; sourceTree = "<group>"; };
+		2A74DCEE0AB82E6FA016ED93 /* Pods-ThatsIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThatsIt.debug.xcconfig"; path = "Target Support Files/Pods-ThatsIt/Pods-ThatsIt.debug.xcconfig"; sourceTree = "<group>"; };
 		530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
 		530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
@@ -70,10 +71,11 @@
 		53C00A8427749B7100C51065 /* SelectFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendView.swift; sourceTree = "<group>"; };
 		53C00A862774ACEE00C51065 /* SelectFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterView.swift; sourceTree = "<group>"; };
 		53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectedFilters+Enum.swift"; sourceTree = "<group>"; };
+		53C42964277CC925004C6B1C /* PlaceMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapView.swift; sourceTree = "<group>"; };
 		53E467AA2777717500554722 /* SearchFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendView.swift; sourceTree = "<group>"; };
 		53E467AC27777CDE00554722 /* TextField+ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+ClearButton.swift"; sourceTree = "<group>"; };
-		8818014AD822CB76C40A8DE9 /* Pods-ThatsIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThatsIt.debug.xcconfig"; path = "Target Support Files/Pods-ThatsIt/Pods-ThatsIt.debug.xcconfig"; sourceTree = "<group>"; };
-		BF5968A3625C06934C062849 /* Pods_ThatsIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThatsIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		825349723DC9BBE2527186F7 /* Pods_ThatsIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThatsIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0709300817A7AE56DE29C4D /* Pods-ThatsIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThatsIt.release.xcconfig"; path = "Target Support Files/Pods-ThatsIt/Pods-ThatsIt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C47C56399398E5F67516CD6 /* Pods_ThatsIt.framework in Frameworks */,
+				F5B41E6B0BBE177A2CC468E4 /* Pods_ThatsIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,12 +110,8 @@
 			children = (
 				536D826327737C5B00C3AAB7 /* HomeView.swift */,
 				53A34EFE2773993700F48566 /* PreviousLocationRow.swift */,
-				53C00A8427749B7100C51065 /* SelectFriendView.swift */,
-				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
-				53E467AA2777717500554722 /* SearchFriendView.swift */,
-				532D191C27798DFD003C174B /* MyFriendRow.swift */,
-				53863657277A18A600B2B3A7 /* ConfirmVoteView.swift */,
-				53863659277A192500B2B3A7 /* ConfirmMyFriendRow.swift */,
+				53A1BE26277CCD7A003D9BB9 /* SelectFriend */,
+				53C42963277CC89B004C6B1C /* SelectPlace */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -143,13 +141,26 @@
 			path = MyPlace;
 			sourceTree = "<group>";
 		};
+		53A1BE26277CCD7A003D9BB9 /* SelectFriend */ = {
+			isa = PBXGroup;
+			children = (
+				53C00A8427749B7100C51065 /* SelectFriendView.swift */,
+				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
+				53E467AA2777717500554722 /* SearchFriendView.swift */,
+				532D191C27798DFD003C174B /* MyFriendRow.swift */,
+				53863657277A18A600B2B3A7 /* ConfirmVoteView.swift */,
+				53863659277A192500B2B3A7 /* ConfirmMyFriendRow.swift */,
+			);
+			path = SelectFriend;
+			sourceTree = "<group>";
+		};
 		53AB86D82770F617006493D7 = {
 			isa = PBXGroup;
 			children = (
 				53AB86E32770F617006493D7 /* ThatsIt */,
 				53AB86E22770F617006493D7 /* Products */,
 				642210109F7DDC825E0E7E0E /* Pods */,
-				D6F7B53E3AD69C423A78AE81 /* Frameworks */,
+				680386A38C16305B4D2FAEAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,8 +199,8 @@
 			children = (
 				53AB86E62770F617006493D7 /* ContentView.swift */,
 				53AB86F42770FC28006493D7 /* Component */,
-				5389CAB527763A000095EE43 /* MyPlace */,
 				536D826227737C4600C3AAB7 /* Home */,
+				5389CAB527763A000095EE43 /* MyPlace */,
 				53AB86F32770FC1F006493D7 /* Login */,
 			);
 			path = View;
@@ -231,19 +242,27 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		53C42963277CC89B004C6B1C /* SelectPlace */ = {
+			isa = PBXGroup;
+			children = (
+				53C42964277CC925004C6B1C /* PlaceMapView.swift */,
+			);
+			path = SelectPlace;
+			sourceTree = "<group>";
+		};
 		642210109F7DDC825E0E7E0E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8818014AD822CB76C40A8DE9 /* Pods-ThatsIt.debug.xcconfig */,
-				221D0F98F59F38CCF34199C1 /* Pods-ThatsIt.release.xcconfig */,
+				2A74DCEE0AB82E6FA016ED93 /* Pods-ThatsIt.debug.xcconfig */,
+				B0709300817A7AE56DE29C4D /* Pods-ThatsIt.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D6F7B53E3AD69C423A78AE81 /* Frameworks */ = {
+		680386A38C16305B4D2FAEAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF5968A3625C06934C062849 /* Pods_ThatsIt.framework */,
+				825349723DC9BBE2527186F7 /* Pods_ThatsIt.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -255,11 +274,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53AB86EF2770F618006493D7 /* Build configuration list for PBXNativeTarget "ThatsIt" */;
 			buildPhases = (
-				90CED4E1726A39DC0DEF433C /* [CP] Check Pods Manifest.lock */,
+				5E7D7B8B11D997A546AB4337 /* [CP] Check Pods Manifest.lock */,
 				53AB86DD2770F617006493D7 /* Sources */,
 				53AB86DE2770F617006493D7 /* Frameworks */,
 				53AB86DF2770F617006493D7 /* Resources */,
-				BD56A709891CB359059A47F3 /* [CP] Embed Pods Frameworks */,
+				12EEE8C115BEA90942529071 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -323,7 +342,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		90CED4E1726A39DC0DEF433C /* [CP] Check Pods Manifest.lock */ = {
+		12EEE8C115BEA90942529071 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThatsIt/Pods-ThatsIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ThatsIt/Pods-ThatsIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThatsIt/Pods-ThatsIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E7D7B8B11D997A546AB4337 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -345,23 +381,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BD56A709891CB359059A47F3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThatsIt/Pods-ThatsIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThatsIt/Pods-ThatsIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThatsIt/Pods-ThatsIt-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -377,6 +396,7 @@
 				53E467AB2777717500554722 /* SearchFriendView.swift in Sources */,
 				5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */,
 				5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */,
+				53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */,
 				53AB86E52770F617006493D7 /* ThatsItApp.swift in Sources */,
 				53AB86F82770FDFB006493D7 /* LoginView.swift in Sources */,
 				53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */,
@@ -432,6 +452,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -493,6 +515,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -504,6 +528,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -513,7 +538,7 @@
 		};
 		53AB86F02770F618006493D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8818014AD822CB76C40A8DE9 /* Pods-ThatsIt.debug.xcconfig */;
+			baseConfigurationReference = 2A74DCEE0AB82E6FA016ED93 /* Pods-ThatsIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -524,6 +549,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ThatsIt/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -546,7 +572,7 @@
 		};
 		53AB86F12770F618006493D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 221D0F98F59F38CCF34199C1 /* Pods-ThatsIt.release.xcconfig */;
+			baseConfigurationReference = B0709300817A7AE56DE29C4D /* Pods-ThatsIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -557,6 +583,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ThatsIt/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
