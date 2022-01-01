@@ -17,6 +17,7 @@
 		530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */; };
 		532D191D27798DFD003C174B /* MyFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191C27798DFD003C174B /* MyFriendRow.swift */; };
 		532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191E2779B8BD003C174B /* SelectedFriend.swift */; };
+		534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C3E532780A1250046D1B9 /* FilterHeaderView.swift */; };
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
 		53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53836A40277CA0EB0069AF7D /* NaverMapView.swift */; };
@@ -35,7 +36,7 @@
 		53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */; };
 		53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C42964277CC925004C6B1C /* PlaceMapView.swift */; };
 		53C6DDDD278035A700633AED /* ConfirmVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863657277A18A600B2B3A7 /* ConfirmVoteView.swift */; };
-		53C6DDDF2780361200633AED /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6DDDE2780361200633AED /* PlaceListView.swift */; };
+		53C6DDDF2780361200633AED /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6DDDE2780361200633AED /* ListContentView.swift */; };
 		53E467AB2777717500554722 /* SearchFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* SearchFriendView.swift */; };
 		53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AC27777CDE00554722 /* TextField+ClearButton.swift */; };
 		F5B41E6B0BBE177A2CC468E4 /* Pods_ThatsIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825349723DC9BBE2527186F7 /* Pods_ThatsIt.framework */; };
@@ -54,6 +55,7 @@
 		530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+NotoSans.swift"; sourceTree = "<group>"; };
 		532D191C27798DFD003C174B /* MyFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendRow.swift; sourceTree = "<group>"; };
 		532D191E2779B8BD003C174B /* SelectedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriend.swift; sourceTree = "<group>"; };
+		534C3E532780A1250046D1B9 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
 		53836A40277CA0EB0069AF7D /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
@@ -73,7 +75,7 @@
 		53C00A862774ACEE00C51065 /* SelectFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterView.swift; sourceTree = "<group>"; };
 		53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectedFilters+Enum.swift"; sourceTree = "<group>"; };
 		53C42964277CC925004C6B1C /* PlaceMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapView.swift; sourceTree = "<group>"; };
-		53C6DDDE2780361200633AED /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
+		53C6DDDE2780361200633AED /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
 		53E467AA2777717500554722 /* SearchFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendView.swift; sourceTree = "<group>"; };
 		53E467AC27777CDE00554722 /* TextField+ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+ClearButton.swift"; sourceTree = "<group>"; };
 		825349723DC9BBE2527186F7 /* Pods_ThatsIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThatsIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,15 @@
 				530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		535BF9A72780A0BC00DD7424 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				53C6DDDE2780361200633AED /* ListContentView.swift */,
+				534C3E532780A1250046D1B9 /* FilterHeaderView.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 		536D826227737C4600C3AAB7 /* Home */ = {
@@ -246,8 +257,8 @@
 		53C42963277CC89B004C6B1C /* SelectPlace */ = {
 			isa = PBXGroup;
 			children = (
+				535BF9A72780A0BC00DD7424 /* BottomSheet */,
 				53C42964277CC925004C6B1C /* PlaceMapView.swift */,
-				53C6DDDE2780361200633AED /* PlaceListView.swift */,
 			);
 			path = SelectPlace;
 			sourceTree = "<group>";
@@ -415,12 +426,13 @@
 				53C6DDDD278035A700633AED /* ConfirmVoteView.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
 				53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */,
-				53C6DDDF2780361200633AED /* PlaceListView.swift in Sources */,
+				53C6DDDF2780361200633AED /* ListContentView.swift in Sources */,
 				53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */,
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
 				5386365A277A192500B2B3A7 /* ConfirmMyFriendRow.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
+				534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
