@@ -25,15 +25,6 @@ enum Range: String, CaseIterable {
     case km10 = "10km"
 }
 
-enum Category: String, CaseIterable {
-    case korean = "한식"
-    case japanese = "일식"
-    case chinese = "중식"
-    case western = "양식"
-    case buffet = "뷔페"
-    case pub = "주점"
-}
-
 enum Price: String, CaseIterable {
     case under10000 = "만원 이하"
     case around10000 = "1만원 대"

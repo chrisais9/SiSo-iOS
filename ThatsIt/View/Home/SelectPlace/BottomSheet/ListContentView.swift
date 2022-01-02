@@ -10,6 +10,7 @@ import SwiftUI
 struct ListContentView: View {
     
     @Binding var bottomSheetPosition: CustomBottomSheetPosition
+    @State var isDetailViewActive: Bool = false
     var body: some View {
         VStack {
             if bottomSheetPosition == .top {
@@ -18,6 +19,16 @@ struct ListContentView: View {
                         MyPlaceRow()
                             .padding(.top)
                             .padding(.horizontal)
+                            .onTapGesture {
+                                isDetailViewActive.toggle()
+                            }
+                            .background(
+                                NavigationLink(isActive: $isDetailViewActive, destination: {
+                                    PlaceDetailView()
+                                }, label: {
+                                    EmptyView()
+                                })
+                            )
                     }
                 }
                 .padding(.top)
