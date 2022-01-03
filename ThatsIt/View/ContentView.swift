@@ -10,22 +10,24 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("홈")
-                }
-            MyPlaceView()
-                .tabItem {
-                    Image(systemName: "mappin")
-                    Text("나의 장소")
-                }
-            Text("3")
-                .tabItem {
-                    Image(systemName: "person.circle")
-                    Text("마이페이지")
-                }
+        NavigationView {
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("홈")
+                    }
+                MyPlaceView()
+                    .tabItem {
+                        Image(systemName: "mappin")
+                        Text("나의 장소")
+                    }
+                Text("3")
+                    .tabItem {
+                        Image(systemName: "person.circle")
+                        Text("마이페이지")
+                    }
+            }
         }
         .accentColor(.black)
     }

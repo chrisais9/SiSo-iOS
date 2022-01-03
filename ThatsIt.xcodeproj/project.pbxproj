@@ -29,6 +29,7 @@
 		5386365A277A192500B2B3A7 /* ConfirmMyFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863659277A192500B2B3A7 /* ConfirmMyFriendRow.swift */; };
 		5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CAB827763A250095EE43 /* MyPlaceView.swift */; };
 		5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CABD27763B2B0095EE43 /* MyPlaceRow.swift */; };
+		5392326C2782A59900746881 /* FilterResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392326B2782A59900746881 /* FilterResultView.swift */; };
 		53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A34EFE2773993700F48566 /* PreviousLocationRow.swift */; };
 		53AB86E52770F617006493D7 /* ThatsItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB86E42770F617006493D7 /* ThatsItApp.swift */; };
 		53AB86E72770F617006493D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB86E62770F617006493D7 /* ContentView.swift */; };
@@ -73,6 +74,7 @@
 		53863659277A192500B2B3A7 /* ConfirmMyFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmMyFriendRow.swift; sourceTree = "<group>"; };
 		5389CAB827763A250095EE43 /* MyPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceView.swift; sourceTree = "<group>"; };
 		5389CABD27763B2B0095EE43 /* MyPlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceRow.swift; sourceTree = "<group>"; };
+		5392326B2782A59900746881 /* FilterResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultView.swift; sourceTree = "<group>"; };
 		53A34EFE2773993700F48566 /* PreviousLocationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLocationRow.swift; sourceTree = "<group>"; };
 		53AB86E12770F617006493D7 /* ThatsIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThatsIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53AB86E42770F617006493D7 /* ThatsItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThatsItApp.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
 				53E467AA2777717500554722 /* SearchFriendView.swift */,
 				532D191C27798DFD003C174B /* MyFriendRow.swift */,
+				5392326B2782A59900746881 /* FilterResultView.swift */,
 			);
 			path = SelectFriend;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */,
 				532D191D27798DFD003C174B /* MyFriendRow.swift in Sources */,
 				53E467AB2777717500554722 /* SearchFriendView.swift in Sources */,
+				5392326C2782A59900746881 /* FilterResultView.swift in Sources */,
 				5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */,
 				5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */,
 				53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */,
