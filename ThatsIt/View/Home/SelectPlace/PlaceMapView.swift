@@ -15,41 +15,14 @@ enum CustomBottomSheetPosition: CGFloat, CaseIterable {
 
 struct PlaceMapView: View {
     
-    @Environment(\.presentationMode) var presentationMode
-    
-    @State var query: String = ""
     @State var bottomSheetPosition: CustomBottomSheetPosition = .bottom
     
     @State var topBarHeight: CGFloat = .zero
     
+    @State var isSearchViewPresented: Bool = false
+    
     var body: some View {
         VStack {
-//            HStack {
-//                Button {
-//                    self.presentationMode.wrappedValue.dismiss()
-//                } label: {
-//                    Image(systemName: "chevron.left")
-//                        .scaleEffect(1.3)
-//                        .foregroundColor(.black)
-//                }
-//
-//                HStack {
-//                    TextField("", text: $query)
-//                        .padding(.vertical, 10)
-//                        .padding(.horizontal, 10)
-//                        .modifier(TextFieldClearButton(text: $query))
-//                    Image(systemName: "magnifyingglass")
-//                        .foregroundColor(.gray)
-//                        .padding(.trailing, 8)
-//                }
-//                .background(
-//                    Color(.systemGray6)
-//                        .cornerRadius(8)
-//                )
-//            }
-//            .padding(.horizontal)
-//            .padding(.bottom, 2)
-            
             GeometryReader { proxy in
                 VStack {
                     NaverMapView()
@@ -67,18 +40,31 @@ struct PlaceMapView: View {
                     ListContentView(bottomSheetPosition: $bottomSheetPosition)
                 }
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.black)
-                        Text("성동구 성수 2가")
-                            .underline()
-                            .font(NotoSans.regular(size: 15))
-                    }
+        }
+        .ignoresSafeArea(.keyboard)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                HStack {
+                    Image(systemName: "magnifyingglass")
+                        .foregroundColor(.black)
+                    Text("성동구 성수 2가")
+                        .underline()
+                        .font(NotoSans.regular(size: 15))
+                }
+                .onTapGesture {
+                    UIView.setAnimationsEnabled(false)
+                    isSearchViewPresented.toggle()
                 }
             }
+        }
+        .fullScreenCover(isPresented: $isSearchViewPresented) {
+            bottomSheetPosition = .bottom
+        } content: {
+            SearchPlaceView()
+                .onAppear {
+                    UIView.setAnimationsEnabled(true)
+                }
         }
     }
 }
