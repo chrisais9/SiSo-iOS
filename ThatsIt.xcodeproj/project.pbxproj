@@ -30,7 +30,7 @@
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
 		53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53836A40277CA0EB0069AF7D /* NaverMapView.swift */; };
-		5386365A277A192500B2B3A7 /* ConfirmMyFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863659277A192500B2B3A7 /* ConfirmMyFriendRow.swift */; };
+		5386365A277A192500B2B3A7 /* AddedFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863659277A192500B2B3A7 /* AddedFriendRow.swift */; };
 		5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CAB827763A250095EE43 /* MyPlaceView.swift */; };
 		5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CABD27763B2B0095EE43 /* MyPlaceRow.swift */; };
 		5392326C2782A59900746881 /* FilterResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392326B2782A59900746881 /* FilterResultView.swift */; };
@@ -46,7 +46,6 @@
 		53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A862774ACEE00C51065 /* SelectFilterView.swift */; };
 		53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */; };
 		53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C42964277CC925004C6B1C /* PlaceMapView.swift */; };
-		53C6DDDD278035A700633AED /* ConfirmVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863657277A18A600B2B3A7 /* ConfirmVoteView.swift */; };
 		53C6DDDF2780361200633AED /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6DDDE2780361200633AED /* ListContentView.swift */; };
 		53E467AB2777717500554722 /* SearchFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* SearchFriendView.swift */; };
 		53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AC27777CDE00554722 /* TextField+ClearButton.swift */; };
@@ -79,8 +78,7 @@
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
 		53836A40277CA0EB0069AF7D /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
-		53863657277A18A600B2B3A7 /* ConfirmVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmVoteView.swift; sourceTree = "<group>"; };
-		53863659277A192500B2B3A7 /* ConfirmMyFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmMyFriendRow.swift; sourceTree = "<group>"; };
+		53863659277A192500B2B3A7 /* AddedFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedFriendRow.swift; sourceTree = "<group>"; };
 		5389CAB827763A250095EE43 /* MyPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceView.swift; sourceTree = "<group>"; };
 		5389CABD27763B2B0095EE43 /* MyPlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceRow.swift; sourceTree = "<group>"; };
 		5392326B2782A59900746881 /* FilterResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultView.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				536D826327737C5B00C3AAB7 /* HomeView.swift */,
 				53A34EFE2773993700F48566 /* PreviousLocationRow.swift */,
 				53A1BE26277CCD7A003D9BB9 /* SelectFriend */,
-				53C6DDDC2780357100633AED /* ConfirmFriend */,
 				53C42963277CC89B004C6B1C /* SelectPlace */,
 				5392326D2782CD2F00746881 /* Vote */,
 			);
@@ -209,6 +206,7 @@
 		53A1BE26277CCD7A003D9BB9 /* SelectFriend */ = {
 			isa = PBXGroup;
 			children = (
+				53863659277A192500B2B3A7 /* AddedFriendRow.swift */,
 				53C00A8427749B7100C51065 /* SelectFriendView.swift */,
 				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
 				53E467AA2777717500554722 /* SearchFriendView.swift */,
@@ -318,15 +316,6 @@
 				53458E802781CCCA0064740D /* SearchPlaceView.swift */,
 			);
 			path = SelectPlace;
-			sourceTree = "<group>";
-		};
-		53C6DDDC2780357100633AED /* ConfirmFriend */ = {
-			isa = PBXGroup;
-			children = (
-				53863657277A18A600B2B3A7 /* ConfirmVoteView.swift */,
-				53863659277A192500B2B3A7 /* ConfirmMyFriendRow.swift */,
-			);
-			path = ConfirmFriend;
 			sourceTree = "<group>";
 		};
 		642210109F7DDC825E0E7E0E /* Pods */ = {
@@ -484,7 +473,6 @@
 				53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */,
 				536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */,
 				53C00A8527749B7100C51065 /* SelectFriendView.swift in Sources */,
-				53C6DDDD278035A700633AED /* ConfirmVoteView.swift in Sources */,
 				53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
 				53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */,
@@ -498,7 +486,7 @@
 				5349B23C2784182500A1B5BE /* CardStack.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
 				5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */,
-				5386365A277A192500B2B3A7 /* ConfirmMyFriendRow.swift in Sources */,
+				5386365A277A192500B2B3A7 /* AddedFriendRow.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
 				534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */,
 			);

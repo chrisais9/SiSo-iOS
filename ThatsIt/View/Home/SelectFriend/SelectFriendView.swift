@@ -46,7 +46,7 @@ struct SelectFriendView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack {
                         ForEach(selectedFriend.frieds, id: \.email) { friend in
-                            ConfirmMyFriendRow(name: friend.name)
+                            AddedFriendRow(name: friend.name)
                         }
                     }
                 }
