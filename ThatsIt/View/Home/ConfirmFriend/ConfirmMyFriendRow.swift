@@ -24,6 +24,7 @@ struct ConfirmMyFriendRow: View {
             Text(name)
                 .font(NotoSans.regular(size: 15))
         }
+        .padding()
         
     }
 }

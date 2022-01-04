@@ -9,130 +9,73 @@ import SwiftUI
 
 struct SelectFriendView: View {
     
-    @State var isFilterViewActive: Bool = false
     @State var isSearchViewActive: Bool = false
     @State var query: String = ""
     
-    @ObservedObject var selectedFilters: SelectedFilters = SelectedFilters()
     @ObservedObject var selectedFriend: SelectedFriend = SelectedFriend()
     
     @State var isInstructionDialogActive: Bool = false
-    @State var isConfirmationVoteViewActive: Bool = false
+    @State var isPlaceMapViewPresented: Bool = false
     
     var body: some View {
         VStack {
-            Text("투표를 함께 할\n친구를 선택해주세요.")
+            Text("우리 누구누구 모여?")
                 .font(NotoSans.bold(size: 25))
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             HStack {
-                Text("이메일, 닉네임으로 검색해보세요.")
-                    .font(NotoSans.regular(size: 15))
-                Spacer()
-                Image(systemName: "magnifyingglass")
-            }
-            .padding(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(Color.black, lineWidth: 1)
-            )
-            .onTapGesture {
-                isSearchViewActive.toggle()
-            }
-            .background(
-                NavigationLink(isActive: $isSearchViewActive, destination: {
-                    SearchFriendView(selectedFriend: selectedFriend)
-                }, label: {
-                    EmptyView()
-                })
-            )
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(selectedFriend.frieds, id: \.email) { friend in
-                        HStack {
-                            Text(friend.name)
-                            Spacer()
-                                .frame(width: 23)
-                            Image(systemName: "multiply.circle.fill")
-                                .onTapGesture {
-                                    selectedFriend.removeFriendBy(email: friend.email)
-                                }
+                Button {
+                    isSearchViewActive.toggle()
+                } label: {
+                    Image(systemName: "plus.circle")
+                        .resizable()
+                        .frame(width: 60, height: 60)
+                        .foregroundColor(.black)
+                }
+                .background(
+                    NavigationLink(isActive: $isSearchViewActive, destination: {
+                        SearchFriendView(selectedFriend: selectedFriend)
+                    }, label: {
+                        EmptyView()
+                    })
+                )
+                Divider()
+                    .frame(height: 100)
+                    
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(selectedFriend.frieds, id: \.email) { friend in
+                            ConfirmMyFriendRow(name: friend.name)
                         }
-                        .padding(5)
-                        .background(
-                            RoundedRectangle(cornerRadius: 4)
-                                .foregroundColor(.gray.opacity(0.5))
-                        )
                     }
                 }
             }
             
-            LargeButton(title: "필터 선택하기", foregroundColor: .black) {
-                isFilterViewActive.toggle()
-            }
-            .background(
-                NavigationLink(isActive: $isFilterViewActive, destination: {
-                    SelectFilterView(selectedFilters: selectedFilters)
-                }, label: {
-                    EmptyView()
-                })
-            )
-            .padding(.vertical)
-            
-            ScrollView(showsIndicators: false, content: {
-                FilterResultView(selectedFilters: selectedFilters)
-            })
-            
             Spacer()
-            HStack {
-                Text("가입되지 않은 친구라면?")
-                    .font(NotoSans.regular(size: 15))
-                Spacer()
-                Button {
-                    
-                } label: {
-                    Text("초대하기")
-                        .font(NotoSans.regular(size: 15))
-                        .padding(.vertical, 5)
-                        .padding(.horizontal, 25)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 3)
-                                .stroke()
-                        )
-                        .foregroundColor(.black)
-                }
-            }
             LargeButton(title: "다음으로", backgroundColor: .gray, foregroundColor: .white) {
-                if selectedFriend.isEmpty || selectedFilters.isEmpty {
+                if selectedFriend.isEmpty {
                     isInstructionDialogActive.toggle()
                 } else {
-                    isConfirmationVoteViewActive.toggle()
+                    isPlaceMapViewPresented.toggle()
                 }
             }
             .background(
-                NavigationLink(isActive: $isConfirmationVoteViewActive, destination: {
-                    ConfirmVoteView(selectedFilters: selectedFilters, selectedFriend: selectedFriend)
+                NavigationLink(isActive: $isPlaceMapViewPresented, destination: {
+                    PlaceMapView()
                 }, label: {
                     EmptyView()
                 })
             )
         }
         .padding()
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Image(systemName: "text.bubble.fill")
-            }
-        }
-        .ignoresSafeArea(.keyboard)
         .simpleDialog(isShowing: $isInstructionDialogActive, dialogContent: {
             VStack {
-                Text(selectedFriend.isEmpty ? "친구 미선택" : "필터 미선택")
+                Text("친구 미선택")
                     .font(NotoSans.bold(size: 15))
                     .padding(.vertical, 17)
                 
-                Text("\(selectedFriend.isEmpty ? "친구" : "필터")가 선택되지 않았어요!")
+                Text("친구가 선택되지 않았어요!")
                     .font(NotoSans.regular(size: 15))
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 13)
@@ -149,12 +92,14 @@ struct SelectFriendView: View {
                 }
             }
         })
+        .ignoresSafeArea(.keyboard)
     }
 }
 
 struct SelectFriendView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectFriendView()
-        
+        NavigationView {
+            SelectFriendView()
+        }
     }
 }
