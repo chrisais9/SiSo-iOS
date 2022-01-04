@@ -206,11 +206,11 @@
 		53A1BE26277CCD7A003D9BB9 /* SelectFriend */ = {
 			isa = PBXGroup;
 			children = (
-				53863659277A192500B2B3A7 /* AddedFriendRow.swift */,
 				53C00A8427749B7100C51065 /* SelectFriendView.swift */,
 				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
 				53E467AA2777717500554722 /* SearchFriendView.swift */,
 				532D191C27798DFD003C174B /* MyFriendRow.swift */,
+				53863659277A192500B2B3A7 /* AddedFriendRow.swift */,
 				5392326B2782A59900746881 /* FilterResultView.swift */,
 			);
 			path = SelectFriend;

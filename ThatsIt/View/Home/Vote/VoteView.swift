@@ -60,8 +60,7 @@ struct VoteView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         self.direction = nil
                     }
-                    let impactMed = UIImpactFeedbackGenerator(style: .medium)
-                    impactMed.impactOccurred()
+                    doHapticFeedback()
                 } content: { place, direction, isOnTop in
                     VStack {
                         WebImage(url: URL(string: place.image))
@@ -174,8 +173,10 @@ struct VoteView: View {
             
         }
     }
-    func setDirection(direction: FourDirections?) {
-        self.direction = direction
+    
+    func doHapticFeedback() {
+        let impactMed = UIImpactFeedbackGenerator(style: .medium)
+        impactMed.impactOccurred()
     }
 }
 
