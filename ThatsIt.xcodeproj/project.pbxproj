@@ -22,6 +22,10 @@
 		53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */; };
 		53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E802781CCCA0064740D /* SearchPlaceView.swift */; };
 		53458E832781D03A0064740D /* TextField+AutoFocus+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E822781D03A0064740D /* TextField+AutoFocus+UIKit.swift */; };
+		5349B236278417B000A1B5BE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B235278417B000A1B5BE /* CardView.swift */; };
+		5349B238278417D800A1B5BE /* CardSwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B237278417D800A1B5BE /* CardSwipeDirection.swift */; };
+		5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B2392784180100A1B5BE /* CardStackConfiguration.swift */; };
+		5349B23C2784182500A1B5BE /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B23B2784182500A1B5BE /* CardStack.swift */; };
 		534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C3E532780A1250046D1B9 /* FilterHeaderView.swift */; };
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
@@ -67,6 +71,10 @@
 		53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMenuRow.swift; sourceTree = "<group>"; };
 		53458E802781CCCA0064740D /* SearchPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceView.swift; sourceTree = "<group>"; };
 		53458E822781D03A0064740D /* TextField+AutoFocus+UIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+AutoFocus+UIKit.swift"; sourceTree = "<group>"; };
+		5349B235278417B000A1B5BE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5349B237278417D800A1B5BE /* CardSwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSwipeDirection.swift; sourceTree = "<group>"; };
+		5349B2392784180100A1B5BE /* CardStackConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackConfiguration.swift; sourceTree = "<group>"; };
+		5349B23B2784182500A1B5BE /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
 		534C3E532780A1250046D1B9 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
@@ -130,6 +138,17 @@
 				53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */,
 			);
 			path = PlaceDetail;
+			sourceTree = "<group>";
+		};
+		5349B2342784179D00A1B5BE /* SwipeCardView */ = {
+			isa = PBXGroup;
+			children = (
+				5349B235278417B000A1B5BE /* CardView.swift */,
+				5349B237278417D800A1B5BE /* CardSwipeDirection.swift */,
+				5349B2392784180100A1B5BE /* CardStackConfiguration.swift */,
+				5349B23B2784182500A1B5BE /* CardStack.swift */,
+			);
+			path = SwipeCardView;
 			sourceTree = "<group>";
 		};
 		535BF9A72780A0BC00DD7424 /* BottomSheet */ = {
@@ -262,6 +281,7 @@
 		53AB86F42770FC28006493D7 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				5349B2342784179D00A1B5BE /* SwipeCardView */,
 				53836A3F277CA0E00069AF7D /* Map */,
 				537C3FC427736B0C00A2626D /* Dialog */,
 				53AB86F52770FC41006493D7 /* LargeButton.swift */,
@@ -456,6 +476,7 @@
 				5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */,
 				5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */,
 				5392326F2782CD5F00746881 /* VoteView.swift in Sources */,
+				5349B236278417B000A1B5BE /* CardView.swift in Sources */,
 				53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */,
 				53AB86E52770F617006493D7 /* ThatsItApp.swift in Sources */,
 				53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */,
@@ -468,12 +489,15 @@
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
 				53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */,
 				53C6DDDF2780361200633AED /* ListContentView.swift in Sources */,
+				5349B238278417D800A1B5BE /* CardSwipeDirection.swift in Sources */,
 				53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */,
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
 				53458E832781D03A0064740D /* TextField+AutoFocus+UIKit.swift in Sources */,
 				53458E7C2781B4760064740D /* Place.swift in Sources */,
 				53458E7A2781B15B0064740D /* PlaceDetailView.swift in Sources */,
+				5349B23C2784182500A1B5BE /* CardStack.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
+				5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */,
 				5386365A277A192500B2B3A7 /* ConfirmMyFriendRow.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
 				534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */,
