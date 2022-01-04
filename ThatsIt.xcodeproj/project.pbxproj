@@ -26,6 +26,8 @@
 		5349B238278417D800A1B5BE /* CardSwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B237278417D800A1B5BE /* CardSwipeDirection.swift */; };
 		5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B2392784180100A1B5BE /* CardStackConfiguration.swift */; };
 		5349B23C2784182500A1B5BE /* CardStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B23B2784182500A1B5BE /* CardStack.swift */; };
+		5349B23E27843C7600A1B5BE /* PlaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B23D27843C7600A1B5BE /* PlaceCardView.swift */; };
+		5349B2422784463400A1B5BE /* VoteEmojiOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */; };
 		534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C3E532780A1250046D1B9 /* FilterHeaderView.swift */; };
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
@@ -65,7 +67,7 @@
 		530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+NotoSans.swift"; sourceTree = "<group>"; };
 		532D191C27798DFD003C174B /* MyFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendRow.swift; sourceTree = "<group>"; };
 		532D191E2779B8BD003C174B /* SelectedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriend.swift; sourceTree = "<group>"; };
-		53458E792781B15B0064740D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
+		53458E792781B15B0064740D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceDetailView.swift; path = ../SelectPlace/PlaceDetail/PlaceDetailView.swift; sourceTree = "<group>"; };
 		53458E7B2781B4760064740D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMenuRow.swift; sourceTree = "<group>"; };
 		53458E802781CCCA0064740D /* SearchPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 		5349B237278417D800A1B5BE /* CardSwipeDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSwipeDirection.swift; sourceTree = "<group>"; };
 		5349B2392784180100A1B5BE /* CardStackConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackConfiguration.swift; sourceTree = "<group>"; };
 		5349B23B2784182500A1B5BE /* CardStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStack.swift; sourceTree = "<group>"; };
+		5349B23D27843C7600A1B5BE /* PlaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCardView.swift; sourceTree = "<group>"; };
+		5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteEmojiOverlayView.swift; sourceTree = "<group>"; };
 		534C3E532780A1250046D1B9 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
@@ -132,7 +136,6 @@
 		53458E7D2781BE040064740D /* PlaceDetail */ = {
 			isa = PBXGroup;
 			children = (
-				53458E792781B15B0064740D /* PlaceDetailView.swift */,
 				53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */,
 			);
 			path = PlaceDetail;
@@ -199,6 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				5392326E2782CD5F00746881 /* VoteView.swift */,
+				5349B23D27843C7600A1B5BE /* PlaceCardView.swift */,
+				53458E792781B15B0064740D /* PlaceDetailView.swift */,
+				5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 				53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */,
 				53AB86F82770FDFB006493D7 /* LoginView.swift in Sources */,
 				53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */,
+				5349B2422784463400A1B5BE /* VoteEmojiOverlayView.swift in Sources */,
 				536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */,
 				53C00A8527749B7100C51065 /* SelectFriendView.swift in Sources */,
 				53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */,
@@ -488,6 +495,7 @@
 				5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */,
 				5386365A277A192500B2B3A7 /* AddedFriendRow.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
+				5349B23E27843C7600A1B5BE /* PlaceCardView.swift in Sources */,
 				534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,7 @@ struct ListContentView: View {
                             }
                             .background(
                                 NavigationLink(isActive: $isDetailViewActive, destination: {
-                                    PlaceDetailView()
+                                    PlaceDetailView(place: placeDummy)
                                 }, label: {
                                     EmptyView()
                                 })
