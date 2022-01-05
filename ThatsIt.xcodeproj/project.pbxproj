@@ -29,6 +29,7 @@
 		5349B23E27843C7600A1B5BE /* PlaceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B23D27843C7600A1B5BE /* PlaceCardView.swift */; };
 		5349B2422784463400A1B5BE /* VoteEmojiOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */; };
 		534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C3E532780A1250046D1B9 /* FilterHeaderView.swift */; };
+		535B8AB22785505F003B4F4F /* VoteResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535B8AB12785505F003B4F4F /* VoteResultView.swift */; };
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
 		53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53836A40277CA0EB0069AF7D /* NaverMapView.swift */; };
@@ -79,6 +80,7 @@
 		5349B23D27843C7600A1B5BE /* PlaceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCardView.swift; sourceTree = "<group>"; };
 		5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteEmojiOverlayView.swift; sourceTree = "<group>"; };
 		534C3E532780A1250046D1B9 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
+		535B8AB12785505F003B4F4F /* VoteResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResultView.swift; sourceTree = "<group>"; };
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
 		53836A40277CA0EB0069AF7D /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = SwipeCardView;
 			sourceTree = "<group>";
 		};
+		535B8AB027855028003B4F4F /* VoteResult */ = {
+			isa = PBXGroup;
+			children = (
+				535B8AB12785505F003B4F4F /* VoteResultView.swift */,
+			);
+			path = VoteResult;
+			sourceTree = "<group>";
+		};
 		535BF9A72780A0BC00DD7424 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 				53A1BE26277CCD7A003D9BB9 /* SelectFriend */,
 				53C42963277CC89B004C6B1C /* SelectPlace */,
 				5392326D2782CD2F00746881 /* Vote */,
+				535B8AB027855028003B4F4F /* VoteResult */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -465,6 +476,7 @@
 				53AB86E72770F617006493D7 /* ContentView.swift in Sources */,
 				532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */,
 				53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */,
+				535B8AB22785505F003B4F4F /* VoteResultView.swift in Sources */,
 				532D191D27798DFD003C174B /* MyFriendRow.swift in Sources */,
 				53E467AB2777717500554722 /* SearchFriendView.swift in Sources */,
 				5392326C2782A59900746881 /* FilterResultView.swift in Sources */,

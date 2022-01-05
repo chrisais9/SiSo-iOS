@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    init() {
+        print("app started")
+    }
     var body: some View {
         NavigationView {
             TabView {

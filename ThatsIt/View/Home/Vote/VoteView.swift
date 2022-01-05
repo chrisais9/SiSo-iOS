@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 var width = UIScreen.main.bounds.width
 struct VoteView: View {
     
-    @State var selectedPlace: Place? = nil
+    @State var selectedPlace: Place = placeDummy
     @State var isPlaceDetailViewPresented: Bool = false
     
     @State var direction: FourDirections? = nil
@@ -76,6 +76,11 @@ struct VoteView: View {
                                 isPlaceDetailViewPresented.toggle()
                             }
                         }
+                        .sheet(isPresented: $isPlaceDetailViewPresented) {
+                            
+                        } content: {
+                            PlaceDetailView(place: selectedPlace)
+                        }
                 }
                 .environment(\.cardStackConfiguration, CardStackConfiguration(
                     maxVisibleCards: 3,
@@ -85,10 +90,14 @@ struct VoteView: View {
             
             VoteEmojiOverlayView(direction: $direction)
             
-            if let selectedPlace = selectedPlace, isPlaceDetailViewPresented {
-                PlaceDetailView(place: selectedPlace)
-            }
+//            if let selectedPlace = selectedPlace, isPlaceDetailViewPresented {
+//                PlaceDetailView(place: selectedPlace)
+//            }
         }
+        .onChange(of: cardViewModel.count) { newValue in
+            print(cardViewModel.count)
+        }
+
     }
     
     func doHapticFeedback() {
