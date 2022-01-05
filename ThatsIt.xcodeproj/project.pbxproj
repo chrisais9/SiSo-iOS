@@ -155,8 +155,8 @@
 		535BF9A72780A0BC00DD7424 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
-				53C6DDDE2780361200633AED /* ListContentView.swift */,
 				534C3E532780A1250046D1B9 /* FilterHeaderView.swift */,
+				53C6DDDE2780361200633AED /* ListContentView.swift */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";

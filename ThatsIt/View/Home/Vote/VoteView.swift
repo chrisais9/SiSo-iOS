@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 var width = UIScreen.main.bounds.width
 struct VoteView: View {
     
-    var selectedPlace: Place? = nil
+    @State var selectedPlace: Place? = nil
     @State var isPlaceDetailViewPresented: Bool = false
     
     @State var direction: FourDirections? = nil
@@ -59,9 +59,8 @@ struct VoteView: View {
                         )
                 }
                 
-                CardStack(direction: FourDirections.direction, data: cardViewModel) { card, direction in
-                    print("swipe to \(direction) \(self.direction.debugDescription)")
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+                CardStack(direction: FourDirections.direction, data: cardViewModel) { place, direction in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         self.direction = nil
                     }
                     doHapticFeedback()
@@ -72,7 +71,10 @@ struct VoteView: View {
                             self.direction = newValue
                         })
                         .onTapGesture {
-                            isPlaceDetailViewPresented.toggle()
+                            if isOnTop {
+                                self.selectedPlace = place
+                                isPlaceDetailViewPresented.toggle()
+                            }
                         }
                 }
                 .environment(\.cardStackConfiguration, CardStackConfiguration(

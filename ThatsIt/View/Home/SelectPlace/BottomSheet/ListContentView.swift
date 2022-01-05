@@ -11,6 +11,8 @@ struct ListContentView: View {
     
     @Binding var bottomSheetPosition: CustomBottomSheetPosition
     @State var isDetailViewActive: Bool = false
+    @State var isVoteViewPresented: Bool = false
+    
     var body: some View {
         VStack {
             if bottomSheetPosition == .top {
@@ -33,9 +35,16 @@ struct ListContentView: View {
                 }
                 .padding(.top)
                 LargeButton(title: "투표 하러가기", backgroundColor: .gray, foregroundColor: .white) {
-                    
+                    isVoteViewPresented.toggle()
                 }
                 .padding(.horizontal)
+                .background(
+                    NavigationLink(isActive: $isVoteViewPresented, destination: {
+                        
+                    }, label: {
+                        EmptyView()
+                    })
+                )
             }
         }
     }
