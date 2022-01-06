@@ -1,3 +1,8 @@
-# ThatsIt
+# SiSo-iOS
+SwiftUI iOS SiSo project
 
-Prototype of That's It (temporary naming)
+## Prerequisites
+
+- iOS 14.1
+- CocoaPods
+- Xcode 13+
