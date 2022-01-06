@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BF1E4CEBDB29EABBD025B82 /* Pods_SiSo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E6D3755854493B6C5F2C78 /* Pods_SiSo.framework */; };
 		530D55182776F36D00AF1FD1 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */; };
 		530D55192776F36D00AF1FD1 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */; };
 		530D551A2776F36D00AF1FD1 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */; };
@@ -52,7 +53,6 @@
 		53C6DDDF2780361200633AED /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6DDDE2780361200633AED /* ListContentView.swift */; };
 		53E467AB2777717500554722 /* SearchFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* SearchFriendView.swift */; };
 		53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AC27777CDE00554722 /* TextField+ClearButton.swift */; };
-		F5B41E6B0BBE177A2CC468E4 /* Pods_ThatsIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 825349723DC9BBE2527186F7 /* Pods_ThatsIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,7 +90,7 @@
 		5392326B2782A59900746881 /* FilterResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultView.swift; sourceTree = "<group>"; };
 		5392326E2782CD5F00746881 /* VoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteView.swift; sourceTree = "<group>"; };
 		53A34EFE2773993700F48566 /* PreviousLocationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLocationRow.swift; sourceTree = "<group>"; };
-		53AB86E12770F617006493D7 /* ThatsIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThatsIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53AB86E12770F617006493D7 /* SiSo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiSo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53AB86E42770F617006493D7 /* ThatsItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThatsItApp.swift; sourceTree = "<group>"; };
 		53AB86E62770F617006493D7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		53AB86E82770F618006493D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,8 +104,10 @@
 		53C6DDDE2780361200633AED /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
 		53E467AA2777717500554722 /* SearchFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendView.swift; sourceTree = "<group>"; };
 		53E467AC27777CDE00554722 /* TextField+ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+ClearButton.swift"; sourceTree = "<group>"; };
-		825349723DC9BBE2527186F7 /* Pods_ThatsIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThatsIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2B55E4F9039825F46E241A /* Pods-SiSo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiSo.release.xcconfig"; path = "Target Support Files/Pods-SiSo/Pods-SiSo.release.xcconfig"; sourceTree = "<group>"; };
+		69E68C93467D851E88731A46 /* Pods-SiSo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiSo.debug.xcconfig"; path = "Target Support Files/Pods-SiSo/Pods-SiSo.debug.xcconfig"; sourceTree = "<group>"; };
 		B0709300817A7AE56DE29C4D /* Pods-ThatsIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThatsIt.release.xcconfig"; path = "Target Support Files/Pods-ThatsIt/Pods-ThatsIt.release.xcconfig"; sourceTree = "<group>"; };
+		E6E6D3755854493B6C5F2C78 /* Pods_SiSo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiSo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5B41E6B0BBE177A2CC468E4 /* Pods_ThatsIt.framework in Frameworks */,
+				4BF1E4CEBDB29EABBD025B82 /* Pods_SiSo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +238,7 @@
 		53AB86D82770F617006493D7 = {
 			isa = PBXGroup;
 			children = (
-				53AB86E32770F617006493D7 /* ThatsIt */,
+				53AB86E32770F617006493D7 /* SiSo */,
 				53AB86E22770F617006493D7 /* Products */,
 				642210109F7DDC825E0E7E0E /* Pods */,
 				680386A38C16305B4D2FAEAE /* Frameworks */,
@@ -246,12 +248,12 @@
 		53AB86E22770F617006493D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				53AB86E12770F617006493D7 /* ThatsIt.app */,
+				53AB86E12770F617006493D7 /* SiSo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		53AB86E32770F617006493D7 /* ThatsIt */ = {
+		53AB86E32770F617006493D7 /* SiSo */ = {
 			isa = PBXGroup;
 			children = (
 				530D551F2776F47900AF1FD1 /* Info.plist */,
@@ -262,7 +264,7 @@
 				530D55102776F35400AF1FD1 /* Fonts */,
 				53AB86EA2770F618006493D7 /* Preview Content */,
 			);
-			path = ThatsIt;
+			path = SiSo;
 			sourceTree = "<group>";
 		};
 		53AB86EA2770F618006493D7 /* Preview Content */ = {
@@ -340,6 +342,8 @@
 			children = (
 				2A74DCEE0AB82E6FA016ED93 /* Pods-ThatsIt.debug.xcconfig */,
 				B0709300817A7AE56DE29C4D /* Pods-ThatsIt.release.xcconfig */,
+				69E68C93467D851E88731A46 /* Pods-SiSo.debug.xcconfig */,
+				5C2B55E4F9039825F46E241A /* Pods-SiSo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -347,7 +351,7 @@
 		680386A38C16305B4D2FAEAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				825349723DC9BBE2527186F7 /* Pods_ThatsIt.framework */,
+				E6E6D3755854493B6C5F2C78 /* Pods_SiSo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -355,9 +359,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		53AB86E02770F617006493D7 /* ThatsIt */ = {
+		53AB86E02770F617006493D7 /* SiSo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53AB86EF2770F618006493D7 /* Build configuration list for PBXNativeTarget "ThatsIt" */;
+			buildConfigurationList = 53AB86EF2770F618006493D7 /* Build configuration list for PBXNativeTarget "SiSo" */;
 			buildPhases = (
 				5E7D7B8B11D997A546AB4337 /* [CP] Check Pods Manifest.lock */,
 				53AB86DD2770F617006493D7 /* Sources */,
@@ -369,9 +373,9 @@
 			);
 			dependencies = (
 			);
-			name = ThatsIt;
+			name = SiSo;
 			productName = ThatsIt;
-			productReference = 53AB86E12770F617006493D7 /* ThatsIt.app */;
+			productReference = 53AB86E12770F617006493D7 /* SiSo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -389,7 +393,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 53AB86DC2770F617006493D7 /* Build configuration list for PBXProject "ThatsIt" */;
+			buildConfigurationList = 53AB86DC2770F617006493D7 /* Build configuration list for PBXProject "SiSo" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -402,7 +406,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53AB86E02770F617006493D7 /* ThatsIt */,
+				53AB86E02770F617006493D7 /* SiSo */,
 			);
 		};
 /* End PBXProject section */
@@ -433,15 +437,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThatsIt/Pods-ThatsIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SiSo/Pods-SiSo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ThatsIt/Pods-ThatsIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SiSo/Pods-SiSo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ThatsIt/Pods-ThatsIt-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SiSo/Pods-SiSo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5E7D7B8B11D997A546AB4337 /* [CP] Check Pods Manifest.lock */ = {
@@ -459,7 +463,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ThatsIt-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SiSo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -638,17 +642,17 @@
 		};
 		53AB86F02770F618006493D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A74DCEE0AB82E6FA016ED93 /* Pods-ThatsIt.debug.xcconfig */;
+			baseConfigurationReference = 69E68C93467D851E88731A46 /* Pods-SiSo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ThatsIt/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SiSo/Preview Content\"";
 				DEVELOPMENT_TEAM = 273WM862CP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ThatsIt/Info.plist;
+				INFOPLIST_FILE = SiSo/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
@@ -665,7 +669,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.koohyongmo.ThatsIt;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.koohyongmo.SiSo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -675,17 +679,17 @@
 		};
 		53AB86F12770F618006493D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0709300817A7AE56DE29C4D /* Pods-ThatsIt.release.xcconfig */;
+			baseConfigurationReference = 5C2B55E4F9039825F46E241A /* Pods-SiSo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ThatsIt/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SiSo/Preview Content\"";
 				DEVELOPMENT_TEAM = 273WM862CP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ThatsIt/Info.plist;
+				INFOPLIST_FILE = SiSo/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
@@ -702,7 +706,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.koohyongmo.ThatsIt;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.koohyongmo.SiSo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -713,7 +717,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		53AB86DC2770F617006493D7 /* Build configuration list for PBXProject "ThatsIt" */ = {
+		53AB86DC2770F617006493D7 /* Build configuration list for PBXProject "SiSo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53AB86ED2770F618006493D7 /* Debug */,
@@ -722,7 +726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53AB86EF2770F618006493D7 /* Build configuration list for PBXNativeTarget "ThatsIt" */ = {
+		53AB86EF2770F618006493D7 /* Build configuration list for PBXNativeTarget "SiSo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53AB86F02770F618006493D7 /* Debug */,
