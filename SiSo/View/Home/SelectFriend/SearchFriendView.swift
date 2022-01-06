@@ -1,6 +1,6 @@
 //
 //  SearchFriendView.swift
-//  ThatsIt
+//  SiSo
 //
 //  Created by 구형모 on 2021/12/26.
 //

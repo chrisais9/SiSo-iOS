@@ -1,6 +1,6 @@
 //
-//  ThatsItApp.swift
-//  ThatsIt
+//  SiSoApp.swift
+//  SiSo
 //
 //  Created by 구형모 on 2021/12/21.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 import NMapsMap
 
 @main
-struct ThatsItApp: App {
+struct SiSoApp: App {
     
     init() {
         NMFAuthManager.shared().clientId = "gyrtzz3dq2"

@@ -5,7 +5,7 @@ target 'SiSo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for ThatsIt
+  # Pods for SiSo
   
   # SDWebImageSwiftUI(https://github.com/SDWebImage/SDWebImageSwiftUI)
   pod 'SDWebImageSwiftUI'
