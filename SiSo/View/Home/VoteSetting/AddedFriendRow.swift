@@ -6,23 +6,32 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+import Kingfisher
 
 struct AddedFriendRow: View {
     
     var isHost: Bool
-    var profileImage: String = "https://www.ibossedu.co.kr/template/DESIGN_shared/program/theme/01/THUMBNAIL_60_60_icon_rep_box.gif"
+    var profileImage: String = "https://www.nicepng.com/png/full/73-730154_open-default-profile-picture-png.png"
     var name: String
     
     var body: some View {
         VStack(spacing: 15) {
+            HStack {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "x.circle.fill")
+                        .foregroundColor(.gray)
+                }
+
+                Spacer()
+            }
             ZStack {
-                WebImage(url: URL(string: profileImage))
+                URLImage(url: URL(string: profileImage)!)
+                    .body
                     .resizable()
-                    .placeholder {
-                        Rectangle().foregroundColor(.gray)
-                    }
                     .clipShape(Circle())
+                
                 if isHost {
                     Image(systemName: "crown.fill")
                         .position(x: 30, y: 0)
@@ -34,6 +43,7 @@ struct AddedFriendRow: View {
             Text(name)
                 .font(NotoSans.regular(size: 15))
         }
+        .frame(width: 80)
         .padding()
         
     }

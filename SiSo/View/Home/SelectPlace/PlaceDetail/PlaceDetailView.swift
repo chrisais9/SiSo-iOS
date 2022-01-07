@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+import Kingfisher
 
 struct PlaceDetailView: View {
     
@@ -41,7 +41,7 @@ struct PlaceDetailView: View {
             }
             .padding()
             .background(
-                WebImage(url: URL(string: place.image))
+                KFImage.url(URL(string: place.image))
                     .resizable()
                     .opacity(0.7)
             )

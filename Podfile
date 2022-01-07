@@ -7,8 +7,8 @@ target 'SiSo' do
 
   # Pods for SiSo
   
-  # SDWebImageSwiftUI(https://github.com/SDWebImage/SDWebImageSwiftUI)
-  pod 'SDWebImageSwiftUI'
+  # Kingfisher
+  pod 'Kingfisher', '~> 7.0'
   
   # NaverMap SDK
   pod 'NMapsMap','3.13.0'

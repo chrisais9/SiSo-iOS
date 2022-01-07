@@ -1,38 +1,32 @@
 PODS:
   - BottomSheetSwiftUI (2.4.0)
+  - Kingfisher (7.1.2)
   - NMapsMap (3.13.0)
-  - SDWebImage (5.12.1):
-    - SDWebImage/Core (= 5.12.1)
-  - SDWebImage/Core (5.12.1)
-  - SDWebImageSwiftUI (2.0.2):
-    - SDWebImage (~> 5.10)
   - Socket.IO-Client-Swift (15.2.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.1)
 
 DEPENDENCIES:
   - BottomSheetSwiftUI
+  - Kingfisher (~> 7.0)
   - NMapsMap (= 3.13.0)
-  - SDWebImageSwiftUI
   - Socket.IO-Client-Swift (~> 15.2.0)
 
 SPEC REPOS:
   trunk:
     - BottomSheetSwiftUI
+    - Kingfisher
     - NMapsMap
-    - SDWebImage
-    - SDWebImageSwiftUI
     - Socket.IO-Client-Swift
     - Starscream
 
 SPEC CHECKSUMS:
   BottomSheetSwiftUI: c176c3022969d6383deaa388dd011199cc50f5bd
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   NMapsMap: 88b5bdac7087bfa99ab058ff5cdd95fb766e0e95
-  SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
-  SDWebImageSwiftUI: 8a3923c95108312b03a599ec1498754af55a6819
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 10d24e7e223d2325ebbeb606c76e4f2176413dea
+PODFILE CHECKSUM: ab80f83f69247793b12fadf5c36727e7855838a9
 
 COCOAPODS: 1.11.2

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+import Kingfisher
 
 struct PlaceMenuRow: View {
     
@@ -16,7 +16,7 @@ struct PlaceMenuRow: View {
     
     var body: some View {
         HStack {
-            WebImage(url: URL(string: image))
+            KFImage.url(URL(string: image))
                 .resizable()
                 .frame(width: 100, height: 100)
                 .cornerRadius(8)

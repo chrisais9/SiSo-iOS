@@ -19,6 +19,8 @@ struct VoteSettingView: View {
     
     @State var location: String = ""
     
+    @State var isFriendEditMode = false
+    
     var body: some View {
         ZStack {
             ScrollView {
@@ -64,6 +66,13 @@ struct VoteSettingView: View {
                             HStack {
                                 ForEach(selectedFriend.frieds, id: \.email) { friend in
                                     AddedFriendRow(isHost: friend.name == "방장", name: friend.name)
+                                        .if(isFriendEditMode) { view in
+                                            view.wiggling()
+                                        }
+                                        .onTapGesture { isFriendEditMode = false }
+                                        .onLongPressGesture {
+                                            isFriendEditMode = true
+                                        }
                                 }
                             }
                         }
@@ -92,6 +101,9 @@ struct VoteSettingView: View {
                 )
             }
             .padding()
+        }
+        .onTapGesture {
+            isFriendEditMode = false
         }
         .navigationBarTitleDisplayMode(.inline)
         //        .onAppear(perform: {

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+import Kingfisher
 
 struct PlaceCardView: View {
     
@@ -14,7 +14,7 @@ struct PlaceCardView: View {
     
     var body: some View {
         VStack {
-            WebImage(url: URL(string: place.image))
+            KFImage.url(URL(string: place.image))
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             

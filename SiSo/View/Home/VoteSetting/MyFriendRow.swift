@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+import Kingfisher
 
 struct MyFriendRow: View {
     
@@ -18,11 +18,11 @@ struct MyFriendRow: View {
     
     var body: some View {
         HStack {
-            WebImage(url: URL(string: profileImage))
-                .resizable()
-                .placeholder {
+            KFImage.url(URL(string: profileImage))
+                .placeholder({
                     Rectangle().foregroundColor(.gray)
-                }
+                })
+                .resizable()
                 .clipShape(Circle())
                 .frame(width: 40, height: 40)
             VStack(alignment: .leading) {

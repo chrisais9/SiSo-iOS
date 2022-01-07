@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+import Kingfisher
 
 struct MyPlaceRow: View {
     
@@ -18,14 +18,13 @@ struct MyPlaceRow: View {
     
     var body: some View {
         HStack {
-            WebImage(url: URL(string: preview))
+            KFImage.url(URL(string: preview))
                 .resizable()
                 .placeholder {
                     Rectangle().foregroundColor(.gray)
                 }
                 .cornerRadius(10)
                 .frame(width: 150, height: 150)
-                
                 
             VStack(alignment: .leading) {
                 Spacer()
