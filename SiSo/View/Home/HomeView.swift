@@ -59,7 +59,7 @@ struct HomeView: View {
                 }
                 .background(
                     NavigationLink(isActive: $isSelectFriendViewActive, destination: {
-                        SelectFriendView()
+                        VoteSettingView()
                     }, label: {
                         EmptyView()
                     })

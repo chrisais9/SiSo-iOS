@@ -47,11 +47,12 @@
 		53AB86EC2770F618006493D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53AB86EB2770F618006493D7 /* Preview Assets.xcassets */; };
 		53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB86F52770FC41006493D7 /* LargeButton.swift */; };
 		53AB86F82770FDFB006493D7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB86F72770FDFB006493D7 /* LoginView.swift */; };
-		53C00A8527749B7100C51065 /* SelectFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8427749B7100C51065 /* SelectFriendView.swift */; };
+		53C00A8527749B7100C51065 /* VoteSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8427749B7100C51065 /* VoteSettingView.swift */; };
 		53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A862774ACEE00C51065 /* SelectFilterView.swift */; };
 		53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */; };
 		53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C42964277CC925004C6B1C /* PlaceMapView.swift */; };
 		53C6DDDF2780361200633AED /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6DDDE2780361200633AED /* ListContentView.swift */; };
+		53CCDB95278842DC00C335FC /* LocationFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CCDB94278842DC00C335FC /* LocationFilterView.swift */; };
 		53E467AB2777717500554722 /* SearchFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* SearchFriendView.swift */; };
 		53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AC27777CDE00554722 /* TextField+ClearButton.swift */; };
 /* End PBXBuildFile section */
@@ -99,11 +100,12 @@
 		53AB86EB2770F618006493D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53AB86F52770FC41006493D7 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		53AB86F72770FDFB006493D7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		53C00A8427749B7100C51065 /* SelectFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendView.swift; sourceTree = "<group>"; };
+		53C00A8427749B7100C51065 /* VoteSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteSettingView.swift; sourceTree = "<group>"; };
 		53C00A862774ACEE00C51065 /* SelectFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterView.swift; sourceTree = "<group>"; };
 		53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectedFilters+Enum.swift"; sourceTree = "<group>"; };
 		53C42964277CC925004C6B1C /* PlaceMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapView.swift; sourceTree = "<group>"; };
 		53C6DDDE2780361200633AED /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
+		53CCDB94278842DC00C335FC /* LocationFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFilterView.swift; sourceTree = "<group>"; };
 		53E467AA2777717500554722 /* SearchFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendView.swift; sourceTree = "<group>"; };
 		53E467AC27777CDE00554722 /* TextField+ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+ClearButton.swift"; sourceTree = "<group>"; };
 		5C2B55E4F9039825F46E241A /* Pods-SiSo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiSo.release.xcconfig"; path = "Target Support Files/Pods-SiSo/Pods-SiSo.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +182,7 @@
 			children = (
 				536D826327737C5B00C3AAB7 /* HomeView.swift */,
 				53A34EFE2773993700F48566 /* PreviousLocationRow.swift */,
-				53A1BE26277CCD7A003D9BB9 /* SelectFriend */,
+				53A1BE26277CCD7A003D9BB9 /* VoteSetting */,
 				53C42963277CC89B004C6B1C /* SelectPlace */,
 				5392326D2782CD2F00746881 /* Vote */,
 				535B8AB027855028003B4F4F /* VoteResult */,
@@ -240,17 +242,18 @@
 			path = Socket;
 			sourceTree = "<group>";
 		};
-		53A1BE26277CCD7A003D9BB9 /* SelectFriend */ = {
+		53A1BE26277CCD7A003D9BB9 /* VoteSetting */ = {
 			isa = PBXGroup;
 			children = (
-				53C00A8427749B7100C51065 /* SelectFriendView.swift */,
+				53C00A8427749B7100C51065 /* VoteSettingView.swift */,
 				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
 				53E467AA2777717500554722 /* SearchFriendView.swift */,
 				532D191C27798DFD003C174B /* MyFriendRow.swift */,
 				53863659277A192500B2B3A7 /* AddedFriendRow.swift */,
 				5392326B2782A59900746881 /* FilterResultView.swift */,
+				53CCDB94278842DC00C335FC /* LocationFilterView.swift */,
 			);
-			path = SelectFriend;
+			path = VoteSetting;
 			sourceTree = "<group>";
 		};
 		53AB86D82770F617006493D7 = {
@@ -515,7 +518,7 @@
 				53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */,
 				5349B2422784463400A1B5BE /* VoteEmojiOverlayView.swift in Sources */,
 				536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */,
-				53C00A8527749B7100C51065 /* SelectFriendView.swift in Sources */,
+				53C00A8527749B7100C51065 /* VoteSettingView.swift in Sources */,
 				53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
 				53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */,
@@ -523,6 +526,7 @@
 				5349B238278417D800A1B5BE /* CardSwipeDirection.swift in Sources */,
 				53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */,
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
+				53CCDB95278842DC00C335FC /* LocationFilterView.swift in Sources */,
 				53458E832781D03A0064740D /* TextField+AutoFocus+UIKit.swift in Sources */,
 				53458E7C2781B4760064740D /* Place.swift in Sources */,
 				53458E7A2781B15B0064740D /* PlaceDetailView.swift in Sources */,

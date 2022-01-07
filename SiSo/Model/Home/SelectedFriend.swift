@@ -28,7 +28,7 @@ class SelectedFriend: ObservableObject {
         MyFriend(name: "구형모", email: "chrisais9@naver.com")
     ]
     
-    @Published var frieds: [MyFriend] = []
+    @Published var frieds: [MyFriend] = [MyFriend(name: "방장", email: "bangjang@naver.com")]
     
     var isEmpty: Bool {
         frieds.isEmpty
