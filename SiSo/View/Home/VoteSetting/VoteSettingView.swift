@@ -68,7 +68,6 @@ struct VoteSettingView: View {
                             }
                         }
                     }
-                    .padding()
                     
                     LocationFilterView()
                 }
