@@ -10,9 +10,9 @@ import SDWebImageSwiftUI
 
 struct AddedFriendRow: View {
     
-    var isHost: Bool = false
+    var isHost: Bool
     var profileImage: String = "https://www.ibossedu.co.kr/template/DESIGN_shared/program/theme/01/THUMBNAIL_60_60_icon_rep_box.gif"
-    var name: String = "닉네임"
+    var name: String
     
     var body: some View {
         VStack(spacing: 15) {
@@ -23,10 +23,12 @@ struct AddedFriendRow: View {
                         Rectangle().foregroundColor(.gray)
                     }
                     .clipShape(Circle())
-                Image(systemName: "crown.fill")
-                    .position(x: 30, y: 0)
-                    .imageScale(.large)
-                    .foregroundColor(.yellow)
+                if isHost {
+                    Image(systemName: "crown.fill")
+                        .position(x: 30, y: 0)
+                        .imageScale(.large)
+                        .foregroundColor(.yellow)
+                }
             }
             .frame(width: 60, height: 60)
             Text(name)
@@ -39,6 +41,6 @@ struct AddedFriendRow: View {
 
 struct ConfirmMyFriendRow_Previews: PreviewProvider {
     static var previews: some View {
-        AddedFriendRow()
+        AddedFriendRow(isHost: true, name: "홍길동")
     }
 }

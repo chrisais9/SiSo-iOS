@@ -63,7 +63,7 @@ struct VoteSettingView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(selectedFriend.frieds, id: \.email) { friend in
-                                    AddedFriendRow(name: friend.name)
+                                    AddedFriendRow(isHost: friend.name == "방장", name: friend.name)
                                 }
                             }
                         }
