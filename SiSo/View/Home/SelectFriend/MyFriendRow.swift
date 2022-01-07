@@ -34,8 +34,7 @@ struct MyFriendRow: View {
             Spacer()
             Button {
                 withAnimation {
-                    selectedFriend.frieds.append(MyFriend(name: name, email: email))
-                    selectedFriend.exampleFriends.removeAll(where: {$0.email == email})
+                    selectedFriend.inviteFriend(name: name, email: email)
                 }
             } label: {
                 Text("선택")

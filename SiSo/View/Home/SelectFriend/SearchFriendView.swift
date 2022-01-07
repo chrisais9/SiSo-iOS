@@ -17,7 +17,7 @@ struct SearchFriendView: View {
     }
     
     @State var query: String = ""
-    @State var isShowingFriends: Bool = false
+    @State var isShowingFriends: Bool = true
     
     @ObservedObject var selectedFriend: SelectedFriend
     

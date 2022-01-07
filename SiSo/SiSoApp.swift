@@ -12,6 +12,8 @@ import NMapsMap
 struct SiSoApp: App {
     
     init() {
+        SisoSocketManager.shared.openConnection()
+        
         NMFAuthManager.shared().clientId = "gyrtzz3dq2"
     }
     var body: some Scene {

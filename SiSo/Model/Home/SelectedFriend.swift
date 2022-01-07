@@ -8,7 +8,16 @@
 import Foundation
 import SwiftUI
 
+struct MyFriend: Codable {
+    let profileImage: String = "https://www.ibossedu.co.kr/template/DESIGN_shared/program/theme/01/THUMBNAIL_60_60_icon_rep_box.gif"
+    let name: String
+    let email: String
+}
+
 class SelectedFriend: ObservableObject {
+    
+    let socketManager: SisoSocketManager = SisoSocketManager.shared
+    
     @Published var exampleFriends: [MyFriend] = [
         MyFriend(name: "김갑돌", email: "chfasdf@naver.com"),
         MyFriend(name: "오형제", email: "chgregs9@naver.com"),
@@ -24,15 +33,26 @@ class SelectedFriend: ObservableObject {
     var isEmpty: Bool {
         frieds.isEmpty
     }
+    
     func removeFriendBy(email: String) {
         withAnimation {
             frieds.removeAll(where: {$0.email == email})
         }
     }
-}
-
-struct MyFriend {
-    let profileImage: String = "https://www.ibossedu.co.kr/template/DESIGN_shared/program/theme/01/THUMBNAIL_60_60_icon_rep_box.gif"
-    let name: String
-    let email: String
+    
+    func inviteFriend(name: String, email: String) {
+        withAnimation {
+            socketManager.sendFriendEntered(name: name, email: email)
+            frieds.append(MyFriend(name: name, email: email))
+            exampleFriends.removeAll(where: {$0.email == email})
+        }
+    }
+    
+    func syncFriendList() {
+        withAnimation {
+            socketManager.syncFriendList { friends in
+                self.frieds = friends
+            }
+        }
+    }
 }

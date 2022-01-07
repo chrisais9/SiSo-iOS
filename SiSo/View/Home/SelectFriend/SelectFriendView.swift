@@ -68,6 +68,9 @@ struct SelectFriendView: View {
                 })
             )
         }
+        .onAppear(perform: {
+            selectedFriend.syncFriendList()
+        })
         .padding()
         .simpleDialog(isShowing: $isInstructionDialogActive, dialogContent: {
             VStack {
