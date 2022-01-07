@@ -14,6 +14,8 @@ target 'SiSo' do
   pod 'NMapsMap','3.13.0'
 
   pod 'BottomSheetSwiftUI'
+  
+  pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 end
 
 post_install do |installer|
