@@ -10,21 +10,24 @@ import Kingfisher
 
 struct AddedFriendRow: View {
     
+    var isEditing: Bool
     var isHost: Bool
     var profileImage: String = "https://www.nicepng.com/png/full/73-730154_open-default-profile-picture-png.png"
     var name: String
     
     var body: some View {
-        VStack(spacing: 15) {
-            HStack {
-                Button {
-                    
-                } label: {
-                    Image(systemName: "x.circle.fill")
-                        .foregroundColor(.gray)
-                }
+        VStack(spacing: 0) {
+            if isEditing {
+                HStack {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "x.circle.fill")
+                            .foregroundColor(.gray)
+                    }
 
-                Spacer()
+                    Spacer()
+                }
             }
             ZStack {
                 URLImage(url: URL(string: profileImage)!)
@@ -40,6 +43,7 @@ struct AddedFriendRow: View {
                 }
             }
             .frame(width: 60, height: 60)
+            .padding(.bottom, 7)
             Text(name)
                 .font(NotoSans.regular(size: 15))
         }
@@ -51,6 +55,6 @@ struct AddedFriendRow: View {
 
 struct ConfirmMyFriendRow_Previews: PreviewProvider {
     static var previews: some View {
-        AddedFriendRow(isHost: true, name: "홍길동")
+        AddedFriendRow(isEditing: true, isHost: true, name: "홍길동")
     }
 }

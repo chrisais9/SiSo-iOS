@@ -65,7 +65,7 @@ struct VoteSettingView: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(selectedFriend.frieds, id: \.email) { friend in
-                                    AddedFriendRow(isHost: friend.name == "방장", name: friend.name)
+                                    AddedFriendRow(isEditing: isFriendEditMode, isHost: friend.name == "방장", name: friend.name)
                                         .if(isFriendEditMode) { view in
                                             view.wiggling()
                                         }
@@ -75,7 +75,7 @@ struct VoteSettingView: View {
                                         }
                                 }
                             }
-                        }
+                        }.clipped()
                     }
                     
                     LocationFilterView()
