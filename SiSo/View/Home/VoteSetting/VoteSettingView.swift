@@ -60,8 +60,7 @@ struct VoteSettingView: View {
                             })
                         )
                         Divider()
-                            .frame(height: 100)
-                        
+    
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(selectedFriend.frieds, id: \.email) { friend in
@@ -74,8 +73,8 @@ struct VoteSettingView: View {
                                             isFriendEditMode = true
                                         }
                                 }
-                            }
-                        }.clipped()
+                            }.frame(height: 100)
+                        }
                     }
                     
                     LocationFilterView()

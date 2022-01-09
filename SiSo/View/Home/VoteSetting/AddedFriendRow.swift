@@ -16,8 +16,8 @@ struct AddedFriendRow: View {
     var name: String
     
     var body: some View {
-        VStack(spacing: 0) {
-            if isEditing {
+        ZStack {
+            VStack {
                 HStack {
                     Button {
                         
@@ -25,36 +25,42 @@ struct AddedFriendRow: View {
                         Image(systemName: "x.circle.fill")
                             .foregroundColor(.gray)
                     }
-
+                    
                     Spacer()
                 }
+                Spacer()
             }
-            ZStack {
+            .opacity(isEditing ? 1 : 0)
+            VStack {
                 URLImage(url: URL(string: profileImage)!)
                     .body
                     .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
                 
-                if isHost {
-                    Image(systemName: "crown.fill")
-                        .position(x: 30, y: 0)
-                        .imageScale(.large)
-                        .foregroundColor(.yellow)
-                }
+                
+                Text(name)
+                    .font(NotoSans.regular(size: 15))
             }
-            .frame(width: 60, height: 60)
-            .padding(.bottom, 7)
-            Text(name)
-                .font(NotoSans.regular(size: 15))
+            .padding()
+            
+            
         }
-        .frame(width: 80)
-        .padding()
-        
+        .aspectRatio(0.5, contentMode: .fit)
+        .overlay(
+            isHost ?
+            VStack {
+                Image(systemName: "crown.fill")
+                    .foregroundColor(.yellow)
+            }
+            : nil, alignment: .top
+        )
     }
 }
 
 struct ConfirmMyFriendRow_Previews: PreviewProvider {
     static var previews: some View {
         AddedFriendRow(isEditing: true, isHost: true, name: "홍길동")
+            .frame(height: 200)
     }
 }
