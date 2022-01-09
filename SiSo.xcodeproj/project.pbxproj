@@ -16,7 +16,7 @@
 		530D551D2776F36D00AF1FD1 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55162776F36D00AF1FD1 /* NotoSansKR-Medium.otf */; };
 		530D551E2776F36D00AF1FD1 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55172776F36D00AF1FD1 /* NotoSansKR-Thin.otf */; };
 		530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */; };
-		532D191D27798DFD003C174B /* MyFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191C27798DFD003C174B /* MyFriendRow.swift */; };
+		532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191C27798DFD003C174B /* InviteFriendRow.swift */; };
 		532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191E2779B8BD003C174B /* SelectedFriend.swift */; };
 		53458E7A2781B15B0064740D /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E792781B15B0064740D /* PlaceDetailView.swift */; };
 		53458E7C2781B4760064740D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7B2781B4760064740D /* Place.swift */; };
@@ -34,10 +34,9 @@
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
 		53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53836A40277CA0EB0069AF7D /* NaverMapView.swift */; };
-		5386365A277A192500B2B3A7 /* AddedFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863659277A192500B2B3A7 /* AddedFriendRow.swift */; };
+		5386365A277A192500B2B3A7 /* PreviewFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863659277A192500B2B3A7 /* PreviewFriendRow.swift */; };
 		5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CAB827763A250095EE43 /* MyPlaceView.swift */; };
 		5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5389CABD27763B2B0095EE43 /* MyPlaceRow.swift */; };
-		5392326C2782A59900746881 /* FilterResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392326B2782A59900746881 /* FilterResultView.swift */; };
 		5392326F2782CD5F00746881 /* VoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392326E2782CD5F00746881 /* VoteView.swift */; };
 		5398E46D2787D9C100E7437B /* SisoSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398E46C2787D9C100E7437B /* SisoSocketManager.swift */; };
 		539AE41827887DED008CAC20 /* View+ifCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539AE41727887DED008CAC20 /* View+ifCondition.swift */; };
@@ -55,8 +54,8 @@
 		53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */; };
 		53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C42964277CC925004C6B1C /* PlaceMapView.swift */; };
 		53C6DDDF2780361200633AED /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6DDDE2780361200633AED /* ListContentView.swift */; };
-		53CCDB95278842DC00C335FC /* LocationFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CCDB94278842DC00C335FC /* LocationFilterView.swift */; };
-		53E467AB2777717500554722 /* SearchFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* SearchFriendView.swift */; };
+		53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CCDB94278842DC00C335FC /* PreviewFilterView.swift */; };
+		53E467AB2777717500554722 /* InviteFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* InviteFriendView.swift */; };
 		53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AC27777CDE00554722 /* TextField+ClearButton.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +70,7 @@
 		530D55172776F36D00AF1FD1 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
 		530D551F2776F47900AF1FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+NotoSans.swift"; sourceTree = "<group>"; };
-		532D191C27798DFD003C174B /* MyFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendRow.swift; sourceTree = "<group>"; };
+		532D191C27798DFD003C174B /* InviteFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendRow.swift; sourceTree = "<group>"; };
 		532D191E2779B8BD003C174B /* SelectedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriend.swift; sourceTree = "<group>"; };
 		53458E792781B15B0064740D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceDetailView.swift; path = ../SelectPlace/PlaceDetail/PlaceDetailView.swift; sourceTree = "<group>"; };
 		53458E7B2781B4760064740D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -89,10 +88,9 @@
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
 		53836A40277CA0EB0069AF7D /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
-		53863659277A192500B2B3A7 /* AddedFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedFriendRow.swift; sourceTree = "<group>"; };
+		53863659277A192500B2B3A7 /* PreviewFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFriendRow.swift; sourceTree = "<group>"; };
 		5389CAB827763A250095EE43 /* MyPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceView.swift; sourceTree = "<group>"; };
 		5389CABD27763B2B0095EE43 /* MyPlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceRow.swift; sourceTree = "<group>"; };
-		5392326B2782A59900746881 /* FilterResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResultView.swift; sourceTree = "<group>"; };
 		5392326E2782CD5F00746881 /* VoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteView.swift; sourceTree = "<group>"; };
 		5398E46C2787D9C100E7437B /* SisoSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SisoSocketManager.swift; sourceTree = "<group>"; };
 		539AE41727887DED008CAC20 /* View+ifCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ifCondition.swift"; sourceTree = "<group>"; };
@@ -111,8 +109,8 @@
 		53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectedFilters+Enum.swift"; sourceTree = "<group>"; };
 		53C42964277CC925004C6B1C /* PlaceMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapView.swift; sourceTree = "<group>"; };
 		53C6DDDE2780361200633AED /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
-		53CCDB94278842DC00C335FC /* LocationFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFilterView.swift; sourceTree = "<group>"; };
-		53E467AA2777717500554722 /* SearchFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendView.swift; sourceTree = "<group>"; };
+		53CCDB94278842DC00C335FC /* PreviewFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFilterView.swift; sourceTree = "<group>"; };
+		53E467AA2777717500554722 /* InviteFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendView.swift; sourceTree = "<group>"; };
 		53E467AC27777CDE00554722 /* TextField+ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+ClearButton.swift"; sourceTree = "<group>"; };
 		5C2B55E4F9039825F46E241A /* Pods-SiSo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiSo.release.xcconfig"; path = "Target Support Files/Pods-SiSo/Pods-SiSo.release.xcconfig"; sourceTree = "<group>"; };
 		69E68C93467D851E88731A46 /* Pods-SiSo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiSo.debug.xcconfig"; path = "Target Support Files/Pods-SiSo/Pods-SiSo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -259,13 +257,11 @@
 		53A1BE26277CCD7A003D9BB9 /* VoteSetting */ = {
 			isa = PBXGroup;
 			children = (
+				53B71863278AB79F0047A42D /* InviteFriend */,
 				53C00A8427749B7100C51065 /* VoteSettingView.swift */,
 				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
-				53E467AA2777717500554722 /* SearchFriendView.swift */,
-				532D191C27798DFD003C174B /* MyFriendRow.swift */,
-				53863659277A192500B2B3A7 /* AddedFriendRow.swift */,
-				5392326B2782A59900746881 /* FilterResultView.swift */,
-				53CCDB94278842DC00C335FC /* LocationFilterView.swift */,
+				53863659277A192500B2B3A7 /* PreviewFriendRow.swift */,
+				53CCDB94278842DC00C335FC /* PreviewFilterView.swift */,
 			);
 			path = VoteSetting;
 			sourceTree = "<group>";
@@ -345,6 +341,15 @@
 				539AE41C27888FC0008CAC20 /* URLImage.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		53B71863278AB79F0047A42D /* InviteFriend */ = {
+			isa = PBXGroup;
+			children = (
+				53E467AA2777717500554722 /* InviteFriendView.swift */,
+				532D191C27798DFD003C174B /* InviteFriendRow.swift */,
+			);
+			path = InviteFriend;
 			sourceTree = "<group>";
 		};
 		53C00A882774D38A00C51065 /* Model */ = {
@@ -522,9 +527,8 @@
 				532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */,
 				53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */,
 				535B8AB22785505F003B4F4F /* VoteResultView.swift in Sources */,
-				532D191D27798DFD003C174B /* MyFriendRow.swift in Sources */,
-				53E467AB2777717500554722 /* SearchFriendView.swift in Sources */,
-				5392326C2782A59900746881 /* FilterResultView.swift in Sources */,
+				532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */,
+				53E467AB2777717500554722 /* InviteFriendView.swift in Sources */,
 				5389CABE27763B2B0095EE43 /* MyPlaceRow.swift in Sources */,
 				5389CAB927763A250095EE43 /* MyPlaceView.swift in Sources */,
 				5392326F2782CD5F00746881 /* VoteView.swift in Sources */,
@@ -546,14 +550,14 @@
 				53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */,
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
 				539AE41827887DED008CAC20 /* View+ifCondition.swift in Sources */,
-				53CCDB95278842DC00C335FC /* LocationFilterView.swift in Sources */,
+				53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */,
 				53458E832781D03A0064740D /* TextField+AutoFocus+UIKit.swift in Sources */,
 				53458E7C2781B4760064740D /* Place.swift in Sources */,
 				53458E7A2781B15B0064740D /* PlaceDetailView.swift in Sources */,
 				5349B23C2784182500A1B5BE /* CardStack.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
 				5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */,
-				5386365A277A192500B2B3A7 /* AddedFriendRow.swift in Sources */,
+				5386365A277A192500B2B3A7 /* PreviewFriendRow.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
 				5349B23E27843C7600A1B5BE /* PlaceCardView.swift in Sources */,
 				534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */,

@@ -54,17 +54,18 @@ struct VoteSettingView: View {
                         }
                         .background(
                             NavigationLink(isActive: $isSearchViewActive, destination: {
-                                SearchFriendView(selectedFriend: selectedFriend)
+                                InviteFriendView(selectedFriend: selectedFriend)
                             }, label: {
                                 EmptyView()
                             })
                         )
+                        
                         Divider()
     
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(selectedFriend.frieds, id: \.email) { friend in
-                                    AddedFriendRow(isEditing: isFriendEditMode, isHost: friend.name == "방장", name: friend.name)
+                                    PreviewFriendRow(isEditing: isFriendEditMode, isHost: friend.name == "방장", name: friend.name)
                                         .onTapGesture { isFriendEditMode = false }
                                         .onLongPressGesture {
                                             isFriendEditMode = true
@@ -74,11 +75,10 @@ struct VoteSettingView: View {
                         }.frame(height: 130)
                     }
                     
-                    LocationFilterView()
+                    PreviewFilterView()
                 }
                 
             }
-            .padding()
             VStack {
                 Spacer()
                 LargeButton(title: "자, 이제 시소타러 가볼까요?", disabled: selectedFriend.frieds.count <= 1, backgroundColor: .gray, foregroundColor: .white) {
@@ -96,8 +96,8 @@ struct VoteSettingView: View {
                     })
                 )
             }
-            .padding()
         }
+        .padding(.horizontal)
         .onTapGesture {
             isFriendEditMode = false
         }

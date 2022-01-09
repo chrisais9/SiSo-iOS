@@ -1,5 +1,5 @@
 //
-//  LocationFilterView.swift
+//  PreviewFilterView.swift
 //  SiSo
 //
 //  Created by 구형모 on 2022/01/07.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LocationFilterView: View {
+struct PreviewFilterView: View {
     var body: some View {
         VStack(spacing: 30) {
             HStack {
@@ -77,6 +77,6 @@ struct LocationFilterView: View {
 
 struct LocationFilterView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationFilterView()
+        PreviewFilterView()
     }
 }

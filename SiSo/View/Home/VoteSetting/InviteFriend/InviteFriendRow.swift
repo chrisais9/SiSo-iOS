@@ -1,5 +1,5 @@
 //
-//  MyFriendRow.swift
+//  InviteFriendRow.swift
 //  SiSo
 //
 //  Created by 구형모 on 2021/12/27.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct MyFriendRow: View {
+struct InviteFriendRow: View {
     
     let selectedFriend: SelectedFriend
     
@@ -56,6 +56,6 @@ struct MyFriendRow: View {
 
 struct MyFriendRow_Previews: PreviewProvider {
     static var previews: some View {
-        MyFriendRow(selectedFriend: SelectedFriend(), profileImage: "https://www.ibossedu.co.kr/template/DESIGN_shared/program/theme/01/THUMBNAIL_60_60_icon_rep_box.gif", name: "홍길동", email: "chrisais9@naver.com")
+        InviteFriendRow(selectedFriend: SelectedFriend(), profileImage: "https://www.ibossedu.co.kr/template/DESIGN_shared/program/theme/01/THUMBNAIL_60_60_icon_rep_box.gif", name: "홍길동", email: "chrisais9@naver.com")
     }
 }

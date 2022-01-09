@@ -1,5 +1,5 @@
 //
-//  SearchFriendView.swift
+//  InviteFriendView.swift
 //  SiSo
 //
 //  Created by 구형모 on 2021/12/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SearchFriendView: View {
+struct InviteFriendView: View {
     
     @Environment(\.presentationMode) var presentationMode
     
@@ -57,7 +57,7 @@ struct SearchFriendView: View {
             if isShowingFriends {
                 List {
                     ForEach(queriedFriends, id: \.email) { friend in
-                        MyFriendRow(
+                        InviteFriendRow(
                             selectedFriend: selectedFriend,
                             profileImage: friend.profileImage,
                             name: friend.name,
@@ -87,6 +87,6 @@ struct SearchFriendView: View {
 
 struct SearchFriendView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchFriendView(selectedFriend: SelectedFriend())
+        InviteFriendView(selectedFriend: SelectedFriend())
     }
 }

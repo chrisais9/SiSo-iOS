@@ -1,5 +1,5 @@
 //
-//  AddedFriendRow.swift
+//  PreviewFriendRow.swift
 //  SiSo
 //
 //  Created by 구형모 on 2021/12/28.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct AddedFriendRow: View {
+struct PreviewFriendRow: View {
     
     var isEditing: Bool
     var isHost: Bool
@@ -57,7 +57,7 @@ struct AddedFriendRow: View {
 
 struct ConfirmMyFriendRow_Previews: PreviewProvider {
     static var previews: some View {
-        AddedFriendRow(isEditing: true, isHost: true, name: "홍길동")
+        PreviewFriendRow(isEditing: true, isHost: true, name: "홍길동")
             .frame(height: 200)
     }
 }
