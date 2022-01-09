@@ -18,6 +18,10 @@ struct AddedFriendRow: View {
     var body: some View {
         ZStack {
             VStack {
+                VStack {
+                    Image(systemName: "crown.fill")
+                        .foregroundColor(.yellow)
+                }.opacity(isHost ? 1 : 0)
                 HStack {
                     Button {
                         
@@ -27,10 +31,9 @@ struct AddedFriendRow: View {
                     }
                     
                     Spacer()
-                }
+                }.opacity(isEditing ? 1 : 0)
                 Spacer()
             }
-            .opacity(isEditing ? 1 : 0)
             VStack {
                 URLImage(url: URL(string: profileImage)!)
                     .body
@@ -46,15 +49,9 @@ struct AddedFriendRow: View {
             
             
         }
-        .aspectRatio(0.5, contentMode: .fit)
-        .overlay(
-            isHost ?
-            VStack {
-                Image(systemName: "crown.fill")
-                    .foregroundColor(.yellow)
-            }
-            : nil, alignment: .top
-        )
+        .if(isEditing) { view in
+            view.wiggling()
+        }
     }
 }
 

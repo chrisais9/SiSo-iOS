@@ -24,7 +24,7 @@ struct VoteSettingView: View {
     var body: some View {
         ZStack {
             ScrollView {
-                VStack {
+                VStack(spacing: 30) {
                     HStack {
                         Image(systemName: "timer")
                         Text("1:23")
@@ -65,16 +65,13 @@ struct VoteSettingView: View {
                             HStack {
                                 ForEach(selectedFriend.frieds, id: \.email) { friend in
                                     AddedFriendRow(isEditing: isFriendEditMode, isHost: friend.name == "방장", name: friend.name)
-                                        .if(isFriendEditMode) { view in
-                                            view.wiggling()
-                                        }
                                         .onTapGesture { isFriendEditMode = false }
                                         .onLongPressGesture {
                                             isFriendEditMode = true
                                         }
                                 }
-                            }.frame(height: 100)
-                        }
+                            }
+                        }.frame(height: 130)
                     }
                     
                     LocationFilterView()
