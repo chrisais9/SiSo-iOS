@@ -57,6 +57,8 @@
 		53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CCDB94278842DC00C335FC /* PreviewFilterView.swift */; };
 		53E171C0278BC78000C2D41A /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171BF278BC78000C2D41A /* VisualEffectView.swift */; };
 		53E171C4278BFC3000C2D41A /* RangeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C3278BFC3000C2D41A /* RangeFilterView.swift */; };
+		53E171C8278C412F00C2D41A /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C7278C412F00C2D41A /* RestaurantListView.swift */; };
+		53E171CA278C454600C2D41A /* RestaurantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C9278C454600C2D41A /* RestaurantCardView.swift */; };
 		53E467AB2777717500554722 /* InviteFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* InviteFriendView.swift */; };
 		53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AC27777CDE00554722 /* TextField+ClearButton.swift */; };
 /* End PBXBuildFile section */
@@ -114,6 +116,8 @@
 		53CCDB94278842DC00C335FC /* PreviewFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFilterView.swift; sourceTree = "<group>"; };
 		53E171BF278BC78000C2D41A /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		53E171C3278BFC3000C2D41A /* RangeFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeFilterView.swift; sourceTree = "<group>"; };
+		53E171C7278C412F00C2D41A /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
+		53E171C9278C454600C2D41A /* RestaurantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCardView.swift; sourceTree = "<group>"; };
 		53E467AA2777717500554722 /* InviteFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendView.swift; sourceTree = "<group>"; };
 		53E467AC27777CDE00554722 /* TextField+ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+ClearButton.swift"; sourceTree = "<group>"; };
 		5C2B55E4F9039825F46E241A /* Pods-SiSo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiSo.release.xcconfig"; path = "Target Support Files/Pods-SiSo/Pods-SiSo.release.xcconfig"; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 		536D826227737C4600C3AAB7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				53E171C6278C410700C2D41A /* Restaurant */,
 				536D826327737C5B00C3AAB7 /* HomeView.swift */,
 				53A34EFE2773993700F48566 /* PreviousLocationRow.swift */,
 				53A1BE26277CCD7A003D9BB9 /* VoteSetting */,
@@ -395,6 +400,15 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
+		53E171C6278C410700C2D41A /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				53E171C7278C412F00C2D41A /* RestaurantListView.swift */,
+				53E171C9278C454600C2D41A /* RestaurantCardView.swift */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
 		642210109F7DDC825E0E7E0E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				539AE41D27888FC0008CAC20 /* URLImage.swift in Sources */,
+				53E171CA278C454600C2D41A /* RestaurantCardView.swift in Sources */,
 				5398E46D2787D9C100E7437B /* SisoSocketManager.swift in Sources */,
 				53AB86E72770F617006493D7 /* ContentView.swift in Sources */,
 				532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */,
@@ -558,6 +573,7 @@
 				53E171C4278BFC3000C2D41A /* RangeFilterView.swift in Sources */,
 				53C00A8527749B7100C51065 /* VoteSettingView.swift in Sources */,
 				53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */,
+				53E171C8278C412F00C2D41A /* RestaurantListView.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
 				53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */,
 				53C6DDDF2780361200633AED /* ListContentView.swift in Sources */,
