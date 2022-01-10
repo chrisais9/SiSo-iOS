@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PreviewFilterView: View {
     var body: some View {
-        VStack(spacing: 30) {
+        VStack {
             HStack {
                 Image(systemName: "location")
                     .imageScale(.large)
@@ -22,6 +22,12 @@ struct PreviewFilterView: View {
                             .strokeBorder()
                     )
             }
+            .padding(.vertical)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                setLocation()
+            }
+            
             HStack {
                 Image(systemName: "fork.knife")
                     .imageScale(.large)
@@ -34,6 +40,12 @@ struct PreviewFilterView: View {
                             .strokeBorder()
                     )
             }
+            .padding(.vertical)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                setCategory()
+            }
+            
             HStack {
                 Image(systemName: "mappin.and.ellipse")
                     .imageScale(.large)
@@ -46,6 +58,12 @@ struct PreviewFilterView: View {
                             .strokeBorder()
                     )
             }
+            .padding(.vertical)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                setRange()
+            }
+            
             HStack {
                 Image(systemName: "wonsign.circle")
                     .imageScale(.large)
@@ -58,6 +76,12 @@ struct PreviewFilterView: View {
                             .strokeBorder()
                     )
             }
+            .padding(.vertical)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                setPrice()
+            }
+            
             HStack {
                 Image(systemName: "car")
                     .imageScale(.large)
@@ -70,8 +94,34 @@ struct PreviewFilterView: View {
                             .strokeBorder()
                     )
             }
+            .padding(.vertical)
+            .contentShape(Rectangle())
+            .onTapGesture {
+                setParking()
+            }
         }
     }
+    
+    func setLocation() {
+        
+    }
+    
+    func setCategory() {
+        
+    }
+
+    func setRange() {
+        
+    }
+
+    func setPrice() {
+        
+    }
+
+    func setParking() {
+        
+    }
+
 }
 
 

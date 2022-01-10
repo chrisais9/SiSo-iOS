@@ -13,13 +13,15 @@ struct VoteSettingView: View {
     @State var query: String = ""
     
     @ObservedObject var selectedFriend: SelectedFriend = SelectedFriend()
+    @ObservedObject var selectedFilter: SelectedFilters = SelectedFilters()
     
     @State var isInstructionDialogActive: Bool = false
     @State var isPlaceMapViewPresented: Bool = false
     
     @State var location: String = ""
     
-    @State var isFriendEditMode = false
+    @State var isFriendEditMode: Bool = false
+    @State var isFilterEditMode: Bool = false
     
     var body: some View {
         ZStack {
@@ -61,7 +63,7 @@ struct VoteSettingView: View {
                         )
                         
                         Divider()
-    
+                        
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 ForEach(selectedFriend.frieds, id: \.email) { friend in
@@ -79,27 +81,37 @@ struct VoteSettingView: View {
                 }
                 
             }
+            .padding(.horizontal)
+            
+            RangeFilterView(isShowing: $isFilterEditMode, selectedFilters: selectedFilter)
+                .zIndex(100)
+            
             VStack {
                 Spacer()
-                LargeButton(title: "자, 이제 시소타러 가볼까요?", disabled: selectedFriend.frieds.count <= 1, backgroundColor: .gray, foregroundColor: .white) {
-                    if selectedFriend.isEmpty {
-                        isInstructionDialogActive.toggle()
-                    } else {
-                        isPlaceMapViewPresented.toggle()
+                LargeButton(
+                    title: "자, 이제 시소타러 가볼까요?",
+                    //                    disabled: selectedFriend.frieds.count <= 1,
+                    backgroundColor: .gray,
+                    foregroundColor: .white) {
+                        
+                        withAnimation(.linear(duration: 0.25)) {
+                            isFilterEditMode.toggle()
+                        }
+                        //                    if selectedFriend.isEmpty {
+                        //                        isInstructionDialogActive.toggle()
+                        //                    } else {
+                        //                        isPlaceMapViewPresented.toggle()
+                        //                    }
                     }
-                }
-                .background(
-                    NavigationLink(isActive: $isPlaceMapViewPresented, destination: {
-                        PlaceMapView()
-                    }, label: {
-                        EmptyView()
-                    })
-                )
+                    .background(
+                        NavigationLink(isActive: $isPlaceMapViewPresented, destination: {
+                            PlaceMapView()
+                        }, label: {
+                            EmptyView()
+                        })
+                    )
             }
-        }
-        .padding(.horizontal)
-        .onTapGesture {
-            isFriendEditMode = false
+            .padding(.horizontal)
         }
         .navigationBarTitleDisplayMode(.inline)
         //        .onAppear(perform: {
