@@ -7,18 +7,26 @@
 
 import SwiftUI
 import NMapsMap
+import KakaoSDKCommon
+import KakaoSDKAuth
 
 @main
 struct SiSoApp: App {
     
     init() {
-        SisoSocketManager.shared.openConnection()
-        
+//        SisoSocketManager.shared.openConnection()
         NMFAuthManager.shared().clientId = "gyrtzz3dq2"
+        KakaoSDK.initSDK(appKey: "4d2a5fa60de38bafa5a03910ed458fef")
+        
     }
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onOpenURL { url in
+                    if AuthApi.isKakaoTalkLoginUrl(url) {
+                        AuthController.handleOpenUrl(url: url)
+                    }
+                }
         }
     }
 }

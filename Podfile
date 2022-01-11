@@ -16,6 +16,9 @@ target 'SiSo' do
   pod 'BottomSheetSwiftUI'
   
   pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+  
+  pod 'KakaoSDK'
+  
 end
 
 post_install do |installer|

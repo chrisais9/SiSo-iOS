@@ -1,5 +1,38 @@
 PODS:
+  - Alamofire (5.5.0)
   - BottomSheetSwiftUI (2.4.0)
+  - KakaoSDK (2.8.4):
+    - KakaoSDKAuth (= 2.8.4)
+    - KakaoSDKCommon (= 2.8.4)
+    - KakaoSDKLink (= 2.8.4)
+    - KakaoSDKNavi (= 2.8.4)
+    - KakaoSDKStory (= 2.8.4)
+    - KakaoSDKTalk (= 2.8.4)
+    - KakaoSDKTemplate (= 2.8.4)
+    - KakaoSDKUser (= 2.8.4)
+  - KakaoSDKAuth (2.8.4):
+    - KakaoSDKCommon (= 2.8.4)
+  - KakaoSDKCommon (2.8.4):
+    - KakaoSDKCommon/Common (= 2.8.4)
+    - KakaoSDKCommon/Network (= 2.8.4)
+  - KakaoSDKCommon/Common (2.8.4)
+  - KakaoSDKCommon/Network (2.8.4):
+    - Alamofire (~> 5.1)
+    - KakaoSDKCommon/Common (= 2.8.4)
+  - KakaoSDKLink (2.8.4):
+    - KakaoSDKCommon (= 2.8.4)
+    - KakaoSDKTemplate (= 2.8.4)
+  - KakaoSDKNavi (2.8.4):
+    - KakaoSDKCommon/Common (= 2.8.4)
+  - KakaoSDKStory (2.8.4):
+    - KakaoSDKUser (= 2.8.4)
+  - KakaoSDKTalk (2.8.4):
+    - KakaoSDKTemplate (= 2.8.4)
+    - KakaoSDKUser (= 2.8.4)
+  - KakaoSDKTemplate (2.8.4):
+    - KakaoSDKCommon/Common (= 2.8.4)
+  - KakaoSDKUser (2.8.4):
+    - KakaoSDKAuth (= 2.8.4)
   - Kingfisher (7.1.2)
   - NMapsMap (3.13.0)
   - Socket.IO-Client-Swift (15.2.0):
@@ -8,25 +41,46 @@ PODS:
 
 DEPENDENCIES:
   - BottomSheetSwiftUI
+  - KakaoSDK
   - Kingfisher (~> 7.0)
   - NMapsMap (= 3.13.0)
   - Socket.IO-Client-Swift (~> 15.2.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - BottomSheetSwiftUI
+    - KakaoSDK
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKLink
+    - KakaoSDKNavi
+    - KakaoSDKStory
+    - KakaoSDKTalk
+    - KakaoSDKTemplate
+    - KakaoSDKUser
     - Kingfisher
     - NMapsMap
     - Socket.IO-Client-Swift
     - Starscream
 
 SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   BottomSheetSwiftUI: c176c3022969d6383deaa388dd011199cc50f5bd
+  KakaoSDK: f80dbd5e4e8db058c9f1cd48356329f11fd6e281
+  KakaoSDKAuth: b9b693995f98b1821ccd22b39d383e1dede5ca45
+  KakaoSDKCommon: 33c9902ee9ce13e9d1cac3549896406229836ff5
+  KakaoSDKLink: 588e425cb30df37b3404662170f2d0bdda7af7ae
+  KakaoSDKNavi: 46060633e4a41682bb8ed086372526412fcffda2
+  KakaoSDKStory: b1d287251c6c35dcf7b04e94e3107b6cc7236495
+  KakaoSDKTalk: ac4d2ec8b7323a50f98d74e6358fc8a296107566
+  KakaoSDKTemplate: 23ff3023d189f0962d28e34627a19c0eb8c1c7a6
+  KakaoSDKUser: d878977e0ba6b365cfeac3b6319cdf4231713bea
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   NMapsMap: 88b5bdac7087bfa99ab058ff5cdd95fb766e0e95
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: ab80f83f69247793b12fadf5c36727e7855838a9
+PODFILE CHECKSUM: b395e6f2dd8a901e95971e6550c1e1fdafd30a33
 
 COCOAPODS: 1.11.2
