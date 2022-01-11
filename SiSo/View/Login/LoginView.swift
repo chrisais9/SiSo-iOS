@@ -7,6 +7,7 @@
 
 import SwiftUI
 import KakaoSDKUser
+import FBSDKLoginKit
 
 struct LoginView: View {
     
@@ -36,6 +37,9 @@ struct LoginView: View {
                     .resizable()
                     .frame(height: 60)
             }
+            
+            FacebookLoginButton()
+                .frame(height: 60)
         }
         .padding()
     }

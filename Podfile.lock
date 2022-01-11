@@ -1,6 +1,14 @@
 PODS:
   - Alamofire (5.5.0)
   - BottomSheetSwiftUI (2.4.0)
+  - FBAEMKit (12.2.1):
+    - FBSDKCoreKit_Basics (= 12.2.1)
+  - FBSDKCoreKit (12.2.1):
+    - FBAEMKit (= 12.2.1)
+    - FBSDKCoreKit_Basics (= 12.2.1)
+  - FBSDKCoreKit_Basics (12.2.1)
+  - FBSDKLoginKit (12.2.1):
+    - FBSDKCoreKit (= 12.2.1)
   - KakaoSDK (2.8.4):
     - KakaoSDKAuth (= 2.8.4)
     - KakaoSDKCommon (= 2.8.4)
@@ -41,6 +49,7 @@ PODS:
 
 DEPENDENCIES:
   - BottomSheetSwiftUI
+  - FBSDKLoginKit
   - KakaoSDK
   - Kingfisher (~> 7.0)
   - NMapsMap (= 3.13.0)
@@ -50,6 +59,10 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - BottomSheetSwiftUI
+    - FBAEMKit
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
+    - FBSDKLoginKit
     - KakaoSDK
     - KakaoSDKAuth
     - KakaoSDKCommon
@@ -67,6 +80,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   BottomSheetSwiftUI: c176c3022969d6383deaa388dd011199cc50f5bd
+  FBAEMKit: 4cea610d0bc1680572f2aad7b25db7a2f2690d82
+  FBSDKCoreKit: 5b1992fe65802ca26be7e68bc4fac5f59fa39908
+  FBSDKCoreKit_Basics: a6a92ca628e05f86f458a4721574c5ddfb058ba3
+  FBSDKLoginKit: 7467b7f988ca4fdf48f12a839bcfce4264752429
   KakaoSDK: f80dbd5e4e8db058c9f1cd48356329f11fd6e281
   KakaoSDKAuth: b9b693995f98b1821ccd22b39d383e1dede5ca45
   KakaoSDKCommon: 33c9902ee9ce13e9d1cac3549896406229836ff5
@@ -81,6 +98,6 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: b395e6f2dd8a901e95971e6550c1e1fdafd30a33
+PODFILE CHECKSUM: a50f49442dd95f815f5c97c7c2f7d9e56b2fcdce
 
 COCOAPODS: 1.11.2

@@ -19,6 +19,8 @@ target 'SiSo' do
   
   pod 'KakaoSDK'
   
+  pod 'FBSDKLoginKit'
+  
 end
 
 post_install do |installer|
