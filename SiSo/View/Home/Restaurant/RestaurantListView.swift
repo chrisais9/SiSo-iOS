@@ -9,15 +9,56 @@ import SwiftUI
 
 struct RestaurantListView: View {
     var body: some View {
-        LazyVStack {
-            RestaurantCardView(images1: "https://www.gyeongju.go.kr/upload/content/thumb/20200429/83B53EE41B9D4C2A88B5D439022943A8.jpg", images2: "https://www.gyeongju.go.kr/upload/content/thumb/20191211/A5E16B2009A741B3B54A228BFA0518D9.jpg", images3: "https://t1.daumcdn.net/cfile/tistory/99EA6D505C6D4A4D2C", title: "김부장이 추천하는 베트남 맛집", likes: "1,201", distance: "0.8")
+        VStack {
+            HStack {
+                VStack {
+                    Text("전체")
+                        .bold()
+                    Divider()
+                }
+                VStack {
+                    Text("양식")
+                    Divider()
+                }
+                VStack {
+                    Text("중식")
+                    Divider()
+                }
+                VStack {
+                    Text("한식")
+                    Divider()
+                }
+            }
+            ScrollView {
+                LazyVStack {
+                    RestaurantCardView(image: "http://img4.tmon.kr/cdn3/deals/2021/07/15/4500036162/original_4500036162_front_f8dfd_1626343427production.jpg",  title: "오늘은 매운게 땡길땐🔥", likes: "1,201", distance: "0.3")
+                        .padding(.bottom)
+                    RestaurantCardView(image: "https://www.gyeongju.go.kr/upload/content/thumb/20191211/A5E16B2009A741B3B54A228BFA0518D9.jpg", title: "김부장이 추천하는 베트남 맛집", likes: "1,201", distance: "0.8")
+                        .padding(.bottom)
+                    RestaurantCardView(image: "https://src.hidoc.co.kr/image/lib/2020/6/17/1592363657269_0.jpg", title: "오늘은 피자다!", likes: "1,201", distance: "1.2")
+                        .padding(.bottom)
+                }
+                .padding()
+            }
         }
-        .padding()
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "line.3.horizontal.decrease.circle")
+                }
+
+            }
+        }
     }
 }
 
 struct RestaurantListView_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantListView()
+        NavigationView {
+            RestaurantListView()
+        }
     }
 }
