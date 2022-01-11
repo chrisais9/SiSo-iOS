@@ -20,11 +20,6 @@ struct ContentView: View {
                         Image(systemName: "house")
                         Text("홈")
                     }
-                MyPlaceView()
-                    .tabItem {
-                        Image(systemName: "mappin")
-                        Text("나의 장소")
-                    }
                 VoteView()
                     .tabItem {
                         Image(systemName: "person.circle")
