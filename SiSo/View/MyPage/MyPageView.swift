@@ -6,15 +6,21 @@
 //
 
 import SwiftUI
+import BottomSheetSwiftUI
+
+//enum LoginBottomSheetPosition: CGFloat, CaseIterable {
+//    case middle = 0.5
+//    case hidden = 0
+//}
 
 struct MyPageView: View {
+    @State var bottomSheetPosition: BottomSheetPosition = .hidden
     
     @State var isGlobalNotificationEnabled = true
     @State var isMarketingNotificationEnabled = true
     
     var body: some View {
         VStack(spacing: 10) {
-            
             Form {
                 Section {
                     HStack {
@@ -36,6 +42,10 @@ struct MyPageView: View {
                         }
                         .padding()
                         Spacer()
+                    }
+                }.onTapGesture {
+                    withAnimation {
+                        bottomSheetPosition = .middle
                     }
                 }
                 
@@ -59,12 +69,17 @@ struct MyPageView: View {
                         Text("로그아웃")
                             .foregroundColor(.black)
                     }
-
+                    
                 }
-
+                
             }
             Spacer()
         }
+        .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.tapToDissmiss, .notResizeable, .cornerRadius(15)], content: {
+            VStack {
+                LoginView()
+            }
+        })
         .navigationBarTitleDisplayMode(.inline)
     }
 }

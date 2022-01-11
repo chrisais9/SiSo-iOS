@@ -9,9 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-    init() {
-        print("app started")
-    }
     var body: some View {
         NavigationView {
             TabView {
@@ -20,7 +17,7 @@ struct ContentView: View {
                         Image(systemName: "house")
                         Text("홈")
                     }
-                VoteView()
+                MyPageView()
                     .tabItem {
                         Image(systemName: "person.circle")
                         Text("마이페이지")
