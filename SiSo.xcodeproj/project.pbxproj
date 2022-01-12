@@ -33,6 +33,10 @@
 		535B8AB22785505F003B4F4F /* VoteResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535B8AB12785505F003B4F4F /* VoteResultView.swift */; };
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
+		537ECB0C278E661800190A40 /* GoogleLoginButton+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537ECB0B278E661800190A40 /* GoogleLoginButton+SwiftUI.swift */; };
+		537ECB0E278E66B600190A40 /* GoogleAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537ECB0D278E66B600190A40 /* GoogleAuthViewModel.swift */; };
+		537ECB11278E671500190A40 /* GoogleLoginAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537ECB10278E671500190A40 /* GoogleLoginAuthenticator.swift */; };
+		537ECB13278E740100190A40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537ECB12278E740000190A40 /* GoogleService-Info.plist */; };
 		53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53836A40277CA0EB0069AF7D /* NaverMapView.swift */; };
 		5386365A277A192500B2B3A7 /* PreviewFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863659277A192500B2B3A7 /* PreviewFriendRow.swift */; };
 		53876D5A278D290700697647 /* MyPlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53876D59278D290700697647 /* MyPlaceRow.swift */; };
@@ -92,6 +96,10 @@
 		535B8AB12785505F003B4F4F /* VoteResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResultView.swift; sourceTree = "<group>"; };
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
+		537ECB0B278E661800190A40 /* GoogleLoginButton+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleLoginButton+SwiftUI.swift"; sourceTree = "<group>"; };
+		537ECB0D278E66B600190A40 /* GoogleAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewModel.swift; sourceTree = "<group>"; };
+		537ECB10278E671500190A40 /* GoogleLoginAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginAuthenticator.swift; sourceTree = "<group>"; };
+		537ECB12278E740000190A40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53836A40277CA0EB0069AF7D /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
 		53863659277A192500B2B3A7 /* PreviewFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFriendRow.swift; sourceTree = "<group>"; };
 		53876D59278D290700697647 /* MyPlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceRow.swift; sourceTree = "<group>"; };
@@ -214,6 +222,14 @@
 			path = Dialog;
 			sourceTree = "<group>";
 		};
+		537ECB0F278E66BD00190A40 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				537ECB0D278E66B600190A40 /* GoogleAuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		53836A3F277CA0E00069AF7D /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				53AB86F52770FC41006493D7 /* LargeButton.swift */,
-				53876D63278D639200697647 /* FacebookButton+SwiftUI.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -254,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				5398E46E2787E58A00E7437B /* Socket */,
+				537ECB10278E671500190A40 /* GoogleLoginAuthenticator.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -308,10 +324,12 @@
 		53AB86E32770F617006493D7 /* SiSo */ = {
 			isa = PBXGroup;
 			children = (
+				537ECB12278E740000190A40 /* GoogleService-Info.plist */,
 				530D551F2776F47900AF1FD1 /* Info.plist */,
 				53AB86E42770F617006493D7 /* SiSoApp.swift */,
 				5398E46B2787D9AC00E7437B /* Modules */,
 				53C00A882774D38A00C51065 /* Model */,
+				537ECB0F278E66BD00190A40 /* ViewModel */,
 				53AB86F22770FC17006493D7 /* View */,
 				53AB86E82770F618006493D7 /* Assets.xcassets */,
 				530D55102776F35400AF1FD1 /* Fonts */,
@@ -344,6 +362,8 @@
 			isa = PBXGroup;
 			children = (
 				53AB86F72770FDFB006493D7 /* LoginView.swift */,
+				53876D63278D639200697647 /* FacebookButton+SwiftUI.swift */,
+				537ECB0B278E661800190A40 /* GoogleLoginButton+SwiftUI.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -499,6 +519,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537ECB13278E740100190A40 /* GoogleService-Info.plist in Resources */,
 				530D55192776F36D00AF1FD1 /* NotoSansKR-Regular.otf in Resources */,
 				53AB86EC2770F618006493D7 /* Preview Assets.xcassets in Resources */,
 				530D551E2776F36D00AF1FD1 /* NotoSansKR-Thin.otf in Resources */,
@@ -586,8 +607,10 @@
 				53E171C8278C412F00C2D41A /* RestaurantListView.swift in Sources */,
 				53876D5A278D290700697647 /* MyPlaceRow.swift in Sources */,
 				53876D64278D639200697647 /* FacebookButton+SwiftUI.swift in Sources */,
+				537ECB11278E671500190A40 /* GoogleLoginAuthenticator.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
 				53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */,
+				537ECB0C278E661800190A40 /* GoogleLoginButton+SwiftUI.swift in Sources */,
 				53C6DDDF2780361200633AED /* ListContentView.swift in Sources */,
 				539AE4202788905F008CAC20 /* WiggleAnimation.swift in Sources */,
 				5349B238278417D800A1B5BE /* CardSwipeDirection.swift in Sources */,
@@ -595,6 +618,7 @@
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
 				539AE41827887DED008CAC20 /* View+ifCondition.swift in Sources */,
 				53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */,
+				537ECB0E278E66B600190A40 /* GoogleAuthViewModel.swift in Sources */,
 				53458E832781D03A0064740D /* TextField+AutoFocus+UIKit.swift in Sources */,
 				53458E7C2781B4760064740D /* Place.swift in Sources */,
 				53458E7A2781B15B0064740D /* PlaceDetailView.swift in Sources */,

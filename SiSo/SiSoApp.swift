@@ -10,34 +10,43 @@ import NMapsMap
 import KakaoSDKCommon
 import KakaoSDKAuth
 import FBSDKCoreKit
+import Firebase
+import GoogleSignIn
 
 @main
 struct SiSoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     init() {
-        //        SisoSocketManager.shared.openConnection()
+        FirebaseApp.configure()
         NMFAuthManager.shared().clientId = "gyrtzz3dq2"
         KakaoSDK.initSDK(appKey: "4d2a5fa60de38bafa5a03910ed458fef")
-        //        Settings.shared.appID = "1148570505679105"
         
     }
+    
+    @StateObject var authViewModel: AuthenticationViewModel = AuthenticationViewModel()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .onOpenURL { url in
                     
-                    if AuthApi.isKakaoTalkLoginUrl(url) {
+                    // google
+                    if GIDSignIn.sharedInstance.handle(url) {
+                        //no-op
+                    } else if AuthApi.isKakaoTalkLoginUrl(url) { // kakao
                         let _ = AuthController.handleOpenUrl(url: url)
-                    }
-                    
-                    ApplicationDelegate.shared.application(
+                    } else if ApplicationDelegate.shared.application( // facebook
                         UIApplication.shared,
                         open: url,
                         sourceApplication: nil,
                         annotation: UIApplication.OpenURLOptionsKey.annotation
-                    )
+                    ) {
+                        
+                    }
+                    
                 }
+                .environmentObject(authViewModel)
         }
     }
     

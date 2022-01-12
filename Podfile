@@ -21,6 +21,12 @@ target 'SiSo' do
   
   pod 'FBSDKLoginKit'
   
+  pod 'GoogleSignIn'
+  
+  # Firebase
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  
 end
 
 post_install do |installer|

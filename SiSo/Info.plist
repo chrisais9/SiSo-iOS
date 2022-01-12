@@ -10,6 +10,12 @@
 				<string>fb1148570505679105</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.615397119216-nvgj2f2p9a1n1c326lo2hlftcguol2m2</string>
+			</array>
+		</dict>
 	</array>
 	<key>FacebookAppID</key>
 	<string>1148570505679105</string>
