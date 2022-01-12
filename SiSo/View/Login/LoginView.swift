@@ -11,7 +11,7 @@ import FBSDKLoginKit
 
 struct LoginView: View {
     
-    @StateObject var viewModel: AuthenticationViewModel
+    @EnvironmentObject var viewModel: AuthenticationViewModel
     
     var body: some View {
         VStack {
@@ -44,6 +44,7 @@ struct LoginView: View {
                 .frame(height: 60)
             
             GoogleLoginButton(handler: viewModel.signIn)
+                .frame(height: 60)
         }
         .padding()
     }
@@ -51,6 +52,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(viewModel: AuthenticationViewModel())
+        LoginView()
+            .environmentObject(AuthenticationViewModel())
     }
 }

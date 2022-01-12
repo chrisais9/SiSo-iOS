@@ -27,6 +27,9 @@ target 'SiSo' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   
+  # Realm DB
+  pod 'RealmSwift', '~>10'
+  
 end
 
 post_install do |installer|

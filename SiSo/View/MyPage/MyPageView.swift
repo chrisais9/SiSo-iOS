@@ -73,14 +73,16 @@ struct MyPageView: View {
                 }
                 
             }
+            .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.tapToDissmiss, .notResizeable, .cornerRadius(15)], content: {
+                VStack {
+                    LoginView()
+                }
+            })
             Spacer()
         }
-        .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.tapToDissmiss, .notResizeable, .cornerRadius(15)], content: {
-            VStack {
-                LoginView()
-            }
-        })
         .navigationBarTitleDisplayMode(.inline)
+        
+
     }
 }
 

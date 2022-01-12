@@ -152,6 +152,11 @@ PODS:
   - nanopb/encode (2.30908.0)
   - NMapsMap (3.13.0)
   - PromisesObjC (2.0.0)
+  - Realm (10.21.0):
+    - Realm/Headers (= 10.21.0)
+  - Realm/Headers (10.21.0)
+  - RealmSwift (10.21.0):
+    - Realm (= 10.21.0)
   - Socket.IO-Client-Swift (15.2.0):
     - Starscream (~> 3.1)
   - Starscream (3.1.1)
@@ -165,6 +170,7 @@ DEPENDENCIES:
   - KakaoSDK
   - Kingfisher (~> 7.0)
   - NMapsMap (= 3.13.0)
+  - RealmSwift (~> 10)
   - Socket.IO-Client-Swift (~> 15.2.0)
 
 SPEC REPOS:
@@ -201,6 +207,8 @@ SPEC REPOS:
     - nanopb
     - NMapsMap
     - PromisesObjC
+    - Realm
+    - RealmSwift
     - Socket.IO-Client-Swift
     - Starscream
 
@@ -237,9 +245,11 @@ SPEC CHECKSUMS:
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NMapsMap: 88b5bdac7087bfa99ab058ff5cdd95fb766e0e95
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  Realm: 55220cda83aabd773740d18518e05fdbe00b87cc
+  RealmSwift: 129dce1dd6b5d9194a37f568aaf32a6c10d1a803
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 8929f297f64f6525837eabe17c3181ef98572234
+PODFILE CHECKSUM: 34e09d7e22eacd2a3905eb1748452b6e9a59f111
 
 COCOAPODS: 1.11.2
