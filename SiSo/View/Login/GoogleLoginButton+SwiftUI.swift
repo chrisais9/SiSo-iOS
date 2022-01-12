@@ -9,6 +9,7 @@ import SwiftUI
 import GoogleSignIn
 
 struct GoogleLoginButton: UIViewRepresentable {
+    
     let handler: () -> Void
     
     init(handler: @escaping () -> Void) {

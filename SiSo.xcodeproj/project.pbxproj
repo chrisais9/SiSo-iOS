@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4BF1E4CEBDB29EABBD025B82 /* Pods_SiSo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E6D3755854493B6C5F2C78 /* Pods_SiSo.framework */; };
+		530650F7278ECCEA00EF5626 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530650F6278ECCEA00EF5626 /* LoginManager.swift */; };
 		530D55182776F36D00AF1FD1 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */; };
 		530D55192776F36D00AF1FD1 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */; };
 		530D551A2776F36D00AF1FD1 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */; };
@@ -34,8 +35,6 @@
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
 		537ECB0C278E661800190A40 /* GoogleLoginButton+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537ECB0B278E661800190A40 /* GoogleLoginButton+SwiftUI.swift */; };
-		537ECB0E278E66B600190A40 /* GoogleAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537ECB0D278E66B600190A40 /* GoogleAuthViewModel.swift */; };
-		537ECB11278E671500190A40 /* GoogleLoginAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537ECB10278E671500190A40 /* GoogleLoginAuthenticator.swift */; };
 		537ECB13278E740100190A40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537ECB12278E740000190A40 /* GoogleService-Info.plist */; };
 		53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53836A40277CA0EB0069AF7D /* NaverMapView.swift */; };
 		5386365A277A192500B2B3A7 /* PreviewFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863659277A192500B2B3A7 /* PreviewFriendRow.swift */; };
@@ -60,6 +59,7 @@
 		53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C42964277CC925004C6B1C /* PlaceMapView.swift */; };
 		53C6DDDF2780361200633AED /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6DDDE2780361200633AED /* ListContentView.swift */; };
 		53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CCDB94278842DC00C335FC /* PreviewFilterView.swift */; };
+		53CF65C0278EA228002B08A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF65BF278EA228002B08A0 /* User.swift */; };
 		53E171C0278BC78000C2D41A /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171BF278BC78000C2D41A /* VisualEffectView.swift */; };
 		53E171C4278BFC3000C2D41A /* RangeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C3278BFC3000C2D41A /* RangeFilterView.swift */; };
 		53E171C8278C412F00C2D41A /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C7278C412F00C2D41A /* RestaurantListView.swift */; };
@@ -70,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		2A74DCEE0AB82E6FA016ED93 /* Pods-ThatsIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThatsIt.debug.xcconfig"; path = "Target Support Files/Pods-ThatsIt/Pods-ThatsIt.debug.xcconfig"; sourceTree = "<group>"; };
+		530650F6278ECCEA00EF5626 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
 		530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
@@ -97,8 +98,6 @@
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
 		537ECB0B278E661800190A40 /* GoogleLoginButton+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleLoginButton+SwiftUI.swift"; sourceTree = "<group>"; };
-		537ECB0D278E66B600190A40 /* GoogleAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthViewModel.swift; sourceTree = "<group>"; };
-		537ECB10278E671500190A40 /* GoogleLoginAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginAuthenticator.swift; sourceTree = "<group>"; };
 		537ECB12278E740000190A40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53836A40277CA0EB0069AF7D /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
 		53863659277A192500B2B3A7 /* PreviewFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFriendRow.swift; sourceTree = "<group>"; };
@@ -124,6 +123,7 @@
 		53C42964277CC925004C6B1C /* PlaceMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapView.swift; sourceTree = "<group>"; };
 		53C6DDDE2780361200633AED /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
 		53CCDB94278842DC00C335FC /* PreviewFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFilterView.swift; sourceTree = "<group>"; };
+		53CF65BF278EA228002B08A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53E171BF278BC78000C2D41A /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		53E171C3278BFC3000C2D41A /* RangeFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeFilterView.swift; sourceTree = "<group>"; };
 		53E171C7278C412F00C2D41A /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
@@ -222,14 +222,6 @@
 			path = Dialog;
 			sourceTree = "<group>";
 		};
-		537ECB0F278E66BD00190A40 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				537ECB0D278E66B600190A40 /* GoogleAuthViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		53836A3F277CA0E00069AF7D /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				5398E46E2787E58A00E7437B /* Socket */,
-				537ECB10278E671500190A40 /* GoogleLoginAuthenticator.swift */,
+				530650F6278ECCEA00EF5626 /* LoginManager.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -329,7 +321,6 @@
 				53AB86E42770F617006493D7 /* SiSoApp.swift */,
 				5398E46B2787D9AC00E7437B /* Modules */,
 				53C00A882774D38A00C51065 /* Model */,
-				537ECB0F278E66BD00190A40 /* ViewModel */,
 				53AB86F22770FC17006493D7 /* View */,
 				53AB86E82770F618006493D7 /* Assets.xcassets */,
 				530D55102776F35400AF1FD1 /* Fonts */,
@@ -397,6 +388,7 @@
 		53C00A882774D38A00C51065 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53CF65BD278EA20A002B08A0 /* Realm */,
 				53C00A892774D3AD00C51065 /* Home */,
 			);
 			path = Model;
@@ -421,6 +413,14 @@
 				53458E802781CCCA0064740D /* SearchPlaceView.swift */,
 			);
 			path = SelectPlace;
+			sourceTree = "<group>";
+		};
+		53CF65BD278EA20A002B08A0 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				53CF65BF278EA228002B08A0 /* User.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		53E171C5278C046B00C2D41A /* Filter */ = {
@@ -607,7 +607,6 @@
 				53E171C8278C412F00C2D41A /* RestaurantListView.swift in Sources */,
 				53876D5A278D290700697647 /* MyPlaceRow.swift in Sources */,
 				53876D64278D639200697647 /* FacebookButton+SwiftUI.swift in Sources */,
-				537ECB11278E671500190A40 /* GoogleLoginAuthenticator.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
 				53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */,
 				537ECB0C278E661800190A40 /* GoogleLoginButton+SwiftUI.swift in Sources */,
@@ -618,13 +617,14 @@
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
 				539AE41827887DED008CAC20 /* View+ifCondition.swift in Sources */,
 				53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */,
-				537ECB0E278E66B600190A40 /* GoogleAuthViewModel.swift in Sources */,
 				53458E832781D03A0064740D /* TextField+AutoFocus+UIKit.swift in Sources */,
 				53458E7C2781B4760064740D /* Place.swift in Sources */,
 				53458E7A2781B15B0064740D /* PlaceDetailView.swift in Sources */,
+				53CF65C0278EA228002B08A0 /* User.swift in Sources */,
 				5349B23C2784182500A1B5BE /* CardStack.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
 				5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */,
+				530650F7278ECCEA00EF5626 /* LoginManager.swift in Sources */,
 				5386365A277A192500B2B3A7 /* PreviewFriendRow.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
 				5349B23E27843C7600A1B5BE /* PlaceCardView.swift in Sources */,

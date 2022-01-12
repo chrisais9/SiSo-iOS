@@ -7,6 +7,8 @@
 
 import SwiftUI
 import BottomSheetSwiftUI
+import RealmSwift
+import Kingfisher
 
 //enum LoginBottomSheetPosition: CGFloat, CaseIterable {
 //    case middle = 0.5
@@ -19,31 +21,46 @@ struct MyPageView: View {
     @State var isGlobalNotificationEnabled = true
     @State var isMarketingNotificationEnabled = true
     
+    @ObservedResults(User.self) var user
+    
     var body: some View {
-        VStack(spacing: 10) {
+        VStack {
             Form {
                 Section {
                     HStack {
                         Spacer()
-                        VStack(spacing: 10) {
-                            Image("profile_dummy")
-                                .resizable()
-                                .clipShape(Circle())
-                                .frame(width: 50, height: 50)
-                            HStack(spacing: 5) {
-                                Text("구형모")
-                                    .font(NotoSans.regular(size: 15))
-                                Image(systemName: "chevron.right")
-                                    .imageScale(.small)
+                        if let user = user.first {
+                            VStack(spacing: 10) {
+                                
+                                KFImage(URL(string: user.profileImage))
+                                    .placeholder {
+                                        Color.gray
+                                    }
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                    .clipShape(Circle())
+                                
+                                HStack(spacing: 5) {
+                                    Text(user.name)
+                                        .font(NotoSans.regular(size: 15))
+                                    Image(systemName: "chevron.right")
+                                        .imageScale(.small)
+                                }
+                                Text("시소와 함께한 지 501일째")
+                                    .font(NotoSans.regular(size: 12))
+                                    .foregroundColor(.gray)
                             }
-                            Text("시소와 함께한 지 501일째")
-                                .font(NotoSans.regular(size: 12))
-                                .foregroundColor(.gray)
+                        } else {
+                            ProgressView()
+                                .onAppear {
+                                    $user.append(User())
+                                }
                         }
-                        .padding()
                         Spacer()
                     }
-                }.onTapGesture {
+                }
+                .contentShape(Rectangle())
+                .onTapGesture {
                     withAnimation {
                         bottomSheetPosition = .middle
                     }
@@ -64,7 +81,7 @@ struct MyPageView: View {
                         
                     }
                     Button {
-                        
+                        LoginManager.shared.doLogoutGoogle()
                     } label: {
                         Text("로그아웃")
                             .foregroundColor(.black)
@@ -73,23 +90,31 @@ struct MyPageView: View {
                 }
                 
             }
-            .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.tapToDissmiss, .notResizeable, .cornerRadius(15)], content: {
-                VStack {
-                    LoginView()
-                }
-            })
-            Spacer()
         }
-        .navigationBarTitleDisplayMode(.inline)
-        
-
+        .onChange(of: user, perform: { newValue in
+            bottomSheetPosition = .hidden
+        })
+        .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.tapToDissmiss, .notResizeable, .cornerRadius(15), .background(AnyView(VisualEffectView(uiVisualEffect: UIBlurEffect(style: .systemUltraThinMaterialDark))))], content: {
+            LoginView()
+        })
+        //        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct MyPageView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
+        createData()
+        return NavigationView {
             MyPageView()
+        }
+    }
+    
+    static func createData() {
+        let realm = try! Realm()
+        let user = realm.create(User.self)
+        try! realm.write {
+            realm.deleteAll()
+            realm.add(user)
         }
     }
 }

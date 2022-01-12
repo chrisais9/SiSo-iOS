@@ -24,13 +24,10 @@ struct SiSoApp: App {
         
     }
     
-    @StateObject var authViewModel: AuthenticationViewModel = AuthenticationViewModel()
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .onOpenURL { url in
-                    
                     // google
                     if GIDSignIn.sharedInstance.handle(url) {
                         //no-op
@@ -44,9 +41,7 @@ struct SiSoApp: App {
                     ) {
                         
                     }
-                    
                 }
-                .environmentObject(authViewModel)
         }
     }
     

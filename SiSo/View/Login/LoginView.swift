@@ -8,10 +8,9 @@
 import SwiftUI
 import KakaoSDKUser
 import FBSDKLoginKit
+import RealmSwift
 
 struct LoginView: View {
-    
-    @EnvironmentObject var viewModel: AuthenticationViewModel
     
     var body: some View {
         VStack {
@@ -43,8 +42,8 @@ struct LoginView: View {
             FacebookLoginButton()
                 .frame(height: 60)
             
-            GoogleLoginButton(handler: viewModel.signIn)
-                .frame(height: 60)
+            GoogleLoginButton(handler: LoginManager.shared.doLoginGoogle)
+            .frame(height: 60)
         }
         .padding()
     }
@@ -53,6 +52,5 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .environmentObject(AuthenticationViewModel())
     }
 }
