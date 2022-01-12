@@ -39,10 +39,17 @@ struct LoginView: View {
                     .frame(height: 60)
             }
             
-            FacebookLoginButton()
-                .frame(height: 60)
+            Button {
+                UserLoginManager.shared.doLoginFacebook()
+            } label: {
+                Text("페북 로그인")
+                    .padding()
+                    .overlay(RoundedRectangle(cornerRadius: 4)
+                    .strokeBorder())
+            }
+
             
-            GoogleLoginButton(handler: LoginManager.shared.doLoginGoogle)
+            GoogleLoginButton(handler: UserLoginManager.shared.doLoginGoogle)
             .frame(height: 60)
         }
         .padding()

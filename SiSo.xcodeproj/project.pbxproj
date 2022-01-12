@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4BF1E4CEBDB29EABBD025B82 /* Pods_SiSo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E6D3755854493B6C5F2C78 /* Pods_SiSo.framework */; };
-		530650F7278ECCEA00EF5626 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530650F6278ECCEA00EF5626 /* LoginManager.swift */; };
+		530650F7278ECCEA00EF5626 /* UserLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530650F6278ECCEA00EF5626 /* UserLoginManager.swift */; };
 		530D55182776F36D00AF1FD1 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */; };
 		530D55192776F36D00AF1FD1 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */; };
 		530D551A2776F36D00AF1FD1 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */; };
@@ -70,7 +70,7 @@
 
 /* Begin PBXFileReference section */
 		2A74DCEE0AB82E6FA016ED93 /* Pods-ThatsIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThatsIt.debug.xcconfig"; path = "Target Support Files/Pods-ThatsIt/Pods-ThatsIt.debug.xcconfig"; sourceTree = "<group>"; };
-		530650F6278ECCEA00EF5626 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		530650F6278ECCEA00EF5626 /* UserLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginManager.swift; sourceTree = "<group>"; };
 		530D55112776F36D00AF1FD1 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
 		530D55122776F36D00AF1FD1 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		530D55132776F36D00AF1FD1 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				5398E46E2787E58A00E7437B /* Socket */,
-				530650F6278ECCEA00EF5626 /* LoginManager.swift */,
+				530650F6278ECCEA00EF5626 /* UserLoginManager.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -624,7 +624,7 @@
 				5349B23C2784182500A1B5BE /* CardStack.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
 				5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */,
-				530650F7278ECCEA00EF5626 /* LoginManager.swift in Sources */,
+				530650F7278ECCEA00EF5626 /* UserLoginManager.swift in Sources */,
 				5386365A277A192500B2B3A7 /* PreviewFriendRow.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
 				5349B23E27843C7600A1B5BE /* PlaceCardView.swift in Sources */,
