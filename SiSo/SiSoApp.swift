@@ -12,9 +12,10 @@ import KakaoSDKAuth
 import FBSDKCoreKit
 import Firebase
 import GoogleSignIn
+import RealmSwift
 
 @main
-struct SiSoApp: App {
+struct SiSoApp: SwiftUI.App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     init() {
@@ -24,9 +25,17 @@ struct SiSoApp: App {
         
     }
     
+    
+    var realmConfigration: Realm.Configuration {
+        var config = Realm.Configuration.defaultConfiguration
+        config.deleteRealmIfMigrationNeeded = true
+        return config
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.realmConfiguration, realmConfigration)
                 .onOpenURL { url in
                     // google
                     GIDSignIn.sharedInstance.handle(url)
