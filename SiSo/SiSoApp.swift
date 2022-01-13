@@ -29,18 +29,16 @@ struct SiSoApp: App {
             ContentView()
                 .onOpenURL { url in
                     // google
-                    if GIDSignIn.sharedInstance.handle(url) {
-                        //no-op
-                    } else if AuthApi.isKakaoTalkLoginUrl(url) { // kakao
+                    GIDSignIn.sharedInstance.handle(url)
+                    if AuthApi.isKakaoTalkLoginUrl(url) { // kakao
                         let _ = AuthController.handleOpenUrl(url: url)
-                    } else if ApplicationDelegate.shared.application( // facebook
+                    }
+                    ApplicationDelegate.shared.application( // facebook
                         UIApplication.shared,
                         open: url,
                         sourceApplication: nil,
                         annotation: UIApplication.OpenURLOptionsKey.annotation
-                    ) {
-                        
-                    }
+                    )
                 }
         }
     }
@@ -54,6 +52,9 @@ struct SiSoApp: App {
         func application(_ app: UIApplication,
                          open url: URL,
                          options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+            if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                        return AuthController.handleOpenUrl(url: url)
+            }
             return ApplicationDelegate.shared.application(app, open: url, options: options)
         }
     }

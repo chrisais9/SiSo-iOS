@@ -9,6 +9,7 @@ import SwiftUI
 import GoogleSignIn
 import RealmSwift
 import FBSDKLoginKit
+import KakaoSDKUser
 
 final class UserLoginManager {
     
@@ -21,8 +22,9 @@ final class UserLoginManager {
     static let shared = UserLoginManager()
     private init() { }
     
-    func setUser(profileImage: String?, name: String?, email: String?) {
+    func setUser(loginType: LoginType, profileImage: String?, name: String?, email: String?) {
         let user = User()
+        user.loginType = loginType
         user.profileImage = profileImage ?? ""
         user.name = name ?? "익명"
         user.email = email ?? ""
@@ -42,6 +44,54 @@ final class UserLoginManager {
     }
 }
 
+// Kakao Login
+extension UserLoginManager {
+    func doLoginKakao() {
+        if UserApi.isKakaoTalkLoginAvailable() {
+            UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    self.getUserProfileKakao()
+                    print("kakao login success \(oauthToken?.accessToken ?? "")")
+                }
+            }
+        } else {
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    self.getUserProfileKakao()
+                    print("kakao login success \(oauthToken?.accessToken ?? "")")
+                }
+            }
+        }
+    }
+    
+    private func getUserProfileKakao() {
+        UserApi.shared.me { user, error in
+            if let error = error {
+                print(error)
+            }
+            else {
+                self.setUser(
+                    loginType: .kakao,
+                    profileImage: user?.kakaoAccount?.profile?.profileImageUrl?.absoluteString,
+                    name: user?.kakaoAccount?.profile?.nickname,
+                    email: user?.kakaoAccount?.email
+                )
+            }
+        }
+    }
+    
+    func doLogoutKakao() {
+        let loginManager = LoginManager()
+        loginManager.logOut()
+    }
+}
+
 // Facebook Login
 extension UserLoginManager {
     func doLoginFacebook() {
@@ -56,14 +106,19 @@ extension UserLoginManager {
             } else if let result = result, result.isCancelled {
                 print("Cancelled")
             } else {
-                Profile.loadCurrentProfile { profile, error in
-                    self.setUser(
-                        profileImage: profile?.imageURL?.absoluteString,
-                        name: profile?.name,
-                        email: profile?.email
-                    )
-                }
+                self.getUserProfileFacebook()
             }
+        }
+    }
+    
+    private func getUserProfileFacebook() {
+        Profile.loadCurrentProfile { profile, error in
+            self.setUser(
+                loginType: .facebook,
+                profileImage: profile?.imageURL?.absoluteString,
+                name: profile?.name,
+                email: profile?.email
+            )
         }
     }
     
@@ -88,6 +143,7 @@ extension UserLoginManager {
             }
             
             self.setUser(
+                loginType: .google,
                 profileImage: socialUser.profile?.imageURL(withDimension: 320)?.absoluteString,
                 name: socialUser.profile?.name,
                 email: socialUser.profile?.email
@@ -97,7 +153,6 @@ extension UserLoginManager {
     
     func doLogoutGoogle() {
         GIDSignIn.sharedInstance.signOut()
-        
         deleteUser()
     }
 }

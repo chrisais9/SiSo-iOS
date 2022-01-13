@@ -112,15 +112,6 @@ PODS:
     - AppAuth/Core (~> 1.4)
     - GTMSessionFetcher/Core (~> 1.5)
   - GTMSessionFetcher/Core (1.7.0)
-  - KakaoSDK (2.8.4):
-    - KakaoSDKAuth (= 2.8.4)
-    - KakaoSDKCommon (= 2.8.4)
-    - KakaoSDKLink (= 2.8.4)
-    - KakaoSDKNavi (= 2.8.4)
-    - KakaoSDKStory (= 2.8.4)
-    - KakaoSDKTalk (= 2.8.4)
-    - KakaoSDKTemplate (= 2.8.4)
-    - KakaoSDKUser (= 2.8.4)
   - KakaoSDKAuth (2.8.4):
     - KakaoSDKCommon (= 2.8.4)
   - KakaoSDKCommon (2.8.4):
@@ -129,18 +120,6 @@ PODS:
   - KakaoSDKCommon/Common (2.8.4)
   - KakaoSDKCommon/Network (2.8.4):
     - Alamofire (~> 5.1)
-    - KakaoSDKCommon/Common (= 2.8.4)
-  - KakaoSDKLink (2.8.4):
-    - KakaoSDKCommon (= 2.8.4)
-    - KakaoSDKTemplate (= 2.8.4)
-  - KakaoSDKNavi (2.8.4):
-    - KakaoSDKCommon/Common (= 2.8.4)
-  - KakaoSDKStory (2.8.4):
-    - KakaoSDKUser (= 2.8.4)
-  - KakaoSDKTalk (2.8.4):
-    - KakaoSDKTemplate (= 2.8.4)
-    - KakaoSDKUser (= 2.8.4)
-  - KakaoSDKTemplate (2.8.4):
     - KakaoSDKCommon/Common (= 2.8.4)
   - KakaoSDKUser (2.8.4):
     - KakaoSDKAuth (= 2.8.4)
@@ -167,7 +146,9 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - GoogleSignIn
-  - KakaoSDK
+  - KakaoSDKAuth
+  - KakaoSDKCommon
+  - KakaoSDKUser
   - Kingfisher (~> 7.0)
   - NMapsMap (= 3.13.0)
   - RealmSwift (~> 10)
@@ -194,14 +175,8 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMAppAuth
     - GTMSessionFetcher
-    - KakaoSDK
     - KakaoSDKAuth
     - KakaoSDKCommon
-    - KakaoSDKLink
-    - KakaoSDKNavi
-    - KakaoSDKStory
-    - KakaoSDKTalk
-    - KakaoSDKTemplate
     - KakaoSDKUser
     - Kingfisher
     - nanopb
@@ -232,14 +207,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
-  KakaoSDK: f80dbd5e4e8db058c9f1cd48356329f11fd6e281
   KakaoSDKAuth: b9b693995f98b1821ccd22b39d383e1dede5ca45
   KakaoSDKCommon: 33c9902ee9ce13e9d1cac3549896406229836ff5
-  KakaoSDKLink: 588e425cb30df37b3404662170f2d0bdda7af7ae
-  KakaoSDKNavi: 46060633e4a41682bb8ed086372526412fcffda2
-  KakaoSDKStory: b1d287251c6c35dcf7b04e94e3107b6cc7236495
-  KakaoSDKTalk: ac4d2ec8b7323a50f98d74e6358fc8a296107566
-  KakaoSDKTemplate: 23ff3023d189f0962d28e34627a19c0eb8c1c7a6
   KakaoSDKUser: d878977e0ba6b365cfeac3b6319cdf4231713bea
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
@@ -250,6 +219,6 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: 34e09d7e22eacd2a3905eb1748452b6e9a59f111
+PODFILE CHECKSUM: bb40e03647f521da157d58eb55adf0ef7ad756d0
 
 COCOAPODS: 1.11.2

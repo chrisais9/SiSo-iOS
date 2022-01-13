@@ -6,33 +6,13 @@
 //
 
 import SwiftUI
-import KakaoSDKUser
-import FBSDKLoginKit
-import RealmSwift
 
 struct LoginView: View {
     
     var body: some View {
         VStack {
             Button {
-                if UserApi.isKakaoTalkLoginAvailable() {
-                    UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
-                        if let error = error {
-                            print(error)
-                        } else {
-                            print("kakao login success \(oauthToken?.accessToken ?? "")")
-                        }
-                    }
-                } else {
-                    UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-                        if let error = error {
-                            print(error)
-                        }
-                        else {
-                            print("kakao login success \(oauthToken?.accessToken ?? "")")
-                        }
-                    }
-                }
+                UserLoginManager.shared.doLoginKakao()
             } label: {
                 Image("btn_kakao_login")
                     .resizable()

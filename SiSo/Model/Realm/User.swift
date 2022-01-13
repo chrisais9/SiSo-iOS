@@ -8,9 +8,18 @@
 import RealmSwift
 import SwiftUI
 
+enum LoginType: String, PersistableEnum {
+    case none
+    case google
+    case kakao
+    case facebook
+    case naver
+    case apple
+}
+
 final class User: Object, ObjectKeyIdentifiable {
     
-    @Persisted var isLoggedIn: Bool = false
+    @Persisted var loginType: LoginType = .none
     
     @Persisted var name: String = "로그인 해주세요"
     
