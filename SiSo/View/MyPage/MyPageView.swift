@@ -81,7 +81,7 @@ struct MyPageView: View {
                         
                     }
                     Button {
-                        UserLoginManager.shared.doLogoutGoogle()
+                        UserLoginManager.shared.doLogout()
                     } label: {
                         Text("로그아웃")
                             .foregroundColor(.black)

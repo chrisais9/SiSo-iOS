@@ -12,7 +12,7 @@ struct LoginView: View {
     var body: some View {
         VStack {
             Button {
-                UserLoginManager.shared.doLoginKakao()
+                UserLoginManager.shared.doLogin(loginType: .kakao)
             } label: {
                 Image("btn_kakao_login")
                     .resizable()
@@ -20,7 +20,7 @@ struct LoginView: View {
             }
             
             Button {
-                UserLoginManager.shared.doLoginFacebook()
+                UserLoginManager.shared.doLogin(loginType: .facebook)
             } label: {
                 Text("페북 로그인")
                     .padding()
@@ -29,7 +29,9 @@ struct LoginView: View {
             }
 
             
-            GoogleLoginButton(handler: UserLoginManager.shared.doLoginGoogle)
+            GoogleLoginButton(handler: {
+                UserLoginManager.shared.doLogin(loginType: .google)
+            })
             .frame(height: 60)
         }
         .padding()

@@ -36,6 +36,44 @@ final class UserLoginManager {
         }
     }
     
+    func doLogin(loginType: LoginType) {
+        switch loginType {
+        case .none:
+            break
+        case .google:
+            doLoginGoogle()
+        case .kakao:
+            doLoginKakao()
+        case .facebook:
+            doLoginFacebook()
+        case .naver:
+            break // not implemented
+        case .apple:
+            break // not implemented
+        }
+    }
+    
+    func doLogout() {
+        let realm = try! Realm()
+        realm.objects(User.self).forEach { user in
+            switch user.loginType {
+            case .none:
+                break
+            case .google:
+                doLogoutGoogle()
+            case .kakao:
+                doLogoutKakao()
+            case .facebook:
+                doLogoutFacebook()
+            case .naver:
+                break // not implemented
+            case .apple:
+                break // not implemented
+            }
+            
+        }
+    }
+    
     func deleteUser() {
         let realm = try! Realm()
         try! realm.write {
@@ -46,7 +84,7 @@ final class UserLoginManager {
 
 // Kakao Login
 extension UserLoginManager {
-    func doLoginKakao() {
+    private func doLoginKakao() {
         if UserApi.isKakaoTalkLoginAvailable() {
             UserApi.shared.loginWithKakaoTalk { (oauthToken, error) in
                 if let error = error {
@@ -86,15 +124,19 @@ extension UserLoginManager {
         }
     }
     
-    func doLogoutKakao() {
-        let loginManager = LoginManager()
-        loginManager.logOut()
+    private func doLogoutKakao() {
+        UserApi.shared.logout { error in
+            if let error = error {
+                print(error)
+            }
+        }
+        self.deleteUser()
     }
 }
 
 // Facebook Login
 extension UserLoginManager {
-    func doLoginFacebook() {
+    private func doLoginFacebook() {
         guard let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
             print("There is no root view controller!")
             return
@@ -122,7 +164,7 @@ extension UserLoginManager {
         }
     }
     
-    func doLogoutFacebook() {
+    private func doLogoutFacebook() {
         let loginManager = LoginManager()
         loginManager.logOut()
     }
@@ -130,7 +172,7 @@ extension UserLoginManager {
 
 // Google Login
 extension UserLoginManager {
-    func doLoginGoogle() {
+    private func doLoginGoogle() {
         guard let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
             print("There is no root view controller!")
             return
@@ -151,7 +193,7 @@ extension UserLoginManager {
         }
     }
     
-    func doLogoutGoogle() {
+    private func doLogoutGoogle() {
         GIDSignIn.sharedInstance.signOut()
         deleteUser()
     }
