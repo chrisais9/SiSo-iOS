@@ -37,17 +37,21 @@ struct SiSoApp: SwiftUI.App {
             ContentView()
                 .environment(\.realmConfiguration, realmConfigration)
                 .onOpenURL { url in
-                    // google
-                    GIDSignIn.sharedInstance.handle(url)
-                    if AuthApi.isKakaoTalkLoginUrl(url) { // kakao
-                        let _ = AuthController.handleOpenUrl(url: url)
-                    }
-                    ApplicationDelegate.shared.application( // facebook
+                    // facebook
+                    ApplicationDelegate.shared.application(
                         UIApplication.shared,
                         open: url,
                         sourceApplication: nil,
                         annotation: UIApplication.OpenURLOptionsKey.annotation
                     )
+                    
+                    // google
+                    GIDSignIn.sharedInstance.handle(url)
+                    
+                    // kakao
+                    if AuthApi.isKakaoTalkLoginUrl(url) {
+                        let _ = AuthController.handleOpenUrl(url: url)
+                    }
                 }
         }
     }
@@ -56,6 +60,7 @@ struct SiSoApp: SwiftUI.App {
         func application(_ application: UIApplication,
                          didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+            return true
         }
         
         func application(_ app: UIApplication,

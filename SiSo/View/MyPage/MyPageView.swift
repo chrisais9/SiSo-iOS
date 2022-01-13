@@ -37,7 +37,7 @@ struct MyPageView: View {
                                         Color.gray
                                     }
                                     .resizable()
-                                    .frame(width: 50, height: 50)
+                                    .frame(width: 80, height: 80)
                                     .clipShape(Circle())
                                 
                                 HStack(spacing: 5) {
@@ -59,6 +59,7 @@ struct MyPageView: View {
                         Spacer()
                     }
                 }
+                .padding()
                 .contentShape(Rectangle())
                 .onTapGesture {
                     withAnimation {
@@ -111,7 +112,8 @@ struct MyPageView_Previews: PreviewProvider {
     
     static func createData() {
         let realm = try! Realm()
-        let user = realm.create(User.self)
+        let user = User()
+        user.name = "로그인 해주세요"
         try! realm.write {
             realm.deleteAll()
             realm.add(user)

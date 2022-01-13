@@ -142,12 +142,13 @@ extension UserLoginManager {
             return
         }
         let loginManager = LoginManager()
-        loginManager.logIn(permissions: ["public_profile", "email", "name"], from: rootViewController) { result, error in
+        loginManager.logIn(permissions: ["public_profile", "email"], from: rootViewController) { result, error in
             if let error = error {
                 print("Encountered Erorr: \(error)")
             } else if let result = result, result.isCancelled {
                 print("Cancelled")
             } else {
+                print("success")
                 self.getUserProfileFacebook()
             }
         }
@@ -155,9 +156,13 @@ extension UserLoginManager {
     
     private func getUserProfileFacebook() {
         Profile.loadCurrentProfile { profile, error in
+            guard error == nil else {
+                print("Encountered Erorr: \(error.debugDescription)")
+                return
+            }
             self.setUser(
                 loginType: .facebook,
-                profileImage: profile?.imageURL?.absoluteString,
+                profileImage: profile?.imageURL(forMode: .large, size: .init(width: 320, height: 320))?.absoluteString,
                 name: profile?.name,
                 email: profile?.email
             )
@@ -167,6 +172,7 @@ extension UserLoginManager {
     private func doLogoutFacebook() {
         let loginManager = LoginManager()
         loginManager.logOut()
+        deleteUser()
     }
 }
 
