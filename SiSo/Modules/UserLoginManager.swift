@@ -10,8 +10,10 @@ import GoogleSignIn
 import RealmSwift
 import FBSDKLoginKit
 import KakaoSDKUser
+import NaverThirdPartyLogin
+import Alamofire
 
-final class UserLoginManager {
+final class UserLoginManager: NSObject {
     
     private let googleClientID: String = "615397119216-nvgj2f2p9a1n1c326lo2hlftcguol2m2.apps.googleusercontent.com"
     
@@ -20,7 +22,7 @@ final class UserLoginManager {
     }()
     
     static let shared = UserLoginManager()
-    private init() { }
+    private override init() { }
     
     func setUser(loginType: LoginType, profileImage: String?, name: String?, email: String?) {
         let user = User()
@@ -47,7 +49,7 @@ final class UserLoginManager {
         case .facebook:
             doLoginFacebook()
         case .naver:
-            break // not implemented
+            doLoginNaver()
         case .apple:
             break // not implemented
         }
@@ -66,7 +68,7 @@ final class UserLoginManager {
             case .facebook:
                 doLogoutFacebook()
             case .naver:
-                break // not implemented
+                doLogoutNaver()
             case .apple:
                 break // not implemented
             }
@@ -201,6 +203,70 @@ extension UserLoginManager {
     
     private func doLogoutGoogle() {
         GIDSignIn.sharedInstance.signOut()
+        deleteUser()
+    }
+}
+
+// Naver Login
+extension UserLoginManager: NaverThirdPartyLoginConnectionDelegate {
+    
+    func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
+        print("called")
+        getUserProfileNaver()
+    }
+    
+    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
+        
+    }
+    
+    func oauth20ConnectionDidFinishDeleteToken() {
+        
+    }
+    
+    func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
+        print(error)
+    }
+    
+    private func doLoginNaver() {
+        let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+        loginInstance?.delegate = self
+        loginInstance?.requestThirdPartyLogin()
+        
+    }
+    
+    private func getUserProfileNaver() {
+        let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+        guard let isValidAccessToken = loginInstance?.isValidAccessTokenExpireTimeNow() else { return }
+        
+        if !isValidAccessToken {
+            return
+        }
+        
+        guard let tokenType = loginInstance?.tokenType else { return }
+        guard let accessToken = loginInstance?.accessToken else { return }
+        let urlStr = "https://openapi.naver.com/v1/nid/me"
+        let url = URL(string: urlStr)!
+        
+        let authorization = "\(tokenType) \(accessToken)"
+        
+        let req = AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization])
+        
+        req.responseDecodable(of: NaverProfileResponse.self) { response in
+            if response.response?.statusCode == 200, let naverProfileResponse = response.value {
+                self.setUser(
+                    loginType: .naver,
+                    profileImage: naverProfileResponse.response.profileImage,
+                    name: naverProfileResponse.response.nickname,
+                    email: naverProfileResponse.response.email
+                )
+            }
+        }
+    }
+    
+    private func doLogoutNaver() {
+        let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+        loginInstance?.removeNaverLoginCookie()
+        loginInstance?.requestDeleteToken()
         deleteUser()
     }
 }

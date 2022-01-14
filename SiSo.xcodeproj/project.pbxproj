@@ -57,6 +57,7 @@
 		53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A862774ACEE00C51065 /* SelectFilterView.swift */; };
 		53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */; };
 		53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C42964277CC925004C6B1C /* PlaceMapView.swift */; };
+		53C5597C279025A6004458F7 /* NaverProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C5597B279025A6004458F7 /* NaverProfileResponse.swift */; };
 		53C6DDDF2780361200633AED /* ListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6DDDE2780361200633AED /* ListContentView.swift */; };
 		53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CCDB94278842DC00C335FC /* PreviewFilterView.swift */; };
 		53CF65C0278EA228002B08A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF65BF278EA228002B08A0 /* User.swift */; };
@@ -121,6 +122,7 @@
 		53C00A862774ACEE00C51065 /* SelectFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterView.swift; sourceTree = "<group>"; };
 		53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectedFilters+Enum.swift"; sourceTree = "<group>"; };
 		53C42964277CC925004C6B1C /* PlaceMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMapView.swift; sourceTree = "<group>"; };
+		53C5597B279025A6004458F7 /* NaverProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverProfileResponse.swift; sourceTree = "<group>"; };
 		53C6DDDE2780361200633AED /* ListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContentView.swift; sourceTree = "<group>"; };
 		53CCDB94278842DC00C335FC /* PreviewFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFilterView.swift; sourceTree = "<group>"; };
 		53CF65BF278EA228002B08A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 		53C00A882774D38A00C51065 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				53C5597A2790255B004458F7 /* Login */,
 				53CF65BD278EA20A002B08A0 /* Realm */,
 				53C00A892774D3AD00C51065 /* Home */,
 			);
@@ -413,6 +416,14 @@
 				53458E802781CCCA0064740D /* SearchPlaceView.swift */,
 			);
 			path = SelectPlace;
+			sourceTree = "<group>";
+		};
+		53C5597A2790255B004458F7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				53C5597B279025A6004458F7 /* NaverProfileResponse.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		53CF65BD278EA20A002B08A0 /* Realm */ = {
@@ -584,6 +595,7 @@
 				539AE41D27888FC0008CAC20 /* URLImage.swift in Sources */,
 				53E171CA278C454600C2D41A /* RestaurantCardView.swift in Sources */,
 				5398E46D2787D9C100E7437B /* SisoSocketManager.swift in Sources */,
+				53C5597C279025A6004458F7 /* NaverProfileResponse.swift in Sources */,
 				53AB86E72770F617006493D7 /* ContentView.swift in Sources */,
 				532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */,
 				53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */,

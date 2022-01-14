@@ -129,6 +129,7 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - naveridlogin-sdk-ios (4.1.3)
   - NMapsMap (3.13.0)
   - PromisesObjC (2.0.0)
   - Realm (10.21.0):
@@ -141,6 +142,7 @@ PODS:
   - Starscream (3.1.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.5)
   - BottomSheetSwiftUI
   - FBSDKLoginKit
   - Firebase/Analytics
@@ -150,6 +152,7 @@ DEPENDENCIES:
   - KakaoSDKCommon
   - KakaoSDKUser
   - Kingfisher (~> 7.0)
+  - naveridlogin-sdk-ios
   - NMapsMap (= 3.13.0)
   - RealmSwift (~> 10)
   - Socket.IO-Client-Swift (~> 15.2.0)
@@ -180,6 +183,7 @@ SPEC REPOS:
     - KakaoSDKUser
     - Kingfisher
     - nanopb
+    - naveridlogin-sdk-ios
     - NMapsMap
     - PromisesObjC
     - Realm
@@ -212,6 +216,7 @@ SPEC CHECKSUMS:
   KakaoSDKUser: d878977e0ba6b365cfeac3b6319cdf4231713bea
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  naveridlogin-sdk-ios: b9d7c20677981177ed994ecb1c8c2b49f223277d
   NMapsMap: 88b5bdac7087bfa99ab058ff5cdd95fb766e0e95
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   Realm: 55220cda83aabd773740d18518e05fdbe00b87cc
@@ -219,6 +224,6 @@ SPEC CHECKSUMS:
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
 
-PODFILE CHECKSUM: bb40e03647f521da157d58eb55adf0ef7ad756d0
+PODFILE CHECKSUM: 1d7d262a6be1d77500c94f78abcc883f59f2e469
 
 COCOAPODS: 1.11.2

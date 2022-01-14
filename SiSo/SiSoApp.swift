@@ -13,6 +13,7 @@ import FBSDKCoreKit
 import Firebase
 import GoogleSignIn
 import RealmSwift
+import NaverThirdPartyLogin
 
 @main
 struct SiSoApp: SwiftUI.App {
@@ -22,6 +23,17 @@ struct SiSoApp: SwiftUI.App {
         FirebaseApp.configure()
         NMFAuthManager.shared().clientId = "gyrtzz3dq2"
         KakaoSDK.initSDK(appKey: "4d2a5fa60de38bafa5a03910ed458fef")
+        
+        let instance = NaverThirdPartyLoginConnection.getSharedInstance()
+        
+        instance?.isNaverAppOauthEnable = true
+        instance?.isInAppOauthEnable = true
+        instance?.setOnlyPortraitSupportInIphone(true)
+
+        instance?.serviceUrlScheme = kServiceAppUrlScheme // 앱을 등록할 때 입력한 URL Scheme
+        instance?.consumerKey = kConsumerKey // 상수 - client id
+        instance?.consumerSecret = kConsumerSecret // pw
+        instance?.appName = kServiceAppName // app name
         
     }
     
@@ -37,7 +49,7 @@ struct SiSoApp: SwiftUI.App {
             ContentView()
                 .environment(\.realmConfiguration, realmConfigration)
                 .onOpenURL { url in
-                    // facebook
+                    // Facebook
                     ApplicationDelegate.shared.application(
                         UIApplication.shared,
                         open: url,
@@ -45,13 +57,18 @@ struct SiSoApp: SwiftUI.App {
                         annotation: UIApplication.OpenURLOptionsKey.annotation
                     )
                     
-                    // google
+                    // Google
                     GIDSignIn.sharedInstance.handle(url)
                     
-                    // kakao
+                    // Kakao
                     if AuthApi.isKakaoTalkLoginUrl(url) {
                         let _ = AuthController.handleOpenUrl(url: url)
                     }
+                    
+                    // Naver
+                    NaverThirdPartyLoginConnection
+                        .getSharedInstance()?
+                        .receiveAccessToken(url)
                 }
         }
     }
@@ -69,6 +86,7 @@ struct SiSoApp: SwiftUI.App {
             if (AuthApi.isKakaoTalkLoginUrl(url)) {
                         return AuthController.handleOpenUrl(url: url)
             }
+            NaverThirdPartyLoginConnection.getSharedInstance()?.application(app, open: url, options: options)
             return ApplicationDelegate.shared.application(app, open: url, options: options)
         }
     }

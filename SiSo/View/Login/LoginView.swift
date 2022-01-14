@@ -20,6 +20,14 @@ struct LoginView: View {
             }
             
             Button {
+                UserLoginManager.shared.doLogin(loginType: .naver)
+            } label: {
+                Image("btn_naver_login")
+                    .resizable()
+                    .frame(height: 60)
+            }
+            
+            Button {
                 UserLoginManager.shared.doLogin(loginType: .facebook)
             } label: {
                 Text("페북 로그인")

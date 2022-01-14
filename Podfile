@@ -22,9 +22,14 @@ target 'SiSo' do
   pod 'KakaoSDKAuth'  # 사용자 인증
   pod 'KakaoSDKUser'  # 카카오 로그인, 사용자 관리
   
+  # Facebook login
   pod 'FBSDKLoginKit'
   
+  # Google login
   pod 'GoogleSignIn'
+  
+  # Naver login
+  pod 'naveridlogin-sdk-ios'
   
   # Firebase
   pod 'Firebase/Analytics'
@@ -32,6 +37,9 @@ target 'SiSo' do
   
   # Realm DB
   pod 'RealmSwift', '~>10'
+  
+  # Alomofire
+  pod 'Alamofire', '~> 5.5'
   
 end
 
