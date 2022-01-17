@@ -19,6 +19,8 @@ enum LoginType: String, PersistableEnum {
 
 final class User: Object, ObjectKeyIdentifiable {
     
+    @Persisted var jwtToken: String = ""
+    
     @Persisted var loginType: LoginType = .none
     
     @Persisted var name: String = "로그인 해주세요"

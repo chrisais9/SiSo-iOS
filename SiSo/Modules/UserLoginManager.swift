@@ -24,12 +24,13 @@ final class UserLoginManager: NSObject {
     static let shared = UserLoginManager()
     private override init() { }
     
-    func setUser(loginType: LoginType, profileImage: String?, name: String?, email: String?) {
+    func setUser(jwtToken: String = "", loginType: LoginType = .none, profileImage: String = "", name: String = "", email: String = "") {
         let user = User()
+        user.jwtToken = jwtToken
         user.loginType = loginType
-        user.profileImage = profileImage ?? ""
-        user.name = name ?? "익명"
-        user.email = email ?? ""
+        user.profileImage = profileImage
+        user.name = name
+        user.email = email
         
         let realm = try! Realm()
         try! realm.write {
@@ -38,7 +39,7 @@ final class UserLoginManager: NSObject {
         }
     }
     
-    func doLogin(loginType: LoginType) {
+    func doSocialLoginBy(loginType: LoginType) {
         switch loginType {
         case .none:
             break
@@ -52,6 +53,32 @@ final class UserLoginManager: NSObject {
             doLoginNaver()
         case .apple:
             break // not implemented
+        }
+    }
+    
+    func doServerLogin(type: LoginType, token: String) {
+        Repositories.shared.loginWithSocialToken(type: type, token: token) { status, loginResponse in
+            switch status {
+            case .ok:
+                if let jwtToken = loginResponse.data {
+                    self.setUser(jwtToken: jwtToken)
+                }
+            default:
+                print(loginResponse.message ?? "?")
+            }
+        }
+    }
+    
+    func doServerRegister(type: LoginType, token: String) {
+        Repositories.shared.registerWithSocialToken(type: type, token: token) { status, registerResponse in
+            switch status {
+            case .ok:
+                if let jwtToken = registerResponse.data {
+                    self.setUser(jwtToken: jwtToken)
+                }
+            default:
+                print(registerResponse.message ?? "?")
+            }
         }
     }
     
@@ -92,39 +119,40 @@ extension UserLoginManager {
                 if let error = error {
                     print(error)
                 }
-                else {
-                    self.getUserProfileKakao()
+                else if let accessToken = oauthToken?.accessToken {
+                    
+                    self.doServerLogin(type: .kakao, token: accessToken)
                     print("kakao login success \(oauthToken?.accessToken ?? "")")
                 }
             }
         } else {
-            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                }
-                else {
-                    self.getUserProfileKakao()
-                    print("kakao login success \(oauthToken?.accessToken ?? "")")
-                }
-            }
+//            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+//                if let error = error {
+//                    print(error)
+//                }
+//                else {
+//                    self.getUserProfileKakao()
+//                    print("kakao login success \(oauthToken?.accessToken ?? "")")
+//                }
+//            }
         }
     }
     
-    private func getUserProfileKakao() {
-        UserApi.shared.me { user, error in
-            if let error = error {
-                print(error)
-            }
-            else {
-                self.setUser(
-                    loginType: .kakao,
-                    profileImage: user?.kakaoAccount?.profile?.profileImageUrl?.absoluteString,
-                    name: user?.kakaoAccount?.profile?.nickname,
-                    email: user?.kakaoAccount?.email
-                )
-            }
-        }
-    }
+//    private func getUserProfileKakao() {
+//        UserApi.shared.me { user, error in
+//            if let error = error {
+//                print(error)
+//            }
+//            else {
+//                self.setUser(
+//                    loginType: .kakao,
+//                    profileImage: user?.kakaoAccount?.profile?.profileImageUrl?.absoluteString,
+//                    name: user?.kakaoAccount?.profile?.nickname,
+//                    email: user?.kakaoAccount?.email
+//                )
+//            }
+//        }
+//    }
     
     private func doLogoutKakao() {
         UserApi.shared.logout { error in
@@ -162,12 +190,12 @@ extension UserLoginManager {
                 print("Encountered Erorr: \(error.debugDescription)")
                 return
             }
-            self.setUser(
-                loginType: .facebook,
-                profileImage: profile?.imageURL(forMode: .large, size: .init(width: 320, height: 320))?.absoluteString,
-                name: profile?.name,
-                email: profile?.email
-            )
+//            self.setUser(
+//                loginType: .facebook,
+//                profileImage: profile?.imageURL(forMode: .large, size: .init(width: 320, height: 320))?.absoluteString,
+//                name: profile?.name!,
+//                email: profile?.email!
+//            )
         }
     }
     
@@ -192,12 +220,12 @@ extension UserLoginManager {
                 return
             }
             
-            self.setUser(
-                loginType: .google,
-                profileImage: socialUser.profile?.imageURL(withDimension: 320)?.absoluteString,
-                name: socialUser.profile?.name,
-                email: socialUser.profile?.email
-            )
+//            self.setUser(
+//                loginType: .google,
+//                profileImage: socialUser.profile?.imageURL(withDimension: 320)?.absoluteString,
+//                name: socialUser.profile?.name!,
+//                email: socialUser.profile?.email!
+//            )
         }
     }
     

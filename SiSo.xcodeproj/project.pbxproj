@@ -32,6 +32,11 @@
 		5349B2422784463400A1B5BE /* VoteEmojiOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */; };
 		534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C3E532780A1250046D1B9 /* FilterHeaderView.swift */; };
 		535B8AB22785505F003B4F4F /* VoteResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535B8AB12785505F003B4F4F /* VoteResultView.swift */; };
+		5366FA4527954865007C723E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4427954865007C723E /* API.swift */; };
+		5366FA4727954986007C723E /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4627954986007C723E /* Repositories.swift */; };
+		5366FA4A27954B15007C723E /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4927954B15007C723E /* LoginResponse.swift */; };
+		5366FA4C27954C6C007C723E /* HTTPStatusCode+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4B27954C6C007C723E /* HTTPStatusCode+Enum.swift */; };
+		5366FA4E27955437007C723E /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4D27955437007C723E /* RegisterResponse.swift */; };
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
 		537ECB0C278E661800190A40 /* GoogleLoginButton+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537ECB0B278E661800190A40 /* GoogleLoginButton+SwiftUI.swift */; };
@@ -96,6 +101,11 @@
 		5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteEmojiOverlayView.swift; sourceTree = "<group>"; };
 		534C3E532780A1250046D1B9 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		535B8AB12785505F003B4F4F /* VoteResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResultView.swift; sourceTree = "<group>"; };
+		5366FA4427954865007C723E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5366FA4627954986007C723E /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+		5366FA4927954B15007C723E /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		5366FA4B27954C6C007C723E /* HTTPStatusCode+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPStatusCode+Enum.swift"; sourceTree = "<group>"; };
+		5366FA4D27955437007C723E /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
 		537ECB0B278E661800190A40 /* GoogleLoginButton+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleLoginButton+SwiftUI.swift"; sourceTree = "<group>"; };
@@ -202,6 +212,24 @@
 			path = BottomSheet;
 			sourceTree = "<group>";
 		};
+		5366FA4127954697007C723E /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				5366FA4427954865007C723E /* API.swift */,
+				5366FA4627954986007C723E /* Repositories.swift */,
+				5366FA4B27954C6C007C723E /* HTTPStatusCode+Enum.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		5366FA4827954AF2007C723E /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				53C5597A2790255B004458F7 /* Login */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		536D826227737C4600C3AAB7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +290,7 @@
 		5398E46B2787D9AC00E7437B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5366FA4127954697007C723E /* Remote */,
 				5398E46E2787E58A00E7437B /* Socket */,
 				530650F6278ECCEA00EF5626 /* UserLoginManager.swift */,
 			);
@@ -390,7 +419,7 @@
 		53C00A882774D38A00C51065 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				53C5597A2790255B004458F7 /* Login */,
+				5366FA4827954AF2007C723E /* Remote */,
 				53CF65BD278EA20A002B08A0 /* Realm */,
 				53C00A892774D3AD00C51065 /* Home */,
 			);
@@ -422,6 +451,8 @@
 			isa = PBXGroup;
 			children = (
 				53C5597B279025A6004458F7 /* NaverProfileResponse.swift */,
+				5366FA4927954B15007C723E /* LoginResponse.swift */,
+				5366FA4D27955437007C723E /* RegisterResponse.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -598,8 +629,10 @@
 				53C5597C279025A6004458F7 /* NaverProfileResponse.swift in Sources */,
 				53AB86E72770F617006493D7 /* ContentView.swift in Sources */,
 				532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */,
+				5366FA4A27954B15007C723E /* LoginResponse.swift in Sources */,
 				53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */,
 				535B8AB22785505F003B4F4F /* VoteResultView.swift in Sources */,
+				5366FA4E27955437007C723E /* RegisterResponse.swift in Sources */,
 				532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */,
 				53E467AB2777717500554722 /* InviteFriendView.swift in Sources */,
 				5392326F2782CD5F00746881 /* VoteView.swift in Sources */,
@@ -636,9 +669,12 @@
 				5349B23C2784182500A1B5BE /* CardStack.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
 				5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */,
+				5366FA4527954865007C723E /* API.swift in Sources */,
 				530650F7278ECCEA00EF5626 /* UserLoginManager.swift in Sources */,
 				5386365A277A192500B2B3A7 /* PreviewFriendRow.swift in Sources */,
+				5366FA4727954986007C723E /* Repositories.swift in Sources */,
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
+				5366FA4C27954C6C007C723E /* HTTPStatusCode+Enum.swift in Sources */,
 				5349B23E27843C7600A1B5BE /* PlaceCardView.swift in Sources */,
 				534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */,
 			);
