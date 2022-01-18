@@ -33,12 +33,10 @@ final class UserLoginManager: NSObject {
         createdAt: Date? = nil,
         updatedAt: Date? = nil
     ) {
-        print("1111")
         let realm = try! Realm()
         
         // 기존에 유저 정보가 realm 에 존재 하면
         if let user = realm.objects(User.self).first {
-            print("1--")
             try! realm.write {
                 if let jwtToken = jwtToken {
                     user.jwtToken = jwtToken
@@ -65,7 +63,6 @@ final class UserLoginManager: NSObject {
         }
         // 없으면 새로 만들어서 입력함
         else {
-            print("2--")
             let user = User()
             if let jwtToken = jwtToken {
                 user.jwtToken = jwtToken
@@ -92,7 +89,6 @@ final class UserLoginManager: NSObject {
                 realm.add(user)
             }
         }
-        print(realm.objects(User.self).first)
     }
     
     func doSocialLoginBy(loginType: LoginType) {
@@ -186,6 +182,7 @@ final class UserLoginManager: NSObject {
         try! realm.write {
             realm.delete(realm.objects(User.self))
         }
+        print("user deleted from local")
     }
 }
 
@@ -222,42 +219,23 @@ extension UserLoginManager {
                 print(error)
             }
         }
-        print("logout")
     }
 }
 
 // Facebook Login
 extension UserLoginManager {
     private func doLoginFacebook() {
-        guard let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
-            print("There is no root view controller!")
-            return
-        }
         let loginManager = LoginManager()
-        loginManager.logIn(permissions: ["public_profile", "email"], from: rootViewController) { result, error in
-            if let error = error {
-                print("Encountered Erorr: \(error)")
-            } else if let result = result, result.isCancelled {
-                print("Cancelled")
-            } else {
-                print("success")
-                self.getUserProfileFacebook()
+        loginManager.logIn(permissions: [], viewController: nil) { result in
+            switch result {
+            case .failed(let error):
+                print(error)
+            case .cancelled:
+            case .success(_, _, let accessToken):
+                if let token = accessToken?.tokenString {
+                    self.doServerRegister(type: .facebook, token: token)
+                }
             }
-        }
-    }
-    
-    private func getUserProfileFacebook() {
-        Profile.loadCurrentProfile { profile, error in
-            guard error == nil else {
-                print("Encountered Erorr: \(error.debugDescription)")
-                return
-            }
-            //            self.setUser(
-            //                loginType: .facebook,
-            //                profileImage: profile?.imageURL(forMode: .large, size: .init(width: 320, height: 320))?.absoluteString,
-            //                name: profile?.name!,
-            //                email: profile?.email!
-            //            )
         }
     }
     

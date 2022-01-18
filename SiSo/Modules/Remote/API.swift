@@ -14,8 +14,8 @@ class API {
     
     static let shared: API = API()
     
-//    let base_url = "https://api.playground.party/"
-    let base_url = "http://192.168.0.30:3000"
+    let base_url = "https://api.playground.party"
+//    let base_url = "http://192.168.0.30:3000"
     
     func getHeaders(withAuthorization: Bool = false) -> HTTPHeaders? {
         var headers: HTTPHeaders = [

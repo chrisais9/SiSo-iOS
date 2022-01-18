@@ -29,7 +29,7 @@ struct SiSoApp: SwiftUI.App {
         instance?.isNaverAppOauthEnable = true
         instance?.isInAppOauthEnable = true
         instance?.setOnlyPortraitSupportInIphone(true)
-
+        
         instance?.serviceUrlScheme = kServiceAppUrlScheme // 앱을 등록할 때 입력한 URL Scheme
         instance?.consumerKey = kConsumerKey // 상수 - client id
         instance?.consumerSecret = kConsumerSecret // pw
@@ -84,7 +84,7 @@ struct SiSoApp: SwiftUI.App {
                          open url: URL,
                          options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
             if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                        return AuthController.handleOpenUrl(url: url)
+                return AuthController.handleOpenUrl(url: url)
             }
             NaverThirdPartyLoginConnection.getSharedInstance()?.application(app, open: url, options: options)
             return ApplicationDelegate.shared.application(app, open: url, options: options)
