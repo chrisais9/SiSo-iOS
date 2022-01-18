@@ -49,26 +49,30 @@ struct SiSoApp: SwiftUI.App {
             ContentView()
                 .environment(\.realmConfiguration, realmConfigration)
                 .onOpenURL { url in
-                    // Facebook
-                    ApplicationDelegate.shared.application(
-                        UIApplication.shared,
-                        open: url,
-                        sourceApplication: nil,
-                        annotation: UIApplication.OpenURLOptionsKey.annotation
-                    )
                     
-                    // Google
-                    GIDSignIn.sharedInstance.handle(url)
+                    // https://devtalk.kakao.com/t/topic/119363/10 네이버 로그인과 같이 사용시 메인스레드 패닉오는 버그때는에 if-else 처리함
                     
                     // Kakao
                     if AuthApi.isKakaoTalkLoginUrl(url) {
                         let _ = AuthController.handleOpenUrl(url: url)
                     }
-                    
-                    // Naver
-                    NaverThirdPartyLoginConnection
-                        .getSharedInstance()?
-                        .receiveAccessToken(url)
+                    // Facebook
+                    else if(ApplicationDelegate.shared.application(
+                        UIApplication.shared,
+                        open: url,
+                        sourceApplication: nil,
+                        annotation: UIApplication.OpenURLOptionsKey.annotation
+                    )) {
+                    }
+                    // Google
+                    else if(GIDSignIn.sharedInstance.handle(url)) {
+                    }
+                    else {
+                        // Naver
+                        NaverThirdPartyLoginConnection
+                            .getSharedInstance()?
+                            .receiveAccessToken(url)
+                    }
                 }
         }
     }
@@ -78,16 +82,6 @@ struct SiSoApp: SwiftUI.App {
                          didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
             ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
             return true
-        }
-        
-        func application(_ app: UIApplication,
-                         open url: URL,
-                         options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-            if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                return AuthController.handleOpenUrl(url: url)
-            }
-            NaverThirdPartyLoginConnection.getSharedInstance()?.application(app, open: url, options: options)
-            return ApplicationDelegate.shared.application(app, open: url, options: options)
         }
     }
 }

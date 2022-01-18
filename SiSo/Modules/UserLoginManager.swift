@@ -255,17 +255,12 @@ extension UserLoginManager {
         }
         GIDSignIn.sharedInstance.signIn(with: configuration,
                                         presenting: rootViewController) { socialUser, error in
-            guard let socialUser = socialUser else {
-                print("Error! \(String(describing: error))")
-                return
+            if let error = error {
+                print(error)
             }
-            
-            //            self.setUser(
-            //                loginType: .google,
-            //                profileImage: socialUser.profile?.imageURL(withDimension: 320)?.absoluteString,
-            //                name: socialUser.profile?.name!,
-            //                email: socialUser.profile?.email!
-            //            )
+            else if let idToken = socialUser?.authentication.idToken {
+                self.doServerRegister(type: .google, token: idToken)
+            }
         }
     }
     
