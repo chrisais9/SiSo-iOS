@@ -158,7 +158,7 @@ final class UserLoginManager: NSObject {
     
     func doLogout() {
         let realm = try! Realm()
-        realm.objects(User.self).forEach { user in
+        if let user = realm.objects(User.self).first {
             switch user.loginType {
             case .none:
                 break
@@ -173,7 +173,6 @@ final class UserLoginManager: NSObject {
             case .apple:
                 break // not implemented
             }
-            
         }
     }
     
@@ -231,6 +230,7 @@ extension UserLoginManager {
             case .failed(let error):
                 print(error)
             case .cancelled:
+                break
             case .success(_, _, let accessToken):
                 if let token = accessToken?.tokenString {
                     self.doServerRegister(type: .facebook, token: token)
