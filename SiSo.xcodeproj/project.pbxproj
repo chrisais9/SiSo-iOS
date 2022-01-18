@@ -58,6 +58,7 @@
 		53AB86EC2770F618006493D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53AB86EB2770F618006493D7 /* Preview Assets.xcassets */; };
 		53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB86F52770FC41006493D7 /* LargeButton.swift */; };
 		53AB86F82770FDFB006493D7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AB86F72770FDFB006493D7 /* LoginView.swift */; };
+		53B486012796533B00B837D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B486002796533B00B837D9 /* ProfileResponse.swift */; };
 		53C00A8527749B7100C51065 /* VoteSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8427749B7100C51065 /* VoteSettingView.swift */; };
 		53C00A872774ACEE00C51065 /* SelectFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A862774ACEE00C51065 /* SelectFilterView.swift */; };
 		53C00A8B2774D3DD00C51065 /* SelectedFilters+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */; };
@@ -128,6 +129,7 @@
 		53AB86EB2770F618006493D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53AB86F52770FC41006493D7 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		53AB86F72770FDFB006493D7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		53B486002796533B00B837D9 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		53C00A8427749B7100C51065 /* VoteSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteSettingView.swift; sourceTree = "<group>"; };
 		53C00A862774ACEE00C51065 /* SelectFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFilterView.swift; sourceTree = "<group>"; };
 		53C00A8A2774D3DD00C51065 /* SelectedFilters+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectedFilters+Enum.swift"; sourceTree = "<group>"; };
@@ -225,7 +227,7 @@
 		5366FA4827954AF2007C723E /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				53C5597A2790255B004458F7 /* Login */,
+				53C5597A2790255B004458F7 /* Auth */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -447,14 +449,15 @@
 			path = SelectPlace;
 			sourceTree = "<group>";
 		};
-		53C5597A2790255B004458F7 /* Login */ = {
+		53C5597A2790255B004458F7 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				53C5597B279025A6004458F7 /* NaverProfileResponse.swift */,
 				5366FA4927954B15007C723E /* LoginResponse.swift */,
 				5366FA4D27955437007C723E /* RegisterResponse.swift */,
+				53B486002796533B00B837D9 /* ProfileResponse.swift */,
 			);
-			path = Login;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		53CF65BD278EA20A002B08A0 /* Realm */ = {
@@ -646,6 +649,7 @@
 				53876D5F278D2B0500697647 /* MyPageView.swift in Sources */,
 				5349B2422784463400A1B5BE /* VoteEmojiOverlayView.swift in Sources */,
 				536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */,
+				53B486012796533B00B837D9 /* ProfileResponse.swift in Sources */,
 				53E171C4278BFC3000C2D41A /* RangeFilterView.swift in Sources */,
 				53C00A8527749B7100C51065 /* VoteSettingView.swift in Sources */,
 				53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */,

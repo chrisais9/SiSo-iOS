@@ -24,19 +24,75 @@ final class UserLoginManager: NSObject {
     static let shared = UserLoginManager()
     private override init() { }
     
-    func setUser(jwtToken: String = "", loginType: LoginType = .none, profileImage: String = "", name: String = "", email: String = "") {
-        let user = User()
-        user.jwtToken = jwtToken
-        user.loginType = loginType
-        user.profileImage = profileImage
-        user.name = name
-        user.email = email
-        
+    func setUser(
+        jwtToken: String? = nil,
+        loginType: LoginType? = nil,
+        profileImage: String? = nil,
+        name: String? = nil,
+        email: String? = nil,
+        createdAt: Date? = nil,
+        updatedAt: Date? = nil
+    ) {
+        print("1111")
         let realm = try! Realm()
-        try! realm.write {
-            realm.delete(realm.objects(User.self))
-            realm.add(user)
+        
+        // 기존에 유저 정보가 realm 에 존재 하면
+        if let user = realm.objects(User.self).first {
+            print("1--")
+            try! realm.write {
+                if let jwtToken = jwtToken {
+                    user.jwtToken = jwtToken
+                }
+                if let loginType = loginType {
+                    user.loginType = loginType
+                }
+                if let profileImage = profileImage {
+                    user.profileImage = profileImage
+                }
+                if let name = name {
+                    user.name = name
+                }
+                if let email = email {
+                    user.email = email
+                }
+                if let createdAt = createdAt {
+                    user.createdAt = createdAt
+                }
+                if let updatedAt = updatedAt {
+                    user.updatedAt = updatedAt
+                }
+            }
         }
+        // 없으면 새로 만들어서 입력함
+        else {
+            print("2--")
+            let user = User()
+            if let jwtToken = jwtToken {
+                user.jwtToken = jwtToken
+            }
+            if let loginType = loginType {
+                user.loginType = loginType
+            }
+            if let profileImage = profileImage {
+                user.profileImage = profileImage
+            }
+            if let name = name {
+                user.name = name
+            }
+            if let email = email {
+                user.email = email
+            }
+            if let createdAt = createdAt {
+                user.createdAt = createdAt
+            }
+            if let updatedAt = updatedAt {
+                user.updatedAt = updatedAt
+            }
+            try! realm.write {
+                realm.add(user)
+            }
+        }
+        print(realm.objects(User.self).first)
     }
     
     func doSocialLoginBy(loginType: LoginType) {
@@ -59,12 +115,13 @@ final class UserLoginManager: NSObject {
     func doServerLogin(type: LoginType, token: String) {
         Repositories.shared.loginWithSocialToken(type: type, token: token) { status, loginResponse in
             switch status {
-            case .ok:
-                if let jwtToken = loginResponse.data {
-                    self.setUser(jwtToken: jwtToken)
+            case .ok: // 로그인 성공
+                if let jwtToken = loginResponse?.data {
+                    self.setUser(jwtToken: jwtToken, loginType: type)
+                    self.getUserProfile()
                 }
             default:
-                print(loginResponse.message ?? "?")
+                break
             }
         }
     }
@@ -73,11 +130,32 @@ final class UserLoginManager: NSObject {
         Repositories.shared.registerWithSocialToken(type: type, token: token) { status, registerResponse in
             switch status {
             case .ok:
-                if let jwtToken = registerResponse.data {
-                    self.setUser(jwtToken: jwtToken)
+                if let jwtToken = registerResponse?.data {
+                    self.setUser(jwtToken: jwtToken, loginType: type)
+                    self.getUserProfile()
+                }
+            case .conflict: // 회원가입 하려는데 이미 유저정보가 존재함 -> 로그인 진행
+                self.doServerLogin(type: type, token: token)
+            default:
+                break
+            }
+        }
+    }
+    
+    func getUserProfile() {
+        Repositories.shared.fetchProfileInfo { status, profileResponse in
+            switch status {
+            case .ok:
+                if let userInfo = profileResponse?.data {
+                    print(userInfo)
+                    self.setUser(
+                        profileImage: userInfo.profileImage,
+                        name: userInfo.userName,
+                        email: userInfo.email
+                    )
                 }
             default:
-                print(registerResponse.message ?? "?")
+                break
             }
         }
     }
@@ -120,47 +198,31 @@ extension UserLoginManager {
                     print(error)
                 }
                 else if let accessToken = oauthToken?.accessToken {
-                    
-                    self.doServerLogin(type: .kakao, token: accessToken)
+                    self.doServerRegister(type: .kakao, token: accessToken)
                     print("kakao login success \(oauthToken?.accessToken ?? "")")
                 }
             }
         } else {
-//            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-//                if let error = error {
-//                    print(error)
-//                }
-//                else {
-//                    self.getUserProfileKakao()
-//                    print("kakao login success \(oauthToken?.accessToken ?? "")")
-//                }
-//            }
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else if let accessToken = oauthToken?.accessToken {
+                    self.doServerRegister(type: .kakao, token: accessToken)
+                    print("kakao login success \(oauthToken?.accessToken ?? "")")
+                }
+            }
         }
     }
     
-//    private func getUserProfileKakao() {
-//        UserApi.shared.me { user, error in
-//            if let error = error {
-//                print(error)
-//            }
-//            else {
-//                self.setUser(
-//                    loginType: .kakao,
-//                    profileImage: user?.kakaoAccount?.profile?.profileImageUrl?.absoluteString,
-//                    name: user?.kakaoAccount?.profile?.nickname,
-//                    email: user?.kakaoAccount?.email
-//                )
-//            }
-//        }
-//    }
-    
     private func doLogoutKakao() {
+        self.deleteUser()
         UserApi.shared.logout { error in
             if let error = error {
                 print(error)
             }
         }
-        self.deleteUser()
+        print("logout")
     }
 }
 
@@ -190,12 +252,12 @@ extension UserLoginManager {
                 print("Encountered Erorr: \(error.debugDescription)")
                 return
             }
-//            self.setUser(
-//                loginType: .facebook,
-//                profileImage: profile?.imageURL(forMode: .large, size: .init(width: 320, height: 320))?.absoluteString,
-//                name: profile?.name!,
-//                email: profile?.email!
-//            )
+            //            self.setUser(
+            //                loginType: .facebook,
+            //                profileImage: profile?.imageURL(forMode: .large, size: .init(width: 320, height: 320))?.absoluteString,
+            //                name: profile?.name!,
+            //                email: profile?.email!
+            //            )
         }
     }
     
@@ -220,12 +282,12 @@ extension UserLoginManager {
                 return
             }
             
-//            self.setUser(
-//                loginType: .google,
-//                profileImage: socialUser.profile?.imageURL(withDimension: 320)?.absoluteString,
-//                name: socialUser.profile?.name!,
-//                email: socialUser.profile?.email!
-//            )
+            //            self.setUser(
+            //                loginType: .google,
+            //                profileImage: socialUser.profile?.imageURL(withDimension: 320)?.absoluteString,
+            //                name: socialUser.profile?.name!,
+            //                email: socialUser.profile?.email!
+            //            )
         }
     }
     

@@ -26,29 +26,40 @@ extension Repositories {
     ///   - token:          소셜 로그인으로 부터 발급받은 access 토큰
     ///
     /// - Returns:         `LoginResponse`
-    func loginWithSocialToken(type: LoginType, token: String, completion: @escaping (HTTPStatusCode, LoginResponse)->Void) {
-        
+    func loginWithSocialToken(type: LoginType, token: String, completion: @escaping (HTTPStatusCode, LoginResponse?)->Void) {
         AF.request(
             "\(baseUrl)/auth/login",
             method: .post,
             parameters: ["type":type.rawValue, "token":token],
             headers: API.shared.getHeaders()
         ).responseDecodable(of: LoginResponse.self) { response in
-            if let value = response.value, let statusCode = response.response?.statusCode {
-                completion(HTTPStatusCode.init(rawValue: statusCode), value)
+            if let statusCode = response.response?.statusCode {
+                completion(HTTPStatusCode.init(rawValue: statusCode), response.value)
             }
         }
     }
     
-    func registerWithSocialToken(type: LoginType, token: String, completion: @escaping (HTTPStatusCode, RegisterResponse)->Void) {
+    func registerWithSocialToken(type: LoginType, token: String, completion: @escaping (HTTPStatusCode, RegisterResponse?)->Void) {
         AF.request(
             "\(baseUrl)/auth/register",
             method: .post,
             parameters: ["type":type.rawValue, "token":token],
             headers: API.shared.getHeaders()
         ).responseDecodable(of: RegisterResponse.self) { response in
-            if let value = response.value, let statusCode = response.response?.statusCode {
-                completion(HTTPStatusCode.init(rawValue: statusCode), value)
+            if let statusCode = response.response?.statusCode {
+                completion(HTTPStatusCode.init(rawValue: statusCode), response.value)
+            }
+        }
+    }
+    
+    func fetchProfileInfo(completion: @escaping (HTTPStatusCode, ProfileResponse?)->Void) {
+        AF.request(
+            "\(baseUrl)/auth/profile",
+            method: .get,
+            headers: API.shared.getHeaders(withAuthorization: true)
+        ).responseDecodable(of: ProfileResponse.self, decoder: ProfileResponse.ProfileResponseDecoder()) { response in
+            if let statusCode = response.response?.statusCode {
+                completion(HTTPStatusCode.init(rawValue: statusCode), response.value)
             }
         }
     }

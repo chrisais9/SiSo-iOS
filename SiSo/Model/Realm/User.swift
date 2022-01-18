@@ -8,7 +8,7 @@
 import RealmSwift
 import SwiftUI
 
-enum LoginType: String, PersistableEnum {
+enum LoginType: String, PersistableEnum, Codable {
     case none
     case google
     case kakao
@@ -24,8 +24,9 @@ final class User: Object, ObjectKeyIdentifiable {
     @Persisted var loginType: LoginType = .none
     
     @Persisted var name: String = "로그인 해주세요"
-    
     @Persisted var email: String = ""
-    
     @Persisted var profileImage: String = ""
+    
+    @Persisted var createdAt: Date
+    @Persisted var updatedAt: Date
 }
