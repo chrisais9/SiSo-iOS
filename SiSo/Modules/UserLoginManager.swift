@@ -279,8 +279,16 @@ extension UserLoginManager {
 extension UserLoginManager: NaverThirdPartyLoginConnectionDelegate {
     
     func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
-        print("called")
-        getUserProfileNaver()
+        let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+        guard let isValidAccessToken = loginInstance?.isValidAccessTokenExpireTimeNow() else { return }
+        
+        if !isValidAccessToken {
+            return
+        }
+        guard let tokenType = loginInstance?.tokenType else { return }
+        guard let accessToken = loginInstance?.accessToken else { return }
+        
+        self.doServerRegister(type: .naver, token: "\(tokenType) \(accessToken)")
     }
     
     func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
@@ -300,35 +308,6 @@ extension UserLoginManager: NaverThirdPartyLoginConnectionDelegate {
         loginInstance?.delegate = self
         loginInstance?.requestThirdPartyLogin()
         
-    }
-    
-    private func getUserProfileNaver() {
-        let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
-        guard let isValidAccessToken = loginInstance?.isValidAccessTokenExpireTimeNow() else { return }
-        
-        if !isValidAccessToken {
-            return
-        }
-        
-        guard let tokenType = loginInstance?.tokenType else { return }
-        guard let accessToken = loginInstance?.accessToken else { return }
-        let urlStr = "https://openapi.naver.com/v1/nid/me"
-        let url = URL(string: urlStr)!
-        
-        let authorization = "\(tokenType) \(accessToken)"
-        
-        let req = AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization])
-        
-        req.responseDecodable(of: NaverProfileResponse.self) { response in
-            if response.response?.statusCode == 200, let naverProfileResponse = response.value {
-                self.setUser(
-                    loginType: .naver,
-                    profileImage: naverProfileResponse.response.profileImage,
-                    name: naverProfileResponse.response.nickname,
-                    email: naverProfileResponse.response.email
-                )
-            }
-        }
     }
     
     private func doLogoutNaver() {
