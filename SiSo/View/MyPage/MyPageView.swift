@@ -21,6 +21,8 @@ struct MyPageView: View {
     @State var isGlobalNotificationEnabled = true
     @State var isMarketingNotificationEnabled = true
     
+    @State var isConfirmLogoutAlertPresented = false
+    
     @ObservedResults(User.self) var user
     
     var body: some View {
@@ -82,10 +84,17 @@ struct MyPageView: View {
                         
                     }
                     Button {
-                        UserLoginManager.shared.doLogout()
+                        isConfirmLogoutAlertPresented.toggle()
                     } label: {
                         Text("로그아웃")
                             .foregroundColor(.black)
+                    }
+                    .alert(isPresented: $isConfirmLogoutAlertPresented) {
+                        let primary = Alert.Button.destructive(Text("로그아웃")) {
+                            UserLoginManager.shared.doLogout()
+                        }
+                        let secondary = Alert.Button.cancel()
+                        return Alert(title: Text("로그아웃 하시겠습니까?"), message: nil, primaryButton: primary, secondaryButton: secondary)
                     }
                     
                 }
@@ -93,18 +102,22 @@ struct MyPageView: View {
             }
         }
         .onChange(of: user, perform: { newValue in
-            bottomSheetPosition = .hidden
+            withAnimation {
+                bottomSheetPosition = .hidden
+            }
         })
-        .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.tapToDissmiss, .notResizeable, .cornerRadius(15), .background(AnyView(VisualEffectView(uiVisualEffect: UIBlurEffect(style: .systemUltraThinMaterialDark))))], content: {
+        .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.tapToDissmiss, .notResizeable, .cornerRadius(15), .background(AnyView(Color.white)), .backgroundBlur(effect: .systemThinMaterialDark)], content: {
             LoginView()
         })
-        //        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct MyPageView_Previews: PreviewProvider {
+    init() {
+        MyPageView_Previews.createData()
+    }
     static var previews: some View {
-        createData()
         return NavigationView {
             MyPageView()
         }

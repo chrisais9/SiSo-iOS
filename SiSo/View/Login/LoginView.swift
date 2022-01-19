@@ -11,36 +11,21 @@ struct LoginView: View {
     
     var body: some View {
         VStack {
-            Button {
-                UserLoginManager.shared.doSocialLoginBy(loginType: .kakao)
-            } label: {
-                Image("btn_kakao_login")
-                    .resizable()
-                    .frame(height: 60)
-            }
-            
-            Button {
+            SocialLoginButton(icon: "ic_naver", title: "네이버 로그인", foregroundColor: .white, backgroundColor: Color(hex: "#03C75A")) {
                 UserLoginManager.shared.doSocialLoginBy(loginType: .naver)
-            } label: {
-                Image("btn_naver_login")
-                    .resizable()
-                    .frame(height: 60)
             }
-            
-            Button {
+            SocialLoginButton(icon: "ic_kakao", title: "카카오로 로그인", foregroundColor: .black, backgroundColor: Color(hex: "#FEE500")) {
+                UserLoginManager.shared.doSocialLoginBy(loginType: .kakao)
+            }
+            SocialLoginButton(icon: "ic_facebook", title: "Facebook으로 로그인", foregroundColor: .white, backgroundColor: Color(hex: "#1877F2")) {
                 UserLoginManager.shared.doSocialLoginBy(loginType: .facebook)
-            } label: {
-                Text("페북 로그인")
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 4)
-                    .strokeBorder())
             }
-
-            
-            GoogleLoginButton(handler: {
+            SocialLoginButton(icon: "ic_google", title: "Google로 로그인", foregroundColor: .black, backgroundColor: .white) {
                 UserLoginManager.shared.doSocialLoginBy(loginType: .google)
-            })
-            .frame(height: 60)
+            }
+            .overlay(RoundedRectangle(cornerRadius: 12)
+                        .strokeBorder())
+            
         }
         .padding()
     }
