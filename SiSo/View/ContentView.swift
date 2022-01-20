@@ -6,24 +6,44 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
     
+    @ObservedResults(User.self) var users
+    
+    init() {
+        if users.isEmpty {
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(User())
+            }
+        }
+    }
+    
     var body: some View {
-        NavigationView {
-            TabView {
-                HomeView()
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("홈")
-                    }
-                MyPageView()
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("홈")
+                }
+            if !users.isEmpty{
+                MyPageView(user: users.first!)
                     .tabItem {
                         Image(systemName: "person.circle")
                         Text("마이페이지")
                     }
             }
         }
+        .onChange(of: users, perform: { newValue in
+            if users.isEmpty {
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.add(User())
+                }
+            }
+        })
         .accentColor(.black)
     }
 }

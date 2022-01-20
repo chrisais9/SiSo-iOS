@@ -22,16 +22,17 @@ struct MyPageView: View {
     @State var isMarketingNotificationEnabled = true
     
     @State var isConfirmLogoutAlertPresented = false
+    @State var isProfileEditViewActive = false
     
-    //    @ObservedResults(User.self) var user
+    @ObservedRealmObject var user: User
     
     var body: some View {
-        VStack {
+        NavigationView {
             VStack {
                 HStack {
                     Spacer()
                     VStack(spacing: 10) {
-                        KFImage(URL(string: ""))
+                        KFImage(URL(string: user.profileImage))
                             .placeholder {
                                 Color.gray
                             }
@@ -40,7 +41,7 @@ struct MyPageView: View {
                             .clipShape(Circle())
                         
                         HStack(spacing: 5) {
-                            Text("구형모")
+                            Text(user.name)
                                 .font(NotoSans.medium(size: 15))
                             Image(systemName: "chevron.right")
                                 .font(NotoSans.medium(size: 15))
@@ -54,10 +55,22 @@ struct MyPageView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture {
-                    withAnimation {
-                        bottomSheetPosition = .middle
+                    if user.loginType == .none {
+                        withAnimation {
+                            bottomSheetPosition = .middle
+                        }
+                    } else {
+                        isProfileEditViewActive.toggle()
                     }
                 }
+                .background(
+                    NavigationLink(isActive: $isProfileEditViewActive, destination: {
+                        EditProfileView(user: user)
+                    }, label: {
+                        EmptyView()
+                    })
+                )
+                
                 Rectangle()
                     .fill(Color(UIColor.systemGroupedBackground))
                     .frame(height: 10)
@@ -110,7 +123,13 @@ struct MyPageView: View {
                     let secondary = Alert.Button.cancel()
                     return Alert(title: Text("로그아웃 하시겠습니까?"), message: nil, primaryButton: primary, secondaryButton: secondary)
                 }
+                Spacer()
             }
+            .onChange(of: user, perform: { newValue in
+                withAnimation {
+                    bottomSheetPosition = .hidden
+                }
+            })
             .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.tapToDissmiss, .notResizeable, .cornerRadius(15), .background(AnyView(Color.white)), .backgroundBlur(effect: .systemThinMaterialDark)], content: {
                 VStack {
                     LoginView()
@@ -121,11 +140,12 @@ struct MyPageView: View {
 }
 
 struct MyPageView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        NavigationView {
-            TabView {
-                MyPageView()
-            }
-        }
+        let user: User = User()
+        user.name = "구형모"
+        user.email = "chrisais9@playground.party"
+        user.profileImage = "https://cdn.crowdpic.net/detail-thumb/thumb_d_C6386337D543E5BD60DB8168D08F5CFA.jpg"
+        return MyPageView(user: .init(value: user))
     }
 }

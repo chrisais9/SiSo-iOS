@@ -13,80 +13,83 @@ struct HomeView: View {
     @State var isSelectFriendViewActive: Bool = false
     
     var body: some View {
-        VStack {
+        NavigationView {
             VStack {
-                HStack {
-                    Spacer()
-                    Button {
-                        isInstructionDialogActive.toggle()
-                    } label: {
-                        Image(systemName: "info.circle")
-                            .resizable()
-                            .foregroundColor(.black)
-                            .frame(width: 20, height: 20)
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button {
+                            isInstructionDialogActive.toggle()
+                        } label: {
+                            Image(systemName: "info.circle")
+                                .resizable()
+                                .foregroundColor(.black)
+                                .frame(width: 20, height: 20)
+                        }
+                        
+                        Button {
+                            isLoginPageActive.toggle()
+                        } label: {
+                            Image(systemName: "bell")
+                                .resizable()
+                                .foregroundColor(.black)
+                                .frame(width: 20, height: 20)
+                        }
                     }
                     
-                    Button {
-                        isLoginPageActive.toggle()
-                    } label: {
-                        Image(systemName: "bell")
-                            .resizable()
-                            .foregroundColor(.black)
-                            .frame(width: 20, height: 20)
+                    VStack(alignment: .leading, spacing: 17) {
+                        Text("오늘 어디가지?")
+                            .font(NotoSans.bold(size: 30))
+                        Text("(닉네임)님 안녕하세요. \n 어려운 장소 선택 친구들과 한번에 해결하세요!")
+                            .font(NotoSans.medium(size: 15))
+                            .fixedSize(horizontal: false, vertical: true)
                     }
-                }
-                
-                VStack(alignment: .leading, spacing: 17) {
-                    Text("오늘 어디가지?")
-                        .font(NotoSans.bold(size: 30))
-                    Text("(닉네임)님 안녕하세요. \n 어려운 장소 선택 친구들과 한번에 해결하세요!")
-                        .font(NotoSans.medium(size: 15))
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.bottom, 20)
-                
-                Text("이미지 or 관련 일러스트")
-                    .font(NotoSans.light(size: 17))
-                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 3)
-                            .stroke(Color.black, lineWidth: 1)
-                    )
-                
-                LargeButton(title: "장소 선택하러 가기", backgroundColor: Color.black.opacity(0.7), foregroundColor: .white) {
-                    isSelectFriendViewActive.toggle()
-                }
-                .background(
-                    NavigationLink(isActive: $isSelectFriendViewActive, destination: {
-                        VoteSettingView()
-                    }, label: {
-                        EmptyView()
-                    })
-                )
-                
-                Text("지난 장소 투표")
-                    .font(NotoSans.bold(size: 20))
                     .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .padding()
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    Spacer()
-                        .padding(.leading, 7)
-                    ForEach(0..<10) { _ in
-                        PreviousLocationRow()
-                            .listRowInsets(EdgeInsets())
+                    .padding(.bottom, 20)
+                    
+                    Text("이미지 or 관련 일러스트")
+                        .font(NotoSans.light(size: 17))
+                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 3)
+                                .stroke(Color.black, lineWidth: 1)
+                        )
+                    
+                    LargeButton(title: "장소 선택하러 가기", backgroundColor: Color.black.opacity(0.7), foregroundColor: .white) {
+                        isSelectFriendViewActive.toggle()
                     }
+                    .background(
+                        NavigationLink(isActive: $isSelectFriendViewActive, destination: {
+                            VoteSettingView()
+                        }, label: {
+                            EmptyView()
+                        })
+                    )
+                    
+                    Text("지난 장소 투표")
+                        .font(NotoSans.bold(size: 20))
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(.horizontal, 2)
-                .padding(.vertical, 2)
+                .padding()
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        Spacer()
+                            .padding(.leading, 7)
+                        ForEach(0..<10) { _ in
+                            PreviousLocationRow()
+                                .listRowInsets(EdgeInsets())
+                        }
+                    }
+                    .padding(.horizontal, 2)
+                    .padding(.vertical, 2)
+                }
             }
+            .navigationBarHidden(true)
             
             Spacer()
+            
         }
-        .navigationBarHidden(true)
         .simpleDialog(isShowing: $isInstructionDialogActive, dialogContent: {
             VStack {
                 Text("그래, 그거 설명서")
@@ -115,8 +118,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            HomeView()
-        }
+        HomeView()
     }
 }

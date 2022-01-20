@@ -67,6 +67,7 @@
 		53C88BFF27979EDB00CC988F /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C88BFE27979EDB00CC988F /* Color+hex.swift */; };
 		53C88C032797A02A00CC988F /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C88C022797A02A00CC988F /* SocialLoginButton.swift */; };
 		53C88C052797E7DB00CC988F /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C88C042797E7DB00CC988F /* EditProfileView.swift */; };
+		53C88C092797EE6500CC988F /* PhotoPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C88C082797EE6500CC988F /* PhotoPickerView.swift */; };
 		53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CCDB94278842DC00C335FC /* PreviewFilterView.swift */; };
 		53CF65C0278EA228002B08A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF65BF278EA228002B08A0 /* User.swift */; };
 		53E171C0278BC78000C2D41A /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171BF278BC78000C2D41A /* VisualEffectView.swift */; };
@@ -140,6 +141,7 @@
 		53C88BFE27979EDB00CC988F /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
 		53C88C022797A02A00CC988F /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
 		53C88C042797E7DB00CC988F /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		53C88C082797EE6500CC988F /* PhotoPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerView.swift; sourceTree = "<group>"; };
 		53CCDB94278842DC00C335FC /* PreviewFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFilterView.swift; sourceTree = "<group>"; };
 		53CF65BF278EA228002B08A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53E171BF278BC78000C2D41A /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				53876D5E278D2B0500697647 /* MyPageView.swift */,
 				53C88C042797E7DB00CC988F /* EditProfileView.swift */,
+				53C88C082797EE6500CC988F /* PhotoPickerView.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				5349B236278417B000A1B5BE /* CardView.swift in Sources */,
 				53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */,
 				53E171C0278BC78000C2D41A /* VisualEffectView.swift in Sources */,
+				53C88C092797EE6500CC988F /* PhotoPickerView.swift in Sources */,
 				53AB86E52770F617006493D7 /* SiSoApp.swift in Sources */,
 				53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */,
 				53AB86F82770FDFB006493D7 /* LoginView.swift in Sources */,
@@ -831,10 +835,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "SiSo/Preview\\ Content";
-				DEVELOPMENT_TEAM = 273WM862CP;
+				DEVELOPMENT_TEAM = 7R73TXTB9S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SiSo/Info.plist;
@@ -854,8 +859,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.playground.siso;
+				PRODUCT_BUNDLE_IDENTIFIER = party.playground.siso;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -869,10 +875,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "SiSo/Preview\\ Content";
-				DEVELOPMENT_TEAM = 273WM862CP;
+				DEVELOPMENT_TEAM = 7R73TXTB9S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SiSo/Info.plist;
@@ -892,8 +899,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.playground.siso;
+				PRODUCT_BUNDLE_IDENTIFIER = party.playground.siso;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
