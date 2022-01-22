@@ -51,13 +51,45 @@ extension Repositories {
             }
         }
     }
+}
+
+// MARK:  Profile
+extension Repositories {
     
+    /**
+     GET: 프로필 정보 가져오기
+     */
     func fetchProfileInfo(completion: @escaping (HTTPStatusCode, ProfileResponse?)->Void) {
         AF.request(
             "\(baseUrl)/auth/profile",
             method: .get,
             headers: API.shared.getHeaders(withAuthorization: true)
         ).responseDecodable(of: ProfileResponse.self, decoder: ProfileResponse.ProfileResponseDecoder()) { response in
+            if let statusCode = response.response?.statusCode {
+                print("profile1")
+                completion(HTTPStatusCode.init(rawValue: statusCode), response.value)
+            }
+        }
+    }
+    
+    /**
+     POST: 프로필 이미지 업로드(변경)
+     */
+    func uploadProfileImage(image: UIImage, completion: @escaping (HTTPStatusCode, SimpleDummyResponse?)-> Void) {
+        guard let jpegData = image.resizeImage(targetSize: .init(width: 256, height: 256)).jpegData(compressionQuality: 1),
+              let to = URL(string: "\(baseUrl)/auth/profile-image") else {
+                  return
+              }
+        
+        AF.upload(
+            multipartFormData: { $0.append(jpegData, withName: "file", fileName: "file.jpeg", mimeType: "image/jpeg")},
+            to: to,
+            usingThreshold: UInt64.init(),
+            method: .post,
+            headers: API.shared.getHeaders(withAuthorization: true)
+        ).uploadProgress(queue: .main, closure: { progress in
+            print("upload1", progress)
+        }).responseDecodable(of: SimpleDummyResponse.self) { response in
             if let statusCode = response.response?.statusCode {
                 completion(HTTPStatusCode.init(rawValue: statusCode), response.value)
             }

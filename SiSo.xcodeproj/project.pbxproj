@@ -17,6 +17,7 @@
 		530D551D2776F36D00AF1FD1 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55162776F36D00AF1FD1 /* NotoSansKR-Medium.otf */; };
 		530D551E2776F36D00AF1FD1 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55172776F36D00AF1FD1 /* NotoSansKR-Thin.otf */; };
 		530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */; };
+		530DC3B62799543600523374 /* SimpleDummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DC3B52799543600523374 /* SimpleDummyResponse.swift */; };
 		532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191C27798DFD003C174B /* InviteFriendRow.swift */; };
 		532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191E2779B8BD003C174B /* SelectedFriend.swift */; };
 		53458E7A2781B15B0064740D /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E792781B15B0064740D /* PlaceDetailView.swift */; };
@@ -32,6 +33,7 @@
 		5349B2422784463400A1B5BE /* VoteEmojiOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */; };
 		534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534C3E532780A1250046D1B9 /* FilterHeaderView.swift */; };
 		535B8AB22785505F003B4F4F /* VoteResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535B8AB12785505F003B4F4F /* VoteResultView.swift */; };
+		535E53D3279A9102003CBCA3 /* UIImage+resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E53D2279A9102003CBCA3 /* UIImage+resize.swift */; };
 		5366FA4527954865007C723E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4427954865007C723E /* API.swift */; };
 		5366FA4727954986007C723E /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4627954986007C723E /* Repositories.swift */; };
 		5366FA4A27954B15007C723E /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4927954B15007C723E /* LoginResponse.swift */; };
@@ -90,6 +92,7 @@
 		530D55172776F36D00AF1FD1 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
 		530D551F2776F47900AF1FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+NotoSans.swift"; sourceTree = "<group>"; };
+		530DC3B52799543600523374 /* SimpleDummyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDummyResponse.swift; sourceTree = "<group>"; };
 		532D191C27798DFD003C174B /* InviteFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendRow.swift; sourceTree = "<group>"; };
 		532D191E2779B8BD003C174B /* SelectedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriend.swift; sourceTree = "<group>"; };
 		53458E792781B15B0064740D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceDetailView.swift; path = ../SelectPlace/PlaceDetail/PlaceDetailView.swift; sourceTree = "<group>"; };
@@ -105,6 +108,7 @@
 		5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteEmojiOverlayView.swift; sourceTree = "<group>"; };
 		534C3E532780A1250046D1B9 /* FilterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterHeaderView.swift; sourceTree = "<group>"; };
 		535B8AB12785505F003B4F4F /* VoteResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteResultView.swift; sourceTree = "<group>"; };
+		535E53D2279A9102003CBCA3 /* UIImage+resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+resize.swift"; sourceTree = "<group>"; };
 		5366FA4427954865007C723E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5366FA4627954986007C723E /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
 		5366FA4927954B15007C723E /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				53C5597A2790255B004458F7 /* Auth */,
+				530DC3B52799543600523374 /* SimpleDummyResponse.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				53E467AC27777CDE00554722 /* TextField+ClearButton.swift */,
 				53458E822781D03A0064740D /* TextField+AutoFocus+UIKit.swift */,
 				53C88BFE27979EDB00CC988F /* Color+hex.swift */,
+				535E53D2279A9102003CBCA3 /* UIImage+resize.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -672,6 +678,7 @@
 				53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */,
 				53E171C8278C412F00C2D41A /* RestaurantListView.swift in Sources */,
 				53876D5A278D290700697647 /* MyPlaceRow.swift in Sources */,
+				535E53D3279A9102003CBCA3 /* UIImage+resize.swift in Sources */,
 				53876D64278D639200697647 /* FacebookButton+SwiftUI.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
 				53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */,
@@ -700,6 +707,7 @@
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
 				5366FA4C27954C6C007C723E /* HTTPStatusCode+Enum.swift in Sources */,
 				5349B23E27843C7600A1B5BE /* PlaceCardView.swift in Sources */,
+				530DC3B62799543600523374 /* SimpleDummyResponse.swift in Sources */,
 				534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -843,6 +851,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SiSo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "시소";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
@@ -883,6 +892,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SiSo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "시소";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 표시하기 위해 사용자의 위치를 받습니다.";

@@ -21,12 +21,14 @@ struct EditProfileView: View {
         ZStack {
             VStack(spacing: 20) {
                 ZStack {
+                    
                     KFImage(URL(string: user.profileImage))
                         .placeholder {
                             Color.gray
                         }
                         .resizable()
                         .clipShape(Circle())
+                    
                     VStack {
                         Spacer()
                         HStack {
@@ -44,7 +46,7 @@ struct EditProfileView: View {
                     isPhotoPickerPresented.toggle()
                 }
                 .sheet(isPresented: $isPhotoPickerPresented) {
-                    
+                    changeProfileImage()
                 } content: {
                     PhotoPickerView(image: $selectedPhoto)
                 }
@@ -75,6 +77,30 @@ struct EditProfileView: View {
                 .padding(.horizontal)
             }
             .ignoresSafeArea(.keyboard)
+        }
+    }
+    
+    func changeProfileImage() {
+        if let selectedPhoto = selectedPhoto {
+            Repositories.shared.uploadProfileImage(image: selectedPhoto) { statusCode, response in
+                switch statusCode {
+                case .ok:
+                    // refresh user
+                    Repositories.shared.fetchProfileInfo { status, profileResponse in
+                        switch status {
+                        case .ok:
+                            if let userInfo = profileResponse?.data {
+                                print(userInfo)
+                                UserLoginManager.shared.setUser(profileImage: userInfo.profileImage)
+                            }
+                        default:
+                            break
+                        }
+                    }
+                default:
+                    break
+                }
+            }
         }
     }
 }
