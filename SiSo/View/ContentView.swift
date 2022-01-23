@@ -22,18 +22,23 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("홈")
-                }
-            if !users.isEmpty{
-                MyPageView(user: users.first!)
+        NavigationView {
+            TabView {
+                HomeView()
+                    .navigationBarHidden(true)
                     .tabItem {
-                        Image(systemName: "person.circle")
-                        Text("마이페이지")
+                        Image(systemName: "house")
+                        Text("홈")
                     }
+                
+                if !users.isEmpty{
+                    MyPageView(user: users.first!)
+                        .navigationBarHidden(true)
+                        .tabItem {
+                            Image(systemName: "person.circle")
+                            Text("마이페이지")
+                        }
+                }
             }
         }
         .onChange(of: users, perform: { newValue in
