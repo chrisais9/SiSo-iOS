@@ -515,9 +515,9 @@
 		53E171C6278C410700C2D41A /* Deck */ = {
 			isa = PBXGroup;
 			children = (
-				53732603279E5849005AF2F7 /* DeckDetail */,
 				53E171C7278C412F00C2D41A /* DeckListView.swift */,
 				53E171C9278C454600C2D41A /* DeckCardView.swift */,
+				53732603279E5849005AF2F7 /* DeckDetail */,
 			);
 			path = Deck;
 			sourceTree = "<group>";

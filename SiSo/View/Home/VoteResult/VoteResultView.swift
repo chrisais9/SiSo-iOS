@@ -11,6 +11,8 @@ struct VoteResultView: View {
     var place: Place = placeDummy
     var body: some View {
         VStack {
+            Text("투표 결과")
+                .font(NotoSans.bold(size: 30))
             Spacer()
             PlaceCardView(place: place)
             Spacer()
@@ -21,6 +23,7 @@ struct VoteResultView: View {
                     }, label: {
                         Text("재투표하기")
                             .padding()
+                            .font(NotoSans.regular(size: 16))
                             .frame(width: proxy.size.width * 0.3)
                             .foregroundColor(.black)
                             .overlay(
@@ -35,6 +38,7 @@ struct VoteResultView: View {
                     }, label: {
                         Text("홈으로")
                             .padding()
+                            .font(NotoSans.regular(size: 16))
                             .frame(width: proxy.size.width * 0.7 - 10)
                             .foregroundColor(.white)
                             .background(Color.gray)

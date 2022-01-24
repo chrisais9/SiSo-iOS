@@ -17,6 +17,10 @@ struct VoteView: View {
     @State var direction: FourDirections? = nil
     @State var cardViewModel: [Place] = placesDummy
     
+    @State var isShowResultViewActive: Bool = false
+    
+    @State var votedPlaceCount: Int = 0
+    
     var body: some View {
         
         ZStack {
@@ -57,10 +61,16 @@ struct VoteView: View {
                                 .foregroundColor(.gray)
                         )
                 }
-                
+                Spacer()
                 CardStack(direction: FourDirections.direction, data: cardViewModel) { place, direction in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         self.direction = nil
+                    }
+                    votedPlaceCount += 1
+                    if votedPlaceCount == cardViewModel.count {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            isShowResultViewActive.toggle()
+                        }
                     }
                     doHapticFeedback()
                 } content: { place, direction, isOnTop in
@@ -85,17 +95,18 @@ struct VoteView: View {
                     maxVisibleCards: 3,
                     swipeThreshold: 0.3
                 ))
+                Spacer()
             }
             
             VoteEmojiOverlayView(direction: $direction)
-            
-//            if let selectedPlace = selectedPlace, isPlaceDetailViewPresented {
-//                DeckDetailView(place: selectedPlace)
-//            }
         }
-        .onChange(of: cardViewModel.count) { newValue in
-            print(cardViewModel.count)
-        }
+        .background(
+            NavigationLink(isActive: $isShowResultViewActive, destination: {
+                VoteResultView()
+            }, label: {
+                EmptyView()
+            })
+        )
 
     }
     

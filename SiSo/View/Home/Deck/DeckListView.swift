@@ -60,6 +60,14 @@ struct DeckListView: View {
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
+            ToolbarItem(placement: .principal) {
+                HStack(spacing: 2) {
+                    Image(systemName: "location")
+                        .font(NotoSans.regular(size: 15))
+                    Text("여의도")
+                        .font(NotoSans.regular(size: 15))
+                }
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button {
                     

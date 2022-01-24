@@ -16,7 +16,7 @@ struct PlaceCardView: View {
         VStack {
             KFImage.url(URL(string: place.image))
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .frame(height: 350)
             
             HStack {
                 VStack(alignment: .leading) {
