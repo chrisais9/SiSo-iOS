@@ -1,5 +1,5 @@
 //
-//  RestaurantCardView.swift
+//  DeckCardView.swift
 //  SiSo
 //
 //  Created by 구형모 on 2022/01/10.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct RestaurantCardView: View {
+struct DeckCardView: View {
     
     var image: String
     
@@ -24,7 +24,7 @@ struct RestaurantCardView: View {
                     Color.gray
                 })
                 .fade(duration: 0.2)
-                .scaledToFit()
+                .frame(height: 300)
             VStack {
                 HStack {
                     Text(title)
@@ -52,8 +52,8 @@ struct RestaurantCardView: View {
 }
 
 
-struct RestaurantCardView_Previews: PreviewProvider {
+struct DeckCardView_Previews: PreviewProvider {
     static var previews: some View {
-        RestaurantCardView(image: "https://www.gyeongju.go.kr/upload/content/thumb/20200429/83B53EE41B9D4C2A88B5D439022943A8.jpg", title: "김부장이 추천하는 베트남 맛집", likes: "1,201", distance: "0.8")
+        DeckCardView(image: "https://www.gyeongju.go.kr/upload/content/thumb/20200429/83B53EE41B9D4C2A88B5D439022943A8.jpg", title: "김부장이 추천하는 베트남 맛집", likes: "1,201", distance: "0.8")
     }
 }

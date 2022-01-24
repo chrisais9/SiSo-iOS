@@ -90,7 +90,7 @@ struct VoteView: View {
             VoteEmojiOverlayView(direction: $direction)
             
 //            if let selectedPlace = selectedPlace, isPlaceDetailViewPresented {
-//                PlaceDetailView(place: selectedPlace)
+//                DeckDetailView(place: selectedPlace)
 //            }
         }
         .onChange(of: cardViewModel.count) { newValue in

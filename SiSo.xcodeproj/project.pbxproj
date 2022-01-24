@@ -20,7 +20,6 @@
 		530DC3B62799543600523374 /* SimpleDummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DC3B52799543600523374 /* SimpleDummyResponse.swift */; };
 		532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191C27798DFD003C174B /* InviteFriendRow.swift */; };
 		532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191E2779B8BD003C174B /* SelectedFriend.swift */; };
-		53458E7A2781B15B0064740D /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E792781B15B0064740D /* PlaceDetailView.swift */; };
 		53458E7C2781B4760064740D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7B2781B4760064740D /* Place.swift */; };
 		53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */; };
 		53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E802781CCCA0064740D /* SearchPlaceView.swift */; };
@@ -40,6 +39,9 @@
 		5366FA4C27954C6C007C723E /* HTTPStatusCode+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4B27954C6C007C723E /* HTTPStatusCode+Enum.swift */; };
 		5366FA4E27955437007C723E /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5366FA4D27955437007C723E /* RegisterResponse.swift */; };
 		536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536D826327737C5B00C3AAB7 /* HomeView.swift */; };
+		53732604279E58AC005AF2F7 /* PlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E792781B15B0064740D /* PlaceDetailView.swift */; };
+		53732606279E5AAD005AF2F7 /* DeckDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53732605279E5AAD005AF2F7 /* DeckDetailView.swift */; };
+		53732609279E63B8005AF2F7 /* DeckPlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53732608279E63B8005AF2F7 /* DeckPlaceRow.swift */; };
 		537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537C3FC22771A03A00A2626D /* SimpleDialog.swift */; };
 		537ECB0C278E661800190A40 /* GoogleLoginButton+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537ECB0B278E661800190A40 /* GoogleLoginButton+SwiftUI.swift */; };
 		537ECB13278E740100190A40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537ECB12278E740000190A40 /* GoogleService-Info.plist */; };
@@ -74,8 +76,8 @@
 		53CF65C0278EA228002B08A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF65BF278EA228002B08A0 /* User.swift */; };
 		53E171C0278BC78000C2D41A /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171BF278BC78000C2D41A /* VisualEffectView.swift */; };
 		53E171C4278BFC3000C2D41A /* RangeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C3278BFC3000C2D41A /* RangeFilterView.swift */; };
-		53E171C8278C412F00C2D41A /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C7278C412F00C2D41A /* RestaurantListView.swift */; };
-		53E171CA278C454600C2D41A /* RestaurantCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C9278C454600C2D41A /* RestaurantCardView.swift */; };
+		53E171C8278C412F00C2D41A /* DeckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C7278C412F00C2D41A /* DeckListView.swift */; };
+		53E171CA278C454600C2D41A /* DeckCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C9278C454600C2D41A /* DeckCardView.swift */; };
 		53E467AB2777717500554722 /* InviteFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* InviteFriendView.swift */; };
 		53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AC27777CDE00554722 /* TextField+ClearButton.swift */; };
 /* End PBXBuildFile section */
@@ -95,7 +97,7 @@
 		530DC3B52799543600523374 /* SimpleDummyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDummyResponse.swift; sourceTree = "<group>"; };
 		532D191C27798DFD003C174B /* InviteFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendRow.swift; sourceTree = "<group>"; };
 		532D191E2779B8BD003C174B /* SelectedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriend.swift; sourceTree = "<group>"; };
-		53458E792781B15B0064740D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlaceDetailView.swift; path = ../SelectPlace/PlaceDetail/PlaceDetailView.swift; sourceTree = "<group>"; };
+		53458E792781B15B0064740D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		53458E7B2781B4760064740D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMenuRow.swift; sourceTree = "<group>"; };
 		53458E802781CCCA0064740D /* SearchPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,8 @@
 		5366FA4B27954C6C007C723E /* HTTPStatusCode+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPStatusCode+Enum.swift"; sourceTree = "<group>"; };
 		5366FA4D27955437007C723E /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
 		536D826327737C5B00C3AAB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		53732605279E5AAD005AF2F7 /* DeckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailView.swift; sourceTree = "<group>"; };
+		53732608279E63B8005AF2F7 /* DeckPlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckPlaceRow.swift; sourceTree = "<group>"; };
 		537C3FC22771A03A00A2626D /* SimpleDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDialog.swift; sourceTree = "<group>"; };
 		537ECB0B278E661800190A40 /* GoogleLoginButton+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoogleLoginButton+SwiftUI.swift"; sourceTree = "<group>"; };
 		537ECB12278E740000190A40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -150,8 +154,8 @@
 		53CF65BF278EA228002B08A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53E171BF278BC78000C2D41A /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		53E171C3278BFC3000C2D41A /* RangeFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeFilterView.swift; sourceTree = "<group>"; };
-		53E171C7278C412F00C2D41A /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
-		53E171C9278C454600C2D41A /* RestaurantCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCardView.swift; sourceTree = "<group>"; };
+		53E171C7278C412F00C2D41A /* DeckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListView.swift; sourceTree = "<group>"; };
+		53E171C9278C454600C2D41A /* DeckCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCardView.swift; sourceTree = "<group>"; };
 		53E467AA2777717500554722 /* InviteFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendView.swift; sourceTree = "<group>"; };
 		53E467AC27777CDE00554722 /* TextField+ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+ClearButton.swift"; sourceTree = "<group>"; };
 		5C2B55E4F9039825F46E241A /* Pods-SiSo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiSo.release.xcconfig"; path = "Target Support Files/Pods-SiSo/Pods-SiSo.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 		53458E7D2781BE040064740D /* PlaceDetail */ = {
 			isa = PBXGroup;
 			children = (
+				53458E792781B15B0064740D /* PlaceDetailView.swift */,
 				53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */,
 			);
 			path = PlaceDetail;
@@ -248,13 +253,23 @@
 			children = (
 				536D826327737C5B00C3AAB7 /* HomeView.swift */,
 				53A34EFE2773993700F48566 /* PreviousLocationRow.swift */,
-				53E171C6278C410700C2D41A /* Restaurant */,
+				53E171C6278C410700C2D41A /* Deck */,
+				53458E7D2781BE040064740D /* PlaceDetail */,
 				53A1BE26277CCD7A003D9BB9 /* VoteSetting */,
 				53C42963277CC89B004C6B1C /* SelectPlace */,
 				5392326D2782CD2F00746881 /* Vote */,
 				535B8AB027855028003B4F4F /* VoteResult */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		53732603279E5849005AF2F7 /* DeckDetail */ = {
+			isa = PBXGroup;
+			children = (
+				53732605279E5AAD005AF2F7 /* DeckDetailView.swift */,
+				53732608279E63B8005AF2F7 /* DeckPlaceRow.swift */,
+			);
+			path = DeckDetail;
 			sourceTree = "<group>";
 		};
 		537C3FC427736B0C00A2626D /* Dialog */ = {
@@ -297,7 +312,6 @@
 			children = (
 				5392326E2782CD5F00746881 /* VoteView.swift */,
 				5349B23D27843C7600A1B5BE /* PlaceCardView.swift */,
-				53458E792781B15B0064740D /* PlaceDetailView.swift */,
 				5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */,
 			);
 			path = Vote;
@@ -453,7 +467,6 @@
 		53C42963277CC89B004C6B1C /* SelectPlace */ = {
 			isa = PBXGroup;
 			children = (
-				53458E7D2781BE040064740D /* PlaceDetail */,
 				535BF9A72780A0BC00DD7424 /* BottomSheet */,
 				53C42964277CC925004C6B1C /* PlaceMapView.swift */,
 				53458E802781CCCA0064740D /* SearchPlaceView.swift */,
@@ -499,13 +512,14 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
-		53E171C6278C410700C2D41A /* Restaurant */ = {
+		53E171C6278C410700C2D41A /* Deck */ = {
 			isa = PBXGroup;
 			children = (
-				53E171C7278C412F00C2D41A /* RestaurantListView.swift */,
-				53E171C9278C454600C2D41A /* RestaurantCardView.swift */,
+				53732603279E5849005AF2F7 /* DeckDetail */,
+				53E171C7278C412F00C2D41A /* DeckListView.swift */,
+				53E171C9278C454600C2D41A /* DeckCardView.swift */,
 			);
-			path = Restaurant;
+			path = Deck;
 			sourceTree = "<group>";
 		};
 		642210109F7DDC825E0E7E0E /* Pods */ = {
@@ -650,7 +664,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				539AE41D27888FC0008CAC20 /* URLImage.swift in Sources */,
-				53E171CA278C454600C2D41A /* RestaurantCardView.swift in Sources */,
+				53E171CA278C454600C2D41A /* DeckCardView.swift in Sources */,
 				5398E46D2787D9C100E7437B /* SisoSocketManager.swift in Sources */,
 				53AB86E72770F617006493D7 /* ContentView.swift in Sources */,
 				532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */,
@@ -660,11 +674,13 @@
 				5366FA4E27955437007C723E /* RegisterResponse.swift in Sources */,
 				532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */,
 				53E467AB2777717500554722 /* InviteFriendView.swift in Sources */,
+				53732609279E63B8005AF2F7 /* DeckPlaceRow.swift in Sources */,
 				5392326F2782CD5F00746881 /* VoteView.swift in Sources */,
 				5349B236278417B000A1B5BE /* CardView.swift in Sources */,
 				53C42965277CC925004C6B1C /* PlaceMapView.swift in Sources */,
 				53E171C0278BC78000C2D41A /* VisualEffectView.swift in Sources */,
 				53C88C092797EE6500CC988F /* PhotoPickerView.swift in Sources */,
+				53732606279E5AAD005AF2F7 /* DeckDetailView.swift in Sources */,
 				53AB86E52770F617006493D7 /* SiSoApp.swift in Sources */,
 				53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */,
 				53AB86F82770FDFB006493D7 /* LoginView.swift in Sources */,
@@ -676,7 +692,7 @@
 				53E171C4278BFC3000C2D41A /* RangeFilterView.swift in Sources */,
 				53C00A8527749B7100C51065 /* VoteSettingView.swift in Sources */,
 				53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */,
-				53E171C8278C412F00C2D41A /* RestaurantListView.swift in Sources */,
+				53E171C8278C412F00C2D41A /* DeckListView.swift in Sources */,
 				53876D5A278D290700697647 /* MyPlaceRow.swift in Sources */,
 				535E53D3279A9102003CBCA3 /* UIImage+resize.swift in Sources */,
 				53876D64278D639200697647 /* FacebookButton+SwiftUI.swift in Sources */,
@@ -689,11 +705,11 @@
 				53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */,
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
 				539AE41827887DED008CAC20 /* View+ifCondition.swift in Sources */,
+				53732604279E58AC005AF2F7 /* PlaceDetailView.swift in Sources */,
 				53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */,
 				53458E832781D03A0064740D /* TextField+AutoFocus+UIKit.swift in Sources */,
 				53C88BFF27979EDB00CC988F /* Color+hex.swift in Sources */,
 				53458E7C2781B4760064740D /* Place.swift in Sources */,
-				53458E7A2781B15B0064740D /* PlaceDetailView.swift in Sources */,
 				53CF65C0278EA228002B08A0 /* User.swift in Sources */,
 				5349B23C2784182500A1B5BE /* CardStack.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
@@ -845,7 +861,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "SiSo/Preview\\ Content";
 				DEVELOPMENT_TEAM = 7R73TXTB9S;
 				ENABLE_PREVIEWS = YES;
@@ -886,7 +902,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "SiSo/Preview\\ Content";
 				DEVELOPMENT_TEAM = 7R73TXTB9S;
 				ENABLE_PREVIEWS = YES;

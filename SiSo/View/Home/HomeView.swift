@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var isSelectFriendViewActive: Bool = false
+    @State var isDeckViewActive: Bool = false
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -35,11 +35,11 @@ struct HomeView: View {
                     )
                 
                 LargeButton(title: "장소 선택하러 가기", backgroundColor: Color.black.opacity(0.7), foregroundColor: .white) {
-                    isSelectFriendViewActive.toggle()
+                    isDeckViewActive.toggle()
                 }
                 .background(
-                    NavigationLink(isActive: $isSelectFriendViewActive, destination: {
-                        VoteView()
+                    NavigationLink(isActive: $isDeckViewActive, destination: {
+                        DeckListView()
                     }, label: {
                         EmptyView()
                     })
