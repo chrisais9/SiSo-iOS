@@ -62,6 +62,11 @@ struct VoteView: View {
                         )
                 }
                 Spacer()
+                
+                if votedPlaceCount != cardViewModel.count {
+                    Text("다른 사람 기다리는중...")
+                        .font(NotoSans.regular(size: 15))
+                }
                 CardStack(direction: FourDirections.direction, data: cardViewModel) { place, direction in
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         self.direction = nil
