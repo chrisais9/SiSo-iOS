@@ -14,10 +14,12 @@ struct LobbyView: View {
     
     @State var isSelectFilterViewActive: Bool = false
     
+    @State var isPlaceMapViewActive: Bool = false
+    
     var body: some View {
         VStack(spacing: 20) {
             
-            Text("방번호 : 7136")
+            Text("방번호 : 7136 (임시로 click)")
                 .font(NotoSans.regular(size: 20))
                 .onTapGesture {
                     selectedFriend.frieds.append(contentsOf: selectedFriend.exampleFriends)
@@ -56,8 +58,15 @@ struct LobbyView: View {
             Spacer()
             
             LargeButton(title: "다음으로", disabled: selectedFilter.isEmpty || selectedFriend.isEmpty , backgroundColor: .appPrimary, foregroundColor: .white) {
-                
+                isPlaceMapViewActive.toggle()
             }
+            .background(
+                NavigationLink(isActive: $isPlaceMapViewActive, destination: {
+                    PlaceMapView(selectedFilter: selectedFilter)
+                }, label: {
+                    EmptyView()
+                })
+            )
             .padding(.horizontal)
         }
     }

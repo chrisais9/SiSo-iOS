@@ -102,7 +102,7 @@ struct VoteSettingView: View {
                     }
                     .background(
                         NavigationLink(isActive: $isPlaceMapViewPresented, destination: {
-                            PlaceMapView()
+                            PlaceMapView(selectedFilter: selectedFilter)
                         }, label: {
                             EmptyView()
                         })

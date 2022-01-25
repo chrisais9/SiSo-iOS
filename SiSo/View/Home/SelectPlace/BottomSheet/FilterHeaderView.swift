@@ -8,54 +8,61 @@
 import SwiftUI
 
 struct FilterHeaderView: View {
+    
+    @ObservedObject var selectedFilter: SelectedFilters
+
+    @State var filters: [String] = []
+    
     var body: some View {
-        VStack {
-            HStack {
-                Text("성동구 성수 2가")
-                    .font(NotoSans.bold(size: 19))
-                Spacer()
-                Text("총 10개")
-                    .font(NotoSans.regular(size: 19))
-                    .foregroundColor(.gray)
-            }
+        VStack(spacing: 13) {
+            
+            Text("서울시 동작구 상도동")
+                .font(NotoSans.bold(size: 19))
+                .frame(maxWidth: .infinity, alignment: .leading)
             
             HStack {
-                Text("1km")
-                    .font(NotoSans.regular(size: 15))
-                    .padding(2)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 3)
-                            .stroke()
-                    )
-                Text("한식")
-                    .font(NotoSans.regular(size: 15))
-                    .padding(2)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 3)
-                            .stroke()
-                    )
-                Text("만원 이하")
-                    .font(NotoSans.regular(size: 15))
-                    .padding(2)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 3)
-                            .stroke()
-                    )
-                Text("상관 없음")
-                    .font(NotoSans.regular(size: 15))
-                    .padding(2)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 3)
-                            .stroke()
-                    )
+                ForEach(filters, id: \.self) { value in
+                    Text(value)
+                        .font(NotoSans.regular(size: 15))
+                        .foregroundColor(.appPrimary)
+                        .padding(.horizontal, 10)
+                        .overlay(
+                            Capsule()
+                                .stroke()
+                                .foregroundColor(.black.opacity(0.2))
+                        )
+                    
+                }
                 Spacer()
             }
+            
+            Divider()
+            
+            Text("총 10개")
+                .font(NotoSans.regular(size: 15))
+                .foregroundColor(.gray)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            
+        }
+        .onAppear {
+            let selectedFilters: [String?] = [
+                selectedFilter.range?.rawValue,
+                selectedFilter.category?.rawValue,
+                selectedFilter.price?.rawValue,
+                selectedFilter.parking?.rawValue
+            ]
+            // append not null
+            filters.append(contentsOf: selectedFilters.compactMap {$0})
         }
     }
 }
 
 struct FilterHeaderView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        FilterHeaderView()
+        let selectedFilter = SelectedFilters()
+        selectedFilter.range = .km1
+        selectedFilter.price = .around10000
+        return FilterHeaderView(selectedFilter: selectedFilter)
     }
 }

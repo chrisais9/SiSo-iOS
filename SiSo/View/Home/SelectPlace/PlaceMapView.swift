@@ -16,8 +16,9 @@ enum CustomBottomSheetPosition: CGFloat, CaseIterable {
 struct PlaceMapView: View {
     
     @State var bottomSheetPosition: CustomBottomSheetPosition = .bottom
-    
     @State var topBarHeight: CGFloat = .zero
+    
+    @ObservedObject var selectedFilter: SelectedFilters
     
     @State var isSearchViewPresented: Bool = false
     
@@ -30,8 +31,8 @@ struct PlaceMapView: View {
                     Spacer()
                     
                 }
-                .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.noBottomPosition], headerContent: {
-                    FilterHeaderView()
+                .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.noBottomPosition, .background(AnyView(Color.white))], headerContent: {
+                    FilterHeaderView(selectedFilter: selectedFilter)
                         .contentShape(Rectangle())
                         .onTapGesture {
                             bottomSheetPosition = .top
@@ -70,9 +71,13 @@ struct PlaceMapView: View {
 }
 
 struct PlaceMapView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        NavigationView {
-            PlaceMapView()
+        let selectedFilter = SelectedFilters()
+        selectedFilter.range = .km1
+        selectedFilter.price = .around10000
+        return NavigationView {
+            PlaceMapView(selectedFilter: selectedFilter)
         }
     }
 }
