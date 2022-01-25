@@ -8,7 +8,7 @@
 import Foundation
 
 class SelectedFilters: ObservableObject {
-    @Published var range: Range?
+    @Published var range: FilterRange?
     @Published var category: Category?
     @Published var price: Price?
     @Published var parking: Parking?
@@ -18,7 +18,7 @@ class SelectedFilters: ObservableObject {
     }
 }
 
-enum Range: String, CaseIterable {
+enum FilterRange: String, CaseIterable {
     case km1 = "1km"
     case km3 = "3km"
     case km5 = "5km"

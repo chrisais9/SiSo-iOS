@@ -46,7 +46,7 @@ struct RangeFilterView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                     LazyVGrid(columns: columns, alignment: .leading) {
-                        ForEach(Range.allCases, id: \.self) { range in
+                        ForEach(FilterRange.allCases, id: \.self) { range in
                             Button {
                                 selectedFilters.range = range
                             } label: {

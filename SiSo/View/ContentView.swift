@@ -33,14 +33,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView(selection: $selectedTab) {
-                HomeView()
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("홈")
-                    }
-                    .tag(SelectedTab.home)
-                
                 if !users.isEmpty{
+                    HomeView(user: users.first!)
+                        .tabItem {
+                            Image(systemName: "house")
+                            Text("홈")
+                        }
+                        .tag(SelectedTab.home)
+                    
+                    
                     MyPageView(user: users.first!)
                         .tabItem {
                             Image(systemName: "person.circle")
@@ -49,11 +50,18 @@ struct ContentView: View {
                         .tag(SelectedTab.mypage)
                 }
             }
+            .accentColor(.appPrimary)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Text("시소")
-                        .font(NotoSans.bold(size: 17))
+                    HStack(alignment: .firstTextBaseline, spacing: 3) {
+                        Text("시소")
+                            .foregroundColor(.appPrimary)
+                            .font(NotoSans.black(size: 20))
+                        Text("시간을 소중하게 ™")
+                            .foregroundColor(.appPrimary)
+                            .font(NotoSans.regular(size: 9))
+                    }
                 }
             }
         }
@@ -65,7 +73,6 @@ struct ContentView: View {
                 }
             }
         })
-        .accentColor(.black)
     }
 }
 

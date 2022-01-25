@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct HomeView: View {
+    
+    @ObservedRealmObject var user: User
     
     @State var isDeckViewActive: Bool = false
     
@@ -17,12 +20,16 @@ struct HomeView: View {
             VStack {
                 VStack(alignment: .leading, spacing: 17) {
                     Text("오늘 어디가지?")
-                        .font(NotoSans.bold(size: 30))
-                    Text("(닉네임)님 안녕하세요. \n 어려운 장소 선택 친구들과 한번에 해결하세요!")
+                        .font(NotoSans.bold(size: 25))
+                    StyledText(verbatim: "\(user.name)님 안녕하세요.\n어려운 장소 선택 친구들과 한번에 해결하세요!")
+                        .style(.highlight(color: .appPrimary), ranges: { [$0.range(of: user.name)!] })
                         .font(NotoSans.medium(size: 15))
                         .fixedSize(horizontal: false, vertical: true)
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(12)
+                .shadow(radius: 4)
                 .padding(.bottom, 20)
                 
                 Text("이미지 or 관련 일러스트")
@@ -72,8 +79,12 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            HomeView()
+        let user: User = User()
+        user.name = "구형모"
+        user.email = "chrisais9@playground.party"
+        user.profileImage = "https://cdn.crowdpic.net/detail-thumb/thumb_d_C6386337D543E5BD60DB8168D08F5CFA.jpg"
+        return NavigationView {
+            HomeView(user: .init(value: user))
                 .navigationBarTitleDisplayMode(.inline)
         }
     }
