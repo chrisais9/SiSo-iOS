@@ -10,7 +10,7 @@ import Kingfisher
 
 struct PreviewFriendRow: View {
     
-    var isEditing: Bool
+    var isEditing: Bool = false
     var isHost: Bool
     var profileImage: String = "https://www.nicepng.com/png/full/73-730154_open-default-profile-picture-png.png"
     var name: String

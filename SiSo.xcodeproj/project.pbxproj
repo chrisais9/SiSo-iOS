@@ -20,8 +20,10 @@
 		530DC3B62799543600523374 /* SimpleDummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DC3B52799543600523374 /* SimpleDummyResponse.swift */; };
 		532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191C27798DFD003C174B /* InviteFriendRow.swift */; };
 		532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191E2779B8BD003C174B /* SelectedFriend.swift */; };
+		532E708B279FC6D700B19C8D /* SisoWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532E708A279FC6D700B19C8D /* SisoWhiteButton.swift */; };
 		53340F82279F997000EAFEC8 /* Color+component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F81279F997000EAFEC8 /* Color+component.swift */; };
 		53340F86279FA97F00EAFEC8 /* StyledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F85279FA97F00EAFEC8 /* StyledText.swift */; };
+		53340F8B279FC16F00EAFEC8 /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F8A279FC16F00EAFEC8 /* LobbyView.swift */; };
 		53458E7C2781B4760064740D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7B2781B4760064740D /* Place.swift */; };
 		53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */; };
 		53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E802781CCCA0064740D /* SearchPlaceView.swift */; };
@@ -98,8 +100,10 @@
 		530DC3B52799543600523374 /* SimpleDummyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDummyResponse.swift; sourceTree = "<group>"; };
 		532D191C27798DFD003C174B /* InviteFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendRow.swift; sourceTree = "<group>"; };
 		532D191E2779B8BD003C174B /* SelectedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriend.swift; sourceTree = "<group>"; };
+		532E708A279FC6D700B19C8D /* SisoWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SisoWhiteButton.swift; sourceTree = "<group>"; };
 		53340F81279F997000EAFEC8 /* Color+component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+component.swift"; sourceTree = "<group>"; };
 		53340F85279FA97F00EAFEC8 /* StyledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledText.swift; sourceTree = "<group>"; };
+		53340F8A279FC16F00EAFEC8 /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
 		53458E792781B15B0064740D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		53458E7B2781B4760064740D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMenuRow.swift; sourceTree = "<group>"; };
@@ -193,6 +197,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		53340F89279FC15C00EAFEC8 /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				53340F8A279FC16F00EAFEC8 /* LobbyView.swift */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
 		53458E7D2781BE040064740D /* PlaceDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +269,7 @@
 				53A34EFE2773993700F48566 /* PreviousLocationRow.swift */,
 				53E171C6278C410700C2D41A /* Deck */,
 				53458E7D2781BE040064740D /* PlaceDetail */,
+				53340F89279FC15C00EAFEC8 /* Lobby */,
 				53E171C5278C046B00C2D41A /* Filter */,
 				53A1BE26277CCD7A003D9BB9 /* VoteSetting */,
 				53C42963277CC89B004C6B1C /* SelectPlace */,
@@ -306,6 +319,7 @@
 			children = (
 				53AB86F52770FC41006493D7 /* LargeButton.swift */,
 				53C88C022797A02A00CC988F /* SocialLoginButton.swift */,
+				532E708A279FC6D700B19C8D /* SisoWhiteButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -704,6 +718,7 @@
 				537ECB0C278E661800190A40 /* GoogleLoginButton+SwiftUI.swift in Sources */,
 				53C6DDDF2780361200633AED /* ListContentView.swift in Sources */,
 				539AE4202788905F008CAC20 /* WiggleAnimation.swift in Sources */,
+				532E708B279FC6D700B19C8D /* SisoWhiteButton.swift in Sources */,
 				5349B238278417D800A1B5BE /* CardSwipeDirection.swift in Sources */,
 				53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */,
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
@@ -727,6 +742,7 @@
 				537C3FC32771A03A00A2626D /* SimpleDialog.swift in Sources */,
 				5366FA4C27954C6C007C723E /* HTTPStatusCode+Enum.swift in Sources */,
 				5349B23E27843C7600A1B5BE /* PlaceCardView.swift in Sources */,
+				53340F8B279FC16F00EAFEC8 /* LobbyView.swift in Sources */,
 				530DC3B62799543600523374 /* SimpleDummyResponse.swift in Sources */,
 				534C3E542780A1250046D1B9 /* FilterHeaderView.swift in Sources */,
 			);
