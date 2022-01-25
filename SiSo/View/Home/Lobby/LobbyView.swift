@@ -22,6 +22,7 @@ struct LobbyView: View {
                 .onTapGesture {
                     selectedFriend.frieds.append(contentsOf: selectedFriend.exampleFriends)
                 }
+                .padding(.horizontal)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
@@ -48,14 +49,17 @@ struct LobbyView: View {
                     EmptyView()
                 })
             )
+            .padding(.horizontal)
+            
             FilterPreviewView(selectedFilter: selectedFilter)
+                .padding(.horizontal)
             Spacer()
             
             LargeButton(title: "다음으로", disabled: selectedFilter.isEmpty || selectedFriend.isEmpty , backgroundColor: .appPrimary, foregroundColor: .white) {
                 
             }
+            .padding(.horizontal)
         }
-        .padding(.horizontal)
     }
 }
 
