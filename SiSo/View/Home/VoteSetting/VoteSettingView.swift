@@ -64,17 +64,17 @@ struct VoteSettingView: View {
                         
                         Divider()
                         
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(selectedFriend.frieds, id: \.email) { friend in
-                                    PreviewFriendRow(isEditing: isFriendEditMode, isHost: friend.name == "방장", name: friend.name)
-                                        .onTapGesture { isFriendEditMode = false }
-                                        .onLongPressGesture {
-                                            isFriendEditMode = true
-                                        }
-                                }
-                            }
-                        }.frame(height: 130)
+//                        ScrollView(.horizontal, showsIndicators: false) {
+//                            HStack {
+//                                ForEach(selectedFriend.frieds, id: \.email) { friend in
+//                                    PreviewFriendRow(isEditing: isFriendEditMode, isHost: friend.name == "방장", name: friend.name)
+//                                        .onTapGesture { isFriendEditMode = false }
+//                                        .onLongPressGesture {
+//                                            isFriendEditMode = true
+//                                        }
+//                                }
+//                            }
+//                        }.frame(height: 130)
                     }
                     
                     PreviewFilterView()

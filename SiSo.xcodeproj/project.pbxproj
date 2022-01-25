@@ -21,6 +21,7 @@
 		532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191C27798DFD003C174B /* InviteFriendRow.swift */; };
 		532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191E2779B8BD003C174B /* SelectedFriend.swift */; };
 		532E708B279FC6D700B19C8D /* SisoWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532E708A279FC6D700B19C8D /* SisoWhiteButton.swift */; };
+		532E708D279FDAB400B19C8D /* FilterPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532E708C279FDAB400B19C8D /* FilterPreviewView.swift */; };
 		53340F82279F997000EAFEC8 /* Color+component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F81279F997000EAFEC8 /* Color+component.swift */; };
 		53340F86279FA97F00EAFEC8 /* StyledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F85279FA97F00EAFEC8 /* StyledText.swift */; };
 		53340F8B279FC16F00EAFEC8 /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F8A279FC16F00EAFEC8 /* LobbyView.swift */; };
@@ -101,6 +102,7 @@
 		532D191C27798DFD003C174B /* InviteFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendRow.swift; sourceTree = "<group>"; };
 		532D191E2779B8BD003C174B /* SelectedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriend.swift; sourceTree = "<group>"; };
 		532E708A279FC6D700B19C8D /* SisoWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SisoWhiteButton.swift; sourceTree = "<group>"; };
+		532E708C279FDAB400B19C8D /* FilterPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPreviewView.swift; sourceTree = "<group>"; };
 		53340F81279F997000EAFEC8 /* Color+component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+component.swift"; sourceTree = "<group>"; };
 		53340F85279FA97F00EAFEC8 /* StyledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledText.swift; sourceTree = "<group>"; };
 		53340F8A279FC16F00EAFEC8 /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				53340F8A279FC16F00EAFEC8 /* LobbyView.swift */,
+				53863659277A192500B2B3A7 /* PreviewFriendRow.swift */,
+				532E708C279FDAB400B19C8D /* FilterPreviewView.swift */,
 			);
 			path = Lobby;
 			sourceTree = "<group>";
@@ -365,7 +369,6 @@
 			children = (
 				53B71863278AB79F0047A42D /* InviteFriend */,
 				53C00A8427749B7100C51065 /* VoteSettingView.swift */,
-				53863659277A192500B2B3A7 /* PreviewFriendRow.swift */,
 				53CCDB94278842DC00C335FC /* PreviewFilterView.swift */,
 			);
 			path = VoteSetting;
@@ -699,6 +702,7 @@
 				53E171C0278BC78000C2D41A /* VisualEffectView.swift in Sources */,
 				53C88C092797EE6500CC988F /* PhotoPickerView.swift in Sources */,
 				53732606279E5AAD005AF2F7 /* DeckDetailView.swift in Sources */,
+				532E708D279FDAB400B19C8D /* FilterPreviewView.swift in Sources */,
 				53AB86E52770F617006493D7 /* SiSoApp.swift in Sources */,
 				53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */,
 				53AB86F82770FDFB006493D7 /* LoginView.swift in Sources */,

@@ -65,6 +65,7 @@ struct ContentView: View {
                 }
             }
         }
+        .accentColor(.black)
         .onChange(of: users, perform: { newValue in
             if users.isEmpty {
                 let realm = try! Realm()

@@ -34,7 +34,7 @@ struct InviteFriendRow: View {
             Spacer()
             Button {
                 withAnimation {
-                    selectedFriend.inviteFriend(name: name, email: email)
+//                    selectedFriend.inviteFriend(name: name, email: email)
                 }
             } label: {
                 Text("선택")

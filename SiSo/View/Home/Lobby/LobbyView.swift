@@ -16,12 +16,17 @@ struct LobbyView: View {
     
     var body: some View {
         VStack(spacing: 20) {
+            
             Text("방번호 : 7136")
                 .font(NotoSans.regular(size: 20))
+                .onTapGesture {
+                    selectedFriend.frieds.append(contentsOf: selectedFriend.exampleFriends)
+                }
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(selectedFriend.frieds, id: \.email) { friend in
-                        PreviewFriendRow(isHost: friend.name == "방장", name: friend.name)
+                        PreviewFriendRow(isHost: friend.name == "방장", profileImage: friend.profileImage, name: friend.name)
                     }
                     if selectedFriend.frieds.count == 1 {
                         Text("초대를 위해 방 번호를 친구에게 알려주세요")
@@ -29,7 +34,7 @@ struct LobbyView: View {
                             .foregroundColor(.gray)
                     }
                 }
-            }.frame(height: 130)
+            }.frame(height: 100)
             
             Spacer()
             
@@ -43,16 +48,12 @@ struct LobbyView: View {
                     EmptyView()
                 })
             )
-            
-            RoundedRectangle(cornerRadius: 3)
-                .fill(Color(.systemGray6))
-                .frame(height: 200)
-                .overlay(
-                    Text("필터를 선택해주세요")
-                        .font(NotoSans.regular(size: 13))
-                        .foregroundColor(.gray)
-                )
+            FilterPreviewView(selectedFilter: selectedFilter)
             Spacer()
+            
+            LargeButton(title: "다음으로", disabled: selectedFilter.isEmpty || selectedFriend.isEmpty , backgroundColor: .appPrimary, foregroundColor: .white) {
+                
+            }
         }
         .padding(.horizontal)
     }
