@@ -21,9 +21,9 @@ struct LargeButtonStyle: ButtonStyle {
             .foregroundColor(currentForegroundColor)
             .background(isDisabled || configuration.isPressed ? backgroundColor.opacity(0.3) : backgroundColor)
             // This is the key part, we are using both an overlay as well as cornerRadius
-            .cornerRadius(6)
+            .cornerRadius(99)
             .overlay(
-                RoundedRectangle(cornerRadius: 6)
+                RoundedRectangle(cornerRadius: 99)
                     .stroke(currentForegroundColor, lineWidth: 1)
         )
             .font(NotoSans.medium(size: 17))

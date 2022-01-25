@@ -34,7 +34,7 @@ struct HomeView: View {
                             .stroke(Color.black, lineWidth: 1)
                     )
                 
-                LargeButton(title: "장소 선택하러 가기", backgroundColor: Color.black.opacity(0.7), foregroundColor: .white) {
+                LargeButton(title: "장소 선택하러 가기", backgroundColor: .appPrimary, foregroundColor: .white) {
                     isDeckViewActive.toggle()
                 }
                 .background(
@@ -44,12 +44,13 @@ struct HomeView: View {
                         EmptyView()
                     })
                 )
-                
-                Text("지난 장소 투표")
-                    .font(NotoSans.bold(size: 20))
-                    .frame(maxWidth: .infinity, alignment: .leading)
             }
             .padding()
+            
+            Text("지난 장소 투표")
+                .font(NotoSans.bold(size: 20))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {

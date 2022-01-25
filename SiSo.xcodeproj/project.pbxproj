@@ -20,6 +20,7 @@
 		530DC3B62799543600523374 /* SimpleDummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DC3B52799543600523374 /* SimpleDummyResponse.swift */; };
 		532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191C27798DFD003C174B /* InviteFriendRow.swift */; };
 		532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191E2779B8BD003C174B /* SelectedFriend.swift */; };
+		53340F82279F997000EAFEC8 /* Color+component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F81279F997000EAFEC8 /* Color+component.swift */; };
 		53458E7C2781B4760064740D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7B2781B4760064740D /* Place.swift */; };
 		53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */; };
 		53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E802781CCCA0064740D /* SearchPlaceView.swift */; };
@@ -97,6 +98,7 @@
 		530DC3B52799543600523374 /* SimpleDummyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDummyResponse.swift; sourceTree = "<group>"; };
 		532D191C27798DFD003C174B /* InviteFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendRow.swift; sourceTree = "<group>"; };
 		532D191E2779B8BD003C174B /* SelectedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriend.swift; sourceTree = "<group>"; };
+		53340F81279F997000EAFEC8 /* Color+component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+component.swift"; sourceTree = "<group>"; };
 		53458E792781B15B0064740D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		53458E7B2781B4760064740D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMenuRow.swift; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 				53458E822781D03A0064740D /* TextField+AutoFocus+UIKit.swift */,
 				53C88BFE27979EDB00CC988F /* Color+hex.swift */,
 				535E53D2279A9102003CBCA3 /* UIImage+resize.swift */,
+				53340F81279F997000EAFEC8 /* Color+component.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */,
 				53458E832781D03A0064740D /* TextField+AutoFocus+UIKit.swift in Sources */,
 				53C88BFF27979EDB00CC988F /* Color+hex.swift in Sources */,
+				53340F82279F997000EAFEC8 /* Color+component.swift in Sources */,
 				53458E7C2781B4760064740D /* Place.swift in Sources */,
 				53CF65C0278EA228002B08A0 /* User.swift in Sources */,
 				5349B23C2784182500A1B5BE /* CardStack.swift in Sources */,
