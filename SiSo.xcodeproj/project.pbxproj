@@ -77,7 +77,6 @@
 		53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CCDB94278842DC00C335FC /* PreviewFilterView.swift */; };
 		53CF65C0278EA228002B08A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CF65BF278EA228002B08A0 /* User.swift */; };
 		53E171C0278BC78000C2D41A /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171BF278BC78000C2D41A /* VisualEffectView.swift */; };
-		53E171C4278BFC3000C2D41A /* RangeFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C3278BFC3000C2D41A /* RangeFilterView.swift */; };
 		53E171C8278C412F00C2D41A /* DeckListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C7278C412F00C2D41A /* DeckListView.swift */; };
 		53E171CA278C454600C2D41A /* DeckCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E171C9278C454600C2D41A /* DeckCardView.swift */; };
 		53E467AB2777717500554722 /* InviteFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E467AA2777717500554722 /* InviteFriendView.swift */; };
@@ -157,7 +156,6 @@
 		53CCDB94278842DC00C335FC /* PreviewFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFilterView.swift; sourceTree = "<group>"; };
 		53CF65BF278EA228002B08A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		53E171BF278BC78000C2D41A /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
-		53E171C3278BFC3000C2D41A /* RangeFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeFilterView.swift; sourceTree = "<group>"; };
 		53E171C7278C412F00C2D41A /* DeckListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckListView.swift; sourceTree = "<group>"; };
 		53E171C9278C454600C2D41A /* DeckCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckCardView.swift; sourceTree = "<group>"; };
 		53E467AA2777717500554722 /* InviteFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendView.swift; sourceTree = "<group>"; };
@@ -259,6 +257,7 @@
 				53A34EFE2773993700F48566 /* PreviousLocationRow.swift */,
 				53E171C6278C410700C2D41A /* Deck */,
 				53458E7D2781BE040064740D /* PlaceDetail */,
+				53E171C5278C046B00C2D41A /* Filter */,
 				53A1BE26277CCD7A003D9BB9 /* VoteSetting */,
 				53C42963277CC89B004C6B1C /* SelectPlace */,
 				5392326D2782CD2F00746881 /* Vote */,
@@ -351,9 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				53B71863278AB79F0047A42D /* InviteFriend */,
-				53E171C5278C046B00C2D41A /* Filter */,
 				53C00A8427749B7100C51065 /* VoteSettingView.swift */,
-				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
 				53863659277A192500B2B3A7 /* PreviewFriendRow.swift */,
 				53CCDB94278842DC00C335FC /* PreviewFilterView.swift */,
 			);
@@ -513,7 +510,7 @@
 		53E171C5278C046B00C2D41A /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				53E171C3278BFC3000C2D41A /* RangeFilterView.swift */,
+				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -696,7 +693,6 @@
 				5349B2422784463400A1B5BE /* VoteEmojiOverlayView.swift in Sources */,
 				536D826427737C5B00C3AAB7 /* HomeView.swift in Sources */,
 				53B486012796533B00B837D9 /* ProfileResponse.swift in Sources */,
-				53E171C4278BFC3000C2D41A /* RangeFilterView.swift in Sources */,
 				53C00A8527749B7100C51065 /* VoteSettingView.swift in Sources */,
 				53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */,
 				53E171C8278C412F00C2D41A /* DeckListView.swift in Sources */,

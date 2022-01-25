@@ -83,9 +83,6 @@ struct VoteSettingView: View {
             }
             .padding(.horizontal)
             
-            RangeFilterView(isShowing: $isFilterEditMode, selectedFilters: selectedFilter)
-                .zIndex(100)
-            
             VStack {
                 Spacer()
                 LargeButton(

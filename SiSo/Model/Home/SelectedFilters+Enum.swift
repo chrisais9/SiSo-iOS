@@ -16,6 +16,13 @@ class SelectedFilters: ObservableObject {
     var isEmpty: Bool {
         range == nil && category == nil && price == nil && parking == nil
     }
+    
+    func reset() {
+        range = nil
+        category = nil
+        price = nil
+        parking = nil
+    }
 }
 
 enum FilterRange: String, CaseIterable {

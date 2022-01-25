@@ -21,7 +21,8 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: 17) {
                     Text("오늘 어디가지?")
                         .font(NotoSans.bold(size: 25))
-                    StyledText(verbatim: "\(user.name)님 안녕하세요.\n어려운 장소 선택 친구들과 한번에 해결하세요!")
+                    
+                    StyledText("\(user.name)님 안녕하세요.\n어려운 장소 선택 친구들과 한번에 해결하세요!")
                         .style(.highlight(color: .appPrimary), ranges: { [$0.range(of: user.name)!] })
                         .font(NotoSans.medium(size: 15))
                         .fixedSize(horizontal: false, vertical: true)

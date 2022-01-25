@@ -66,7 +66,7 @@ public extension StyledText {
 }
 
 extension StyledText {
-    public init(verbatim content: String, styles: [TextStyle] = []) {
+    public init(_ content: String, styles: [TextStyle] = []) {
         let attributes = styles.reduce(into: [:]) { result, style in
             result[style.key] = style
         }
