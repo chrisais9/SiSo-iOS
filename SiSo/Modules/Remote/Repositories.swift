@@ -66,7 +66,6 @@ extension Repositories {
             headers: API.shared.getHeaders(withAuthorization: true)
         ).responseDecodable(of: ProfileResponse.self, decoder: ProfileResponse.ProfileResponseDecoder()) { response in
             if let statusCode = response.response?.statusCode {
-                print("profile1")
                 completion(HTTPStatusCode.init(rawValue: statusCode), response.value)
             }
         }
@@ -88,7 +87,6 @@ extension Repositories {
             method: .post,
             headers: API.shared.getHeaders(withAuthorization: true)
         ).uploadProgress(queue: .main, closure: { progress in
-            print("upload1", progress)
         }).responseDecodable(of: SimpleDummyResponse.self) { response in
             if let statusCode = response.response?.statusCode {
                 completion(HTTPStatusCode.init(rawValue: statusCode), response.value)

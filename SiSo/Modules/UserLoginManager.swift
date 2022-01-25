@@ -143,7 +143,6 @@ final class UserLoginManager: NSObject {
             switch status {
             case .ok:
                 if let userInfo = profileResponse?.data {
-                    print(userInfo)
                     self.setUser(
                         profileImage: userInfo.profileImage,
                         name: userInfo.userName,
@@ -181,7 +180,6 @@ final class UserLoginManager: NSObject {
         try! realm.write {
             realm.delete(realm.objects(User.self))
         }
-        print("user deleted from local")
     }
 }
 
@@ -195,7 +193,6 @@ extension UserLoginManager {
                 }
                 else if let accessToken = oauthToken?.accessToken {
                     self.doServerRegister(type: .kakao, token: accessToken)
-                    print("kakao login success \(oauthToken?.accessToken ?? "")")
                 }
             }
         } else {
@@ -205,7 +202,6 @@ extension UserLoginManager {
                 }
                 else if let accessToken = oauthToken?.accessToken {
                     self.doServerRegister(type: .kakao, token: accessToken)
-                    print("kakao login success \(oauthToken?.accessToken ?? "")")
                 }
             }
         }
@@ -250,7 +246,6 @@ extension UserLoginManager {
 extension UserLoginManager {
     private func doLoginGoogle() {
         guard let rootViewController = UIApplication.shared.windows.first?.rootViewController else {
-            print("There is no root view controller!")
             return
         }
         GIDSignIn.sharedInstance.signIn(with: configuration,
@@ -295,7 +290,7 @@ extension UserLoginManager: NaverThirdPartyLoginConnectionDelegate {
     }
     
     func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
-        print(error)
+        
     }
     
     private func doLoginNaver() {

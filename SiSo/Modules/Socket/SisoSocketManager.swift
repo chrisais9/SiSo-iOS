@@ -40,10 +40,8 @@ class SisoSocketManager {
     func syncFriendList(completion: @escaping ([MyFriend]) -> Void) {
         socket.on(events.friendList.rawValue) { data, ack in
             do {
-                print("0", data)
                 let jsonData = try JSONSerialization.data(withJSONObject: data[0])
                 let friends = try? JSONDecoder().decode([MyFriend].self, from: jsonData)
-                print("2", friends)
                 completion(friends ?? [])
             } catch {}
         }
