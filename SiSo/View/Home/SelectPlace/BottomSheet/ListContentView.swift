@@ -40,7 +40,7 @@ struct ListContentView: View {
                 .padding(.horizontal)
                 .background(
                     NavigationLink(isActive: $isVoteViewPresented, destination: {
-                        
+                        VoteView()
                     }, label: {
                         EmptyView()
                     })
