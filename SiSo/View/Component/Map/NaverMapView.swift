@@ -63,12 +63,16 @@ struct NaverMapView: UIViewRepresentable {
                 
                 viewModel.places.forEach { place in
                     let marker = NMFMarker()
-                    marker.position = NMGLatLng(lat: place.latitude, lng: place.longitude)
+                    marker.position = NMGLatLng(lat: place.coordinates.latitude, lng: place.coordinates.longitude)
                     marker.width = 25
                     marker.height = 35
 //                    marker.iconTintColor = .init(named: "color_primary")!
-                    marker.captionText = "[음식점 이름]"
+                    marker.captionText = place.name
                     marker.mapView = view.mapView
+                    marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
+                        print("touched")
+                        return true
+                    }
                 }
                 
 //                let range = NMFCircleOverlay()
@@ -96,17 +100,6 @@ struct NaverMapView: UIViewRepresentable {
     }
 }
 
-struct NPlace {
-    var latitude: Double
-    var longitude: Double
-}
-
 class MapSceneViewModel: ObservableObject {
-    var places: [NPlace] = [
-        NPlace(latitude: 37.524321386, longitude: 126.927731774),
-        NPlace(latitude: 37.524075486, longitude: 126.927374324),
-        NPlace(latitude: 37.52439446, longitude: 126.927148809),
-        NPlace(latitude: 37.524630733, longitude: 126.92748643)
-        
-    ]
+    var places: [Place] = placesDummy
 }

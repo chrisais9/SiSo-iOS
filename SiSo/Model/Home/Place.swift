@@ -20,6 +20,12 @@ struct Place: Identifiable {
     var rank: Int
     var menus: [Menu]
     
+    var coordinates: Coordinates
+    
+    struct Coordinates {
+        var latitude: Double
+        var longitude: Double
+    }
 }
 
 struct Menu {
@@ -69,7 +75,8 @@ var placeDummy: Place = Place(
             image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
             name: "숙성 눈꽃살",
             description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임")
-    ]
+    ],
+    coordinates: Place.Coordinates(latitude: 37.524321386, longitude: 126.927731774)
 )
 
 var placesDummy: [Place] = [
@@ -105,7 +112,8 @@ var placesDummy: [Place] = [
                 image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
                 name: "숙성 눈꽃살",
                 description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임")
-        ]
+        ],
+        coordinates: Place.Coordinates(latitude: 37.524075486, longitude: 126.927374324)
     ),
     Place(
         name: "오복수산 여의도점",
@@ -139,7 +147,8 @@ var placesDummy: [Place] = [
                 image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
                 name: "숙성 눈꽃살",
                 description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임")
-        ]
+        ],
+        coordinates: Place.Coordinates(latitude: 37.52439446, longitude: 126.927374324)
     ),
     Place(
         name: "콘래드서울 제스트",
@@ -173,7 +182,8 @@ var placesDummy: [Place] = [
                 image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
                 name: "숙성 눈꽃살",
                 description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임")
-        ]
+        ],
+        coordinates: Place.Coordinates(latitude: 37.52439446, longitude: 126.927148809)
     ),
     Place(
         name: "더 스테이크 하우스 여의도 IFC점",
@@ -207,6 +217,7 @@ var placesDummy: [Place] = [
                 image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
                 name: "숙성 눈꽃살",
                 description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임")
-        ]
+        ],
+        coordinates: Place.Coordinates(latitude: 37.524630733, longitude: 126.92748643)
     )
 ]
