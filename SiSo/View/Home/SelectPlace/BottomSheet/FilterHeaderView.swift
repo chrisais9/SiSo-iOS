@@ -52,7 +52,10 @@ struct FilterHeaderView: View {
                 selectedFilter.parking?.rawValue
             ]
             // append not null
-            filters.append(contentsOf: selectedFilters.compactMap {$0})
+            
+            if filters.isEmpty {
+                filters.append(contentsOf: selectedFilters.compactMap {$0})
+            }
         }
     }
 }
