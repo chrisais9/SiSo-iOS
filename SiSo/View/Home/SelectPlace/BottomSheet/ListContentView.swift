@@ -13,12 +13,14 @@ struct ListContentView: View {
     @State var isDetailViewActive: Bool = false
     @State var isVoteViewPresented: Bool = false
     
+    var places: [Place] = placesDummy
+    
     var body: some View {
         VStack {
             if bottomSheetPosition == .top {
                 ScrollView {
-                    ForEach(0..<10) { i in
-                        MyPlaceRow()
+                    ForEach(places) { place in
+                        MyPlaceRow(place: place)
                             .padding(.top)
                             .padding(.horizontal)
                             .onTapGesture {

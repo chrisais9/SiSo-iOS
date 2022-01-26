@@ -16,7 +16,7 @@ struct FilterHeaderView: View {
     var body: some View {
         VStack(spacing: 13) {
             
-            Text("서울시 동작구 상도동")
+            Text("서울시 영등포구 여의도동")
                 .font(NotoSans.bold(size: 19))
                 .frame(maxWidth: .infinity, alignment: .leading)
             

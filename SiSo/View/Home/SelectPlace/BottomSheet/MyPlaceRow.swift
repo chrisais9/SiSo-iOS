@@ -10,15 +10,11 @@ import Kingfisher
 
 struct MyPlaceRow: View {
     
-    var preview: String = "https://www.noodlelovers.com/upload_data/m_product_noodle_set/shutterstock_543369610.jpg"
-//    var name: String
-//    var location: String
-//    var category: Category
-//    var bookmarks: String
+    var place: Place
     
     var body: some View {
         HStack {
-            KFImage.url(URL(string: preview))
+            KFImage.url(URL(string: place.image))
                 .resizable()
                 .placeholder {
                     Rectangle().foregroundColor(.gray)
@@ -28,10 +24,10 @@ struct MyPlaceRow: View {
                 
             VStack(alignment: .leading) {
                 Spacer()
-                Text("장소 명")
+                Text(place.name)
                     .font(NotoSans.bold(size: 17))
                 Spacer()
-                Text("성동구 | 양식")
+                Text(place.location)
                     .font(NotoSans.regular(size: 13))
                 Spacer()
             }
@@ -50,6 +46,6 @@ struct MyPlaceRow: View {
 
 struct MyPlaceRow_Previews: PreviewProvider {
     static var previews: some View {
-        MyPlaceRow()
+        MyPlaceRow(place: placeDummy)
     }
 }
