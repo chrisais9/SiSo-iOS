@@ -61,14 +61,23 @@ struct NaverMapView: UIViewRepresentable {
             locationService.requestLocation { location in
                 guard let location = location else { return }
                 
+                viewModel.places.forEach { place in
+                    let marker = NMFMarker()
+                    marker.position = NMGLatLng(lat: place.latitude, lng: place.longitude)
+                    marker.width = 25
+                    marker.height = 35
+//                    marker.iconTintColor = .init(named: "color_primary")!
+                    marker.captionText = "[음식점 이름]"
+                    marker.mapView = view.mapView
+                }
                 
-                let range = NMFCircleOverlay()
-                range.center = NMGLatLng(from: location)
-                range.radius = 1000
-                range.fillColor = UIColor.black.withAlphaComponent(0.3)
-                range.outlineWidth = 1
-                range.outlineColor = UIColor.gray
-                range.mapView = view.mapView
+//                let range = NMFCircleOverlay()
+//                range.center = NMGLatLng(from: location)
+//                range.radius = 1000
+//                range.fillColor = UIColor.black.withAlphaComponent(0.3)
+//                range.outlineWidth = 1
+//                range.outlineColor = UIColor.gray
+//                range.mapView = view.mapView
                 
                 
                 let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: location.latitude, lng: location.longitude))
@@ -76,6 +85,8 @@ struct NaverMapView: UIViewRepresentable {
                 view.mapView.moveCamera(cameraUpdate)
             }
         }
+        
+        
         
         return view
     }
@@ -85,6 +96,17 @@ struct NaverMapView: UIViewRepresentable {
     }
 }
 
+struct NPlace {
+    var latitude: Double
+    var longitude: Double
+}
+
 class MapSceneViewModel: ObservableObject {
-    
+    var places: [NPlace] = [
+        NPlace(latitude: 37.524321386, longitude: 126.927731774),
+        NPlace(latitude: 37.524075486, longitude: 126.927374324),
+        NPlace(latitude: 37.52439446, longitude: 126.927148809),
+        NPlace(latitude: 37.524630733, longitude: 126.92748643)
+        
+    ]
 }
