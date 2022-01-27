@@ -66,7 +66,6 @@ struct NaverMapView: UIViewRepresentable {
                     marker.position = NMGLatLng(lat: place.coordinates.latitude, lng: place.coordinates.longitude)
                     marker.width = 25
                     marker.height = 35
-//                    marker.iconTintColor = .init(named: "color_primary")!
                     marker.captionText = place.name
                     marker.mapView = view.mapView
                     marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
@@ -74,15 +73,6 @@ struct NaverMapView: UIViewRepresentable {
                         return true
                     }
                 }
-                
-//                let range = NMFCircleOverlay()
-//                range.center = NMGLatLng(from: location)
-//                range.radius = 1000
-//                range.fillColor = UIColor.black.withAlphaComponent(0.3)
-//                range.outlineWidth = 1
-//                range.outlineColor = UIColor.gray
-//                range.mapView = view.mapView
-                
                 
                 let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: location.latitude, lng: location.longitude))
 //                cameraUpdate.animation = .easeIn

@@ -10,21 +10,24 @@ import UIKit
 import SwiftUI
 
 struct AutoFocusTextField: UIViewRepresentable {
-    @Binding public var isFirstResponder: Bool
-    @Binding public var text: String
+    @Binding var isFirstResponder: Bool
+    @Binding var text: String
+    var placeHolderText: String
 
     public var configuration = { (view: UITextField) in }
 
-    public init(text: Binding<String>, isFirstResponder: Binding<Bool>, configuration: @escaping (UITextField) -> () = { _ in }) {
+    public init(_ placeHolderText: String, text: Binding<String>, isFirstResponder: Binding<Bool>, configuration: @escaping (UITextField) -> () = { _ in }) {
         self.configuration = configuration
         self._text = text
         self._isFirstResponder = isFirstResponder
+        self.placeHolderText = placeHolderText
     }
 
     public func makeUIView(context: Context) -> UITextField {
         let view = UITextField()
         view.addTarget(context.coordinator, action: #selector(Coordinator.textViewDidChange), for: .editingChanged)
         view.delegate = context.coordinator
+        view.placeholder = placeHolderText
         return view
     }
 

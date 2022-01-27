@@ -21,6 +21,7 @@ struct PlaceMapView: View {
     @State var topBarHeight: CGFloat = .zero
     
     @ObservedObject var selectedFilter: SelectedFilters
+    @State var places: [Place] = placesDummy
     
     @State var isSearchViewPresented: Bool = false
     
@@ -95,7 +96,7 @@ struct PlaceMapView: View {
             }
         }
         .bottomSheet(bottomSheetPosition: $bottomSheetPosition, options: [.noBottomPosition, .background(AnyView(Color.white))], headerContent: {
-            FilterHeaderView(selectedFilter: selectedFilter)
+            FilterHeaderView(selectedFilter: selectedFilter, placeCount: places.count)
                 .contentShape(Rectangle())
                 .onTapGesture {
                     bottomSheetPosition = .top

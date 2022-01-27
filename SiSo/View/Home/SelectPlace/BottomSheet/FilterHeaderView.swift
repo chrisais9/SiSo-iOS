@@ -10,8 +10,8 @@ import SwiftUI
 struct FilterHeaderView: View {
     
     @ObservedObject var selectedFilter: SelectedFilters
-
-    @State var filters: [String] = []
+    @State var placeCount: Int
+    @State private var filters: [String] = []
     
     var body: some View {
         VStack(spacing: 13) {
@@ -38,7 +38,7 @@ struct FilterHeaderView: View {
             
             Divider()
             
-            Text("총 10개")
+            Text("총 \(placeCount)개")
                 .font(NotoSans.regular(size: 15))
                 .foregroundColor(.gray)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -66,6 +66,6 @@ struct FilterHeaderView_Previews: PreviewProvider {
         let selectedFilter = SelectedFilters()
         selectedFilter.range = .km1
         selectedFilter.price = .around10000
-        return FilterHeaderView(selectedFilter: selectedFilter)
+        return FilterHeaderView(selectedFilter: selectedFilter, placeCount: 10)
     }
 }
