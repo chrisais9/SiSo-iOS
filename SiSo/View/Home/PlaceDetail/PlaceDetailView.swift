@@ -29,10 +29,8 @@ struct PlaceDetailView: View {
                     Text("\(place.name)")
                         .font(NotoSans.bold(size: 19))
                     Spacer()
-                    Text("\(place.rank)순위")
-                        .font(NotoSans.bold(size: 23))
-                    
                 }
+                
                 Spacer()
                     .frame(height: 150)
                 Text("\(place.description)")
