@@ -11,39 +11,19 @@ struct VoteResultView: View {
     var place: Place = placeDummy
     var body: some View {
         VStack {
-            Text("투표 결과")
-                .font(NotoSans.bold(size: 30))
             Spacer()
-            VoteCardView(place: place)
+            VoteResultCardView(place: place)
+                .padding(.vertical, 30)
             Spacer()
             GeometryReader { proxy in
                 HStack(spacing: 10) {
-                    Button(action: {
+                    SisoWhiteButton(title: "재투표 하기") {
                         
-                    }, label: {
-                        Text("재투표하기")
-                            .padding()
-                            .font(NotoSans.regular(size: 16))
-                            .frame(width: proxy.size.width * 0.35)
-                            .foregroundColor(.black)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 13)
-                                    .strokeBorder(lineWidth: 1)
-                                    .foregroundColor(.black)
-                            )
-                            .cornerRadius(13)
-                    })
-                    Button(action: {
+                    }
+                    .frame(width: proxy.size.width * 0.35)
+                    LargeButton(title: "홈으로", backgroundColor: .appPrimary, foregroundColor: .white) {
                         
-                    }, label: {
-                        Text("홈으로")
-                            .padding()
-                            .font(NotoSans.regular(size: 16))
-                            .frame(width: proxy.size.width * 0.65 - 10)
-                            .foregroundColor(.white)
-                            .background(Color.gray)
-                            .cornerRadius(13)
-                    })
+                    }
                 }
             }
             .frame(height: 55)

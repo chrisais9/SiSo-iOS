@@ -12,9 +12,13 @@ struct VoteCardView: View {
     var place: Place
     
     var body: some View {
-        VStack {
-            KFImage.url(URL(string: place.image))
-                .resizable()
+        VStack(spacing: 0) {
+            VStack {
+                KFImage.url(URL(string: place.image))
+                    .resizable()
+                    .cornerRadius(17)
+            }
+            .padding()
             
             HStack {
                 VStack(alignment: .leading) {
@@ -30,10 +34,8 @@ struct VoteCardView: View {
             }
             .padding()
         }
-        .background(
-            Color.white
-        )
-        .cornerRadius(12)
+        .background(Color.white)
+        .cornerRadius(17)
         .shadow(radius: 4)
     }
 }
