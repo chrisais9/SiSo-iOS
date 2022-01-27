@@ -25,6 +25,7 @@
 		53340F82279F997000EAFEC8 /* Color+component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F81279F997000EAFEC8 /* Color+component.swift */; };
 		53340F86279FA97F00EAFEC8 /* StyledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F85279FA97F00EAFEC8 /* StyledText.swift */; };
 		53340F8B279FC16F00EAFEC8 /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53340F8A279FC16F00EAFEC8 /* LobbyView.swift */; };
+		53354AEE27A2348200295D3C /* VoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53354AED27A2348200295D3C /* VoteCardView.swift */; };
 		53458E7C2781B4760064740D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7B2781B4760064740D /* Place.swift */; };
 		53458E7F2781BE1F0064740D /* PlaceMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */; };
 		53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53458E802781CCCA0064740D /* SearchPlaceView.swift */; };
@@ -52,7 +53,6 @@
 		537ECB13278E740100190A40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 537ECB12278E740000190A40 /* GoogleService-Info.plist */; };
 		53836A41277CA0EB0069AF7D /* NaverMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53836A40277CA0EB0069AF7D /* NaverMapView.swift */; };
 		5386365A277A192500B2B3A7 /* PreviewFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53863659277A192500B2B3A7 /* PreviewFriendRow.swift */; };
-		53876D5A278D290700697647 /* MyPlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53876D59278D290700697647 /* MyPlaceRow.swift */; };
 		53876D5F278D2B0500697647 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53876D5E278D2B0500697647 /* MyPageView.swift */; };
 		53876D64278D639200697647 /* FacebookButton+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53876D63278D639200697647 /* FacebookButton+SwiftUI.swift */; };
 		5392326F2782CD5F00746881 /* VoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5392326E2782CD5F00746881 /* VoteView.swift */; };
@@ -106,6 +106,7 @@
 		53340F81279F997000EAFEC8 /* Color+component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+component.swift"; sourceTree = "<group>"; };
 		53340F85279FA97F00EAFEC8 /* StyledText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledText.swift; sourceTree = "<group>"; };
 		53340F8A279FC16F00EAFEC8 /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
+		53354AED27A2348200295D3C /* VoteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCardView.swift; sourceTree = "<group>"; };
 		53458E792781B15B0064740D /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		53458E7B2781B4760064740D /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMenuRow.swift; sourceTree = "<group>"; };
@@ -133,7 +134,6 @@
 		537ECB12278E740000190A40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53836A40277CA0EB0069AF7D /* NaverMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverMapView.swift; sourceTree = "<group>"; };
 		53863659277A192500B2B3A7 /* PreviewFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewFriendRow.swift; sourceTree = "<group>"; };
-		53876D59278D290700697647 /* MyPlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlaceRow.swift; sourceTree = "<group>"; };
 		53876D5E278D2B0500697647 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		53876D63278D639200697647 /* FacebookButton+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FacebookButton+SwiftUI.swift"; sourceTree = "<group>"; };
 		5392326E2782CD5F00746881 /* VoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteView.swift; sourceTree = "<group>"; };
@@ -205,6 +205,7 @@
 				53340F8A279FC16F00EAFEC8 /* LobbyView.swift */,
 				53863659277A192500B2B3A7 /* PreviewFriendRow.swift */,
 				532E708C279FDAB400B19C8D /* FilterPreviewView.swift */,
+				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
 			);
 			path = Lobby;
 			sourceTree = "<group>";
@@ -242,7 +243,7 @@
 			children = (
 				534C3E532780A1250046D1B9 /* FilterHeaderView.swift */,
 				53C6DDDE2780361200633AED /* ListContentView.swift */,
-				53876D59278D290700697647 /* MyPlaceRow.swift */,
+				5349B23D27843C7600A1B5BE /* PlaceCardView.swift */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";
@@ -274,7 +275,6 @@
 				53E171C6278C410700C2D41A /* Deck */,
 				53458E7D2781BE040064740D /* PlaceDetail */,
 				53340F89279FC15C00EAFEC8 /* Lobby */,
-				53E171C5278C046B00C2D41A /* Filter */,
 				53A1BE26277CCD7A003D9BB9 /* VoteSetting */,
 				53C42963277CC89B004C6B1C /* SelectPlace */,
 				5392326D2782CD2F00746881 /* Vote */,
@@ -332,8 +332,8 @@
 			isa = PBXGroup;
 			children = (
 				5392326E2782CD5F00746881 /* VoteView.swift */,
-				5349B23D27843C7600A1B5BE /* PlaceCardView.swift */,
 				5349B2412784463400A1B5BE /* VoteEmojiOverlayView.swift */,
+				53354AED27A2348200295D3C /* VoteCardView.swift */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -524,14 +524,6 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
-		53E171C5278C046B00C2D41A /* Filter */ = {
-			isa = PBXGroup;
-			children = (
-				53C00A862774ACEE00C51065 /* SelectFilterView.swift */,
-			);
-			path = Filter;
-			sourceTree = "<group>";
-		};
 		53E171C6278C410700C2D41A /* Deck */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,7 +706,6 @@
 				53C00A8527749B7100C51065 /* VoteSettingView.swift in Sources */,
 				53458E812781CCCA0064740D /* SearchPlaceView.swift in Sources */,
 				53E171C8278C412F00C2D41A /* DeckListView.swift in Sources */,
-				53876D5A278D290700697647 /* MyPlaceRow.swift in Sources */,
 				535E53D3279A9102003CBCA3 /* UIImage+resize.swift in Sources */,
 				53876D64278D639200697647 /* FacebookButton+SwiftUI.swift in Sources */,
 				53A34EFF2773993700F48566 /* PreviousLocationRow.swift in Sources */,
@@ -736,6 +727,7 @@
 				53CF65C0278EA228002B08A0 /* User.swift in Sources */,
 				5349B23C2784182500A1B5BE /* CardStack.swift in Sources */,
 				53AB86F62770FC41006493D7 /* LargeButton.swift in Sources */,
+				53354AEE27A2348200295D3C /* VoteCardView.swift in Sources */,
 				5349B23A2784180100A1B5BE /* CardStackConfiguration.swift in Sources */,
 				5366FA4527954865007C723E /* API.swift in Sources */,
 				530650F7278ECCEA00EF5626 /* UserLoginManager.swift in Sources */,

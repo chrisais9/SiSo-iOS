@@ -79,7 +79,8 @@ struct VoteView: View {
                     }
                     doHapticFeedback()
                 } content: { place, direction, isOnTop in
-                    PlaceCardView(place: place)
+                    VoteCardView(place: place)
+                        .frame(height: 400)
                         .padding([.top, .horizontal])
                         .onChange(of: direction, perform: { newValue in
                             self.direction = newValue

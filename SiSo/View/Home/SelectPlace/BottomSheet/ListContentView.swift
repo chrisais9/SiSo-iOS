@@ -15,14 +15,15 @@ struct ListContentView: View {
     
     var places: [Place] = placesDummy
     
+    var colums: [GridItem] = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
+    
     var body: some View {
-        VStack {
-            if bottomSheetPosition == .top {
-                ScrollView {
+        ZStack {
+            ScrollView(showsIndicators: false) {
+                LazyVGrid(columns: colums, spacing: 20) {
                     ForEach(places) { place in
-                        MyPlaceRow(place: place)
-                            .padding(.top)
-                            .padding(.horizontal)
+                        PlaceCardView(place: place)
+                            .frame(height: 250)
                             .onTapGesture {
                                 isDetailViewActive.toggle()
                             }
@@ -33,10 +34,16 @@ struct ListContentView: View {
                                     EmptyView()
                                 })
                             )
+                        
                     }
+                    
                 }
                 .padding(.top)
-                LargeButton(title: "투표 하러가기", backgroundColor: .gray, foregroundColor: .white) {
+                .padding(.horizontal)
+            }
+            VStack {
+                Spacer()
+                LargeButton(title: "투표 하러가기", backgroundColor: .appPrimary, foregroundColor: .white) {
                     isVoteViewPresented.toggle()
                 }
                 .padding(.horizontal)
@@ -49,11 +56,12 @@ struct ListContentView: View {
                 )
             }
         }
+        .opacity(bottomSheetPosition == .top ? 1 : 0)
     }
 }
 
 struct ListContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ListContentView(bottomSheetPosition: .constant(CustomBottomSheetPosition.top))
+        ListContentView(bottomSheetPosition: .constant(.top))
     }
 }

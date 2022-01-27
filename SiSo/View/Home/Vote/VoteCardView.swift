@@ -1,14 +1,13 @@
 //
-//  PlaceCardView.swift
+//  VoteCardView.swift
 //  SiSo
 //
-//  Created by 구형모 on 2022/01/04.
+//  Created by 구형모 on 2022/01/27.
 //
-
 import SwiftUI
 import Kingfisher
 
-struct PlaceCardView: View {
+struct VoteCardView: View {
     
     var place: Place
     
@@ -16,7 +15,6 @@ struct PlaceCardView: View {
         VStack {
             KFImage.url(URL(string: place.image))
                 .resizable()
-                .frame(height: 350)
             
             HStack {
                 VStack(alignment: .leading) {
@@ -40,8 +38,8 @@ struct PlaceCardView: View {
     }
 }
 
-struct PlaceCardView_Previews: PreviewProvider {
+struct VoteCardView_Previews: PreviewProvider {
     static var previews: some View {
-        PlaceCardView(place: placeDummy)
+        VoteCardView(place: placeDummy)
     }
 }

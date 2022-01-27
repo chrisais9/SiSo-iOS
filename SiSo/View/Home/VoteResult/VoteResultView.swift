@@ -14,7 +14,7 @@ struct VoteResultView: View {
             Text("투표 결과")
                 .font(NotoSans.bold(size: 30))
             Spacer()
-            PlaceCardView(place: place)
+            VoteCardView(place: place)
             Spacer()
             GeometryReader { proxy in
                 HStack(spacing: 10) {
