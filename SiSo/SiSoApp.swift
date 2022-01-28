@@ -89,6 +89,6 @@ struct SiSoApp: SwiftUI.App {
 extension UINavigationController {
     // Remove back button text
     open override func viewWillLayoutSubviews() {
-        navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationBar.topItem?.backButtonDisplayMode = .minimal
     }
 }
