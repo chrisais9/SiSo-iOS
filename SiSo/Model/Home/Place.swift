@@ -55,29 +55,29 @@ let placesDummy: [Place] = [
         category: .western,
         menus: [
             Menu(
-                image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
-                name: "숙성 눈꽃살",
-                description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임"),
+                image: "https://ldb-phinf.pstatic.net/20210727_100/1627374983520dB6Hs_JPEG/image.jpg",
+                name: "스파이시 새우 크림 파스타",
+                description: ""),
             Menu(
-                image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
-                name: "숙성 눈꽃살",
-                description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임"),
+                image: "https://ldb-phinf.pstatic.net/20210727_177/162737500123145s4v_JPEG/image_%282%29.jpg",
+                name: "한우 큐브 스테이크",
+                description: "국내산 한우 180g"),
             Menu(
-                image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
-                name: "숙성 눈꽃살",
-                description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임"),
+                image: "https://ldb-phinf.pstatic.net/20210727_201/1627374974197VBw2X_JPEG/image_%281%29.jpg",
+                name: "잠봉 부르스케타",
+                description: ""),
             Menu(
-                image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
-                name: "숙성 눈꽃살",
-                description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임"),
+                image: "",
+                name: "마르게리따",
+                description: ""),
             Menu(
-                image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
-                name: "숙성 눈꽃살",
-                description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임"),
+                image: "",
+                name: "수비드한 문어 꼬치",
+                description: ""),
             Menu(
-                image: "https://blog.kakaocdn.net/dn/nBCKV/btqBE1JKegR/HHZIH590KCsqlxZRd0DlKK/img.png",
-                name: "숙성 눈꽃살",
-                description: "부드러운 숙성 소고기, 눈꽃을 닮아서 눈꽃살임")
+                image: "",
+                name: "오늘의 스프",
+                description: "")
         ],
         coordinates: Place.Coordinates(latitude: 37.524075486, longitude: 126.927374324)
     ),

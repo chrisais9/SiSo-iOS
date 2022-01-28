@@ -16,10 +16,12 @@ struct PlaceMenuRow: View {
     
     var body: some View {
         HStack {
-            KFImage.url(URL(string: image))
-                .resizable()
-                .frame(width: 100, height: 100)
-                .cornerRadius(8)
+            if !image.isEmpty {
+                KFImage.url(URL(string: image))
+                    .resizable()
+                    .frame(width: 100)
+                    .cornerRadius(8)
+            }
             VStack(spacing: 6) {
                 Text(name)
                     .frame(maxWidth: .infinity, alignment: .leading)

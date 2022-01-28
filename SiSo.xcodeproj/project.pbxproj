@@ -19,6 +19,7 @@
 		530D551E2776F36D00AF1FD1 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 530D55172776F36D00AF1FD1 /* NotoSansKR-Thin.otf */; };
 		530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */; };
 		530DC3B62799543600523374 /* SimpleDummyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530DC3B52799543600523374 /* SimpleDummyResponse.swift */; };
+		530E45B127A37F1800269DDF /* PlaceDetailPlaceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530E45B027A37F1800269DDF /* PlaceDetailPlaceCard.swift */; };
 		532D191D27798DFD003C174B /* InviteFriendRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191C27798DFD003C174B /* InviteFriendRow.swift */; };
 		532D191F2779B8BD003C174B /* SelectedFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532D191E2779B8BD003C174B /* SelectedFriend.swift */; };
 		532E708B279FC6D700B19C8D /* SisoWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532E708A279FC6D700B19C8D /* SisoWhiteButton.swift */; };
@@ -101,6 +102,7 @@
 		530D551F2776F47900AF1FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		530D55202776F54C00AF1FD1 /* Fonts+NotoSans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+NotoSans.swift"; sourceTree = "<group>"; };
 		530DC3B52799543600523374 /* SimpleDummyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDummyResponse.swift; sourceTree = "<group>"; };
+		530E45B027A37F1800269DDF /* PlaceDetailPlaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPlaceCard.swift; sourceTree = "<group>"; };
 		532D191C27798DFD003C174B /* InviteFriendRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteFriendRow.swift; sourceTree = "<group>"; };
 		532D191E2779B8BD003C174B /* SelectedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFriend.swift; sourceTree = "<group>"; };
 		532E708A279FC6D700B19C8D /* SisoWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SisoWhiteButton.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			children = (
 				53458E792781B15B0064740D /* PlaceDetailView.swift */,
 				53458E7E2781BE1F0064740D /* PlaceMenuRow.swift */,
+				530E45B027A37F1800269DDF /* PlaceDetailPlaceCard.swift */,
 			);
 			path = PlaceDetail;
 			sourceTree = "<group>";
@@ -276,10 +279,10 @@
 				536D826327737C5B00C3AAB7 /* HomeView.swift */,
 				53A34EFE2773993700F48566 /* PreviousLocationRow.swift */,
 				53E171C6278C410700C2D41A /* Deck */,
-				53458E7D2781BE040064740D /* PlaceDetail */,
 				53340F89279FC15C00EAFEC8 /* Lobby */,
 				53A1BE26277CCD7A003D9BB9 /* VoteSetting */,
 				53C42963277CC89B004C6B1C /* SelectPlace */,
+				53458E7D2781BE040064740D /* PlaceDetail */,
 				5392326D2782CD2F00746881 /* Vote */,
 				535B8AB027855028003B4F4F /* VoteResult */,
 			);
@@ -722,6 +725,7 @@
 				53E467AD27777CDE00554722 /* TextField+ClearButton.swift in Sources */,
 				530D55212776F54C00AF1FD1 /* Fonts+NotoSans.swift in Sources */,
 				539AE41827887DED008CAC20 /* View+ifCondition.swift in Sources */,
+				530E45B127A37F1800269DDF /* PlaceDetailPlaceCard.swift in Sources */,
 				53732604279E58AC005AF2F7 /* PlaceDetailView.swift in Sources */,
 				53CCDB95278842DC00C335FC /* PreviewFilterView.swift in Sources */,
 				53458E832781D03A0064740D /* TextField+AutoFocus+UIKit.swift in Sources */,
