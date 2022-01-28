@@ -10,10 +10,11 @@ import SwiftUI
 struct ListContentView: View {
     
     @Binding var bottomSheetPosition: CustomBottomSheetPosition
-    @State var isDetailViewActive: Bool = false
+    
     @State var isVoteViewPresented: Bool = false
     
     var places: [Place] = placesDummy
+    @State var selectedPlace: Place? = nil
     
     var colums: [GridItem] = Array(repeating: GridItem(.flexible(), spacing: 20), count: 2)
     
@@ -21,22 +22,20 @@ struct ListContentView: View {
         ZStack {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: colums, spacing: 20) {
-                    ForEach(places) { place in
+                    ForEach(places, id: \.name) { place in
                         PlaceCardView(place: place)
                             .frame(height: 250)
                             .onTapGesture {
-                                isDetailViewActive.toggle()
+                                selectedPlace = place
                             }
                             .background(
-                                NavigationLink(isActive: $isDetailViewActive, destination: {
-                                    PlaceDetailView(place: placeDummy)
+                                NavigationLink(tag: place, selection: $selectedPlace, destination: {
+                                    PlaceDetailView(place: place)
                                 }, label: {
                                     EmptyView()
                                 })
                             )
-                        
                     }
-                    
                 }
                 .padding(.top)
                 .padding(.horizontal)

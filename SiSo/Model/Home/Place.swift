@@ -8,9 +8,16 @@
 import Foundation
 import SwiftUI
 
-struct Place: Identifiable {
+struct Place: Codable, Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(coordinates.latitude)
+        hasher.combine(coordinates.longitude)
+    }
+    static func == (lhs: Place, rhs: Place) -> Bool {
+        return lhs.name == rhs.name && lhs.coordinates == rhs.coordinates
+    }
     
-    var id = UUID()
     
     var name: String
     var description: String
@@ -21,19 +28,19 @@ struct Place: Identifiable {
     
     var coordinates: Coordinates
     
-    struct Coordinates {
+    struct Coordinates: Codable, Equatable {
         var latitude: Double
         var longitude: Double
     }
 }
 
-struct Menu {
+struct Menu: Codable {
     var image: String
     var name: String
     var description: String
 }
 
-enum Category: String, CaseIterable {
+enum Category: String, CaseIterable, Codable {
     case korean = "한식"
     case japanese = "일식"
     case chinese = "중식"

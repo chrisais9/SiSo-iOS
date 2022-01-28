@@ -22,10 +22,6 @@ struct PlaceDetailPlaceCard: View {
                             .shadow(radius: 3)
                             .foregroundColor(.white)
                         Spacer()
-                        Text("1위")
-                            .font(NotoSans.bold(size: 23))
-                            .shadow(radius: 3)
-                            .foregroundColor(.white)
                     }
                     HStack {
                         Text("\(place.location) | \(place.category.rawValue)")
